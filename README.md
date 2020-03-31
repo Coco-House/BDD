@@ -1,10 +1,11 @@
-# BDD
-Projet BDD
+# Projet
 
-# To DO
+Modification Modele E/A
 
-pull 
-push 
-commit 
+# TO DO
 
-bonjour J'ai modifie le fichier
+Tableau relationnel
+/newline
+SQL requetes
+/newline
+Connection C#
