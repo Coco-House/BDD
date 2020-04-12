@@ -1,6 +1,40 @@
 -- base de donnees --
 
--- table recette --
-nom;type;liste_ingredients;quantite;descriptif;prix_vente
+----------------------------------------------------------------------------------
+-- table client --
+nomC;telephoneC;createur_de_recettes
+
+Gossard;0615392840;non
+Ellul;0142559302;oui
+
+
+
+
+----------------------------------------------------------------------------------
+-- table recette -- https://www.marmiton.org/ -> recette au hasard
+nomR;type;liste_ingredients;quantite;descriptif;prix_vente
 
 tiramisu;dessert;mascarpone, biscuits, cafe, oeufs, sucre, cacao, vanille;250, 24, 50, 3, 100, 30, 1;Dessert vegetarien, rapide, issu d'Italie;5.99
+
+----------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------
+-- table produit --
+nomP;categorie;unite;stock_actuel;stock_minimal;nomF;referenceF
+
+mascarpone;fromage;g;4000;1000;Davigel;2
+biscuits;gateau;u;200;150;Disgroup;3
+
+----------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------
+-- table fournisseur --
+nomF;telephoneF
+
+Carrefour traiteur;0912592338
+Davigel;0314985223
+Disgroup;0812950034
+
+----------------------------------------------------------------------------------
