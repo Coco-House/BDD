@@ -1,1 +1,6 @@
 -- base de donnees --
+
+-- table recette --
+nom;type;liste_ingredients;quantite;descriptif;prix_vente
+
+tiramisu;dessert;mascarpone, biscuits, cafe, oeufs, sucre, cacao, vanille;250, 24, 50, 3, 100, 30, 1;Dessert vegetarien, rapide, issu d'Italie;5.99
