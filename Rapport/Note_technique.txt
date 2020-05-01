@@ -1,0 +1,8 @@
+--- Note technique explicative --- (j'ai fait un .txt pour pouvoir le deposer sur github)
+pour expliquer les choix techniques
+
+Choix pour le diagramme Entites/Associations
+- le createur de recettes est un client particulier, donc nous avons cree une table nouvelle liee a la table client mais egalement a la table recette car les recettes permettent au createur de recettes de gagner des points Cook.
+
+
+Organisation de la base de données

@@ -1,0 +1,10 @@
+Fonctions C# :
+
+lecture de la dataset
+
+fonction requetes sql
+ - 1 : ajout d'éléments dans la dataset (recettes, clients, cooking, fournisseurs ...), points Cook
+ - 2 : affichage
+ - 3 : commandes / livraisons
+ - 4 : composition recette
+ - 5 : stocks actuels / stocks min,max / stocks apres recette
