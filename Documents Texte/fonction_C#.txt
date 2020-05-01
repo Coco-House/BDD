@@ -4,6 +4,7 @@ I- Remarques :
 - Points : en cook, convertis en euro : taux de change?
 - Creation de database --> "Les informations detaillees" p. 2/3
 - Cuisiniers = salaries = cooking --> pas de login page 
+- Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
 
 
 II- Fonctions classes C# :
