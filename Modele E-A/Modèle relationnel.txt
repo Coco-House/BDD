@@ -1,0 +1,42 @@
+﻿Client (nomClient,telClient)
+
+
+CdR (nomCdR,cook,nomClient)
+
+
+PointCook (IdGratification,nbPoints,nomCdR)
+
+
+Cooking (idCooking)
+
+
+Produit (nomProduit,categorieProduit,quantite,stockAct,stockMin,stockMax,nomFournisseur)
+
+
+Fournisseur (nomFournisseur,telFournisseur)
+
+
+Recette (nomRecette,typeRecette,listeIngredients,descriptionRecette,prix,remunerationCuisinier,nbPoints,idGratification,nbPoints)
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Commande (dateCommande,adresse,nomClient,nomRecette)
+
+
+Approvisionne (dateApprovionnnement,nomProduit,idCooking)
+
+
+Réalise (dateRealisation,nomRecette,idCooking)
+
+
+Compose (idComposition,nomProduit,nomRecette)
