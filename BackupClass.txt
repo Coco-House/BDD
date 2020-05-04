@@ -1,0 +1,334 @@
+public class CdR
+    {
+        private int idCdR;
+        private int cook;
+        private int idC;
+
+        public CdR(int idCdR, int cook,int idC)
+        {
+            this.idC = idC;
+            this.cook = cook;
+            this.idCdR = idCdR;
+        }
+        public int IdCdR
+        {
+            get { return this.idCdR; }
+            set { this.idCdR = value; }
+        }
+
+        public int Cook
+        {
+            get { return this.cook; }
+            set { this.cook = value; }
+        }
+
+        public int IdC
+        {
+            get { return this.idC; }
+            set { this.idC = value; }
+        }
+
+        public override string ToString()
+        {
+            string s = "\nId Createur de Recette : " + this.idCdR
+                + "\nNombre de Cook : " + this.cook
+                + "\nId Client : " + this.idC
+                + "\n";
+            return s;
+        }
+    }
+
+
+public class Client
+    {
+        private int idC;
+        private string nomC;
+        private string telC;
+
+        public Client(int idC, string nomC, string telC)
+        {
+            this.idC = idC;
+            this.nomC = nomC;
+            this.telC = telC;
+        }
+
+        public int IdC
+        {
+            get { return this.idC; }
+            set { this.idC = value; }
+        }
+
+        public string NomC
+        {
+            get { return this.nomC; }
+            set { this.nomC = value; }
+        }
+
+        public string TelC
+        {
+            get { return this.telC; }
+            set { this.telC = value; }
+        }
+
+        public override string ToString()
+        {
+            string s = "\nId Client : " + this.idC
+                + "\nNom Client : " + this.nomC
+                + "\nTelephone Client : " + this.telC
+                + "\n";
+            return s;
+        }
+    }
+
+public class Cooking
+    {
+        private int idCooking;
+
+        public Cooking(int idCooking)
+        {
+            this.idCooking = idCooking;
+        }
+
+        public int IdCooking
+        {
+            get { return this.idCooking; }
+            set { this.idCooking = value; }
+        }
+
+        public override string ToString()
+        {
+            return "\nId cooking : " + this.idCooking + "\n";
+        }
+    }
+
+public class Fournisseur
+    {
+        private int idF;
+        private string nomF;
+        private string telF;
+
+        public Fournisseur(int idF, string nomF, string telF)
+        {
+            this.idF = idF;
+            this.nomF = nomF;
+            this.telF = telF;
+        }
+
+        public int IdF
+        {
+            get { return this.idF; }
+            set { this.idF = value; }
+        }
+
+        public string NomF
+        {
+            get { return this.nomF; }
+            set { this.nomF = value; }
+        }
+
+        public string TelF
+        {
+            get { return this.telF; }
+            set { this.telF = value; }
+        }
+
+        public override string ToString()
+        {
+            string s = "\nId Fournisseur : " + this.idF
+                + "\nNom Fournisseur : " + this.nomF
+                + "\nTelephone Fournisseur : " + this.telF
+                + "\n";
+            return s;
+        }
+    }
+
+public class Produit
+    {
+        private string nomP;
+        private string categorieP;
+        private int quantite;
+        private int stockActuel;
+        private int stockMin;
+        private int stockMax;
+        private int idF;
+
+        public Produit(string nomP, string categorieP, int quantite, int stockActuel, int stockMin, int stockMax, int idF)
+        {
+            this.nomP = nomP;
+            this.categorieP = categorieP;
+            this.quantite = quantite;
+            this.stockActuel = stockActuel;
+            this.stockMax = stockMax;
+            this.stockMin = stockMin;
+            this.idF = idF;
+        }
+
+        public string NomP
+        {
+            get { return this.nomP; }
+            set { this.nomP = value; }
+        }
+        
+        public string CategorieP
+        {
+            get { return this.categorieP; }
+            set { this.categorieP = value; }
+        }
+
+        public int Quantite
+        {
+            get { return this.quantite; }
+            set { this.quantite = value; }
+        }
+
+        public int StockActuel
+        {
+            get { return this.stockActuel; }
+            set { this.stockActuel = value; }
+        }
+
+        public int StockMin
+        {
+            get { return this.stockMin; }
+            set { this.stockMin = value; }
+        }
+
+        public int StockMax
+        {
+            get { return this.stockMax; }
+            set { this.stockMax = value; }
+        }
+
+        public int IdF
+        {
+            get { return this.idF; }
+            set { this.idF = value; }
+        }
+
+
+        public override string ToString()
+        {
+            string s = "\nNom Produit : " + this.nomP
+                + "\nCategorie : " + this.categorieP
+                + "\nQuantite : " + this.quantite
+                + "\nStock Actuel : " + this.stockActuel
+                + "\nStock Max : " + this.stockMax
+                + "\nStock Min : " + this.stockMin
+                + "\nId Fournisseur : " + this.idF
+                + "\n";
+            return s;
+        }
+    }
+
+public class Recette
+    {
+        private int idR;
+        private string nomR;
+        private List<Produit> listeIngredients = new List<Produit>();
+        private string descriptionR;
+        private int prixR;
+        private int remunerationCdR;
+        private int idGratification;
+        private int nbPointsCook;
+        private int idCdR;
+
+        public Recette(int idR, string nomR, List<Produit> listeIngredients, string descriptionR, int prixR, int remunerationCdR, int idGrat, int nbPoints, int idCdR)
+        {
+            this.idR = idR;
+            this.nomR = nomR;
+            this.listeIngredients = listeIngredients;
+            this.descriptionR = descriptionR;
+            this.prixR = prixR;
+            this.remunerationCdR = remunerationCdR;
+            this.idGratification = idGrat;
+            this.nbPointsCook = nbPoints;
+            this.idCdR = idCdR;
+        }
+
+        public int IdR
+        {
+            get { return this.idR; }
+            set { this.idR = value; }
+        }
+        public string NomR
+        {
+            get { return this.nomR; }
+            set { this.nomR = value; }
+        }
+
+        public List<Produit> ListeIngredients
+        {
+            get { return this.listeIngredients; }
+            set { this.listeIngredients = value; }
+        }
+
+        public string DescriptionR
+        {
+            get { return this.descriptionR; }
+            set { this.descriptionR = value; }
+        }
+
+        public int PrixR
+        {
+            get { return this.prixR; }
+            set { this.prixR = value; }
+        }
+
+        public int RemunerationCdR
+        {
+            get { return this.remunerationCdR; }
+            set { this.remunerationCdR = value; }
+        }
+
+        public int IdCdR
+        {
+            get { return this.idCdR; }
+            set { this.idCdR = value; }
+        }
+
+
+        public int IdGratification
+        {
+            get { return this.idGratification; }
+            set { this.idGratification = value; }
+        }
+
+        public int NbPointsCook
+        {
+            get { return this.nbPointsCook; }
+            set { this.nbPointsCook = value; }
+        }
+
+        public override string ToString()
+        {
+            string s =
+                "\nId Recette : " + this.idR
+                + "\nNom : " + this.nomR
+                + "\nListe Ingredients : \n";
+            foreach (Produit p in this.listeIngredients)
+            {
+                s += p;
+            }
+
+            s += "\nDescription : " + this.descriptionR
+                + "\nPrix : " + this.prixR + " cook"
+                + "\nRemuneration : " + this.remunerationCdR + " cook"
+                + "\nId Gratification : " + this.idGratification
+                + "\nNombre de Points : " + this.nbPointsCook + " cook"
+                + "\nId Createur de Recette : " + this.IdCdR + "\n";
+            return s;
+        }
+
+        public static double ConvertirEnEuros(int cook)
+        {
+            double taux = 0.5; // 1 cook = 0.5 euros
+            return cook * taux;
+        }
+
+        public static int ConvertirEnCook(double euros)
+        {
+            int taux = 2; // 1 euros = 2 cook
+            return Convert.ToInt32(euros* taux);
+        }
+
+    }

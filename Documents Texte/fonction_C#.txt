@@ -9,6 +9,7 @@ I- Remarques :
 
 II- Fonctions classes C# :
   ----------------------
+X connection Database
 
 lecture de la dataset
 
@@ -94,7 +95,7 @@ V- Bonus :
     - Fonctionnalite client et CdR --> possibilite de supprimer son compte (et donc toutes ses recettes pour un CdR)
     - (Cf discussion DVO) Pouvoir creer des recettes avec des produits qui sont pas dans la database et mettre a jour le stock des produits 
 
-VI- Creation Database :  On peut rajouter des infos supp.
+X VI- Creation Database :  On peut rajouter des infos supp.
     -------------------
 
     -!! Cf modele E/A

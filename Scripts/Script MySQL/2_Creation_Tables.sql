@@ -1,18 +1,18 @@
-USE `projet`;
+USE projet;
 
-CREATE TABLE `projet`.`fournisseur`
+CREATE TABLE projet.`fournisseur`
 (
 	`idF` VARCHAR(10) NOT NULL,
 	`nomF` VARCHAR(20) NOT NULL,
-	`telF` INT NOT NULL,
+	`telF` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idF`)
 );
 
-CREATE TABLE `projet`.`produit`
+CREATE TABLE projet.`produit`
 (
 	`nomP` VARCHAR(20) NOT NULL,
     `categorieP` VARCHAR(20) NOT NULL,
-	`quantite` INT NOT NULL,
+    `unite` VARCHAR(5) NOT NULL,
     `stockActuel` INT NOT NULL,
     `stockMin` INT NOT NULL,
     `stockMax` INT NOT NULL,
@@ -21,48 +21,42 @@ CREATE TABLE `projet`.`produit`
     FOREIGN KEY (`idF`) REFERENCES `projet`.`fournisseur`(`idF`)
 );
 
-CREATE TABLE `projet`.`client`
+CREATE TABLE projet.`client`
 (
-	`idC` INT NOT NULL,
+	`idC` VARCHAR(10) NOT NULL,
 	`nomC` VARCHAR(20) NOT NULL,
-	`telC` INT NOT NULL,
+	`telC` VARCHAR(10)  NOT NULL,
 	PRIMARY KEY (`idC`)
 );
 
-CREATE TABLE `projet`.`cdr`
+CREATE TABLE projet.`cdr`
 (
-	`idCdR` INT NOT NULL,
+	`idCdR` VARCHAR(10) NOT NULL,
     `cook` INT NOT NULL,
-    `idC` INT NOT NULL,
+    `idC` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idCdR`),
     FOREIGN KEY (`idC`) REFERENCES `projet`.`client`(`idC`)
 );
 
-CREATE TABLE `projet`.`recette`
+CREATE TABLE projet.`recette`
 (
-	`idR` INT NOT NULL,
+	`idR` VARCHAR(10) NOT NULL,
 	`nomR` VARCHAR(20) NOT NULL,
-    `listeIngredients` VARCHAR(100) NOT NULL,
-    `descriptionR` VARCHAR(100) NOT NULL,
-	`prixR` FLOAT NOT NULL,
-    `remunerationCuisinier` FLOAT NOT NULL,
-    `idCdR` INT NOT NULL,
+    `type` VARCHAR(10) CHECK(LOCATE(' ',`type`)=0) ,
+    `listeIngredients` VARCHAR(100) NOT NULL, -- c'est un string de nom de produits separes par un ;
+    `descriptionR` TEXT(256) NOT NULL,
+	`prixR` INT NOT NULL CHECK(`prixR` BETWEEN 10 and 40 ),
+    `remunerationCuisinier` INT NOT NULL,
+    `idGratification` VARCHAR(10) NOT NULL,
+    `nbCook` INT NOT NULL,
+    `idCdR` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idR`),
     FOREIGN KEY (`idCdR`) REFERENCES `projet`.`cdr`(`idCdR`)
 );
 
 
-CREATE TABLE `projet`.`pointcook`
+CREATE TABLE projet.`cooking`
 (
-	`idPointCook` INT NOT NULL,
-    `nbCook` INT NOT NULL,
-    `idCdR` INT NOT NULL,
-	PRIMARY KEY (`idPointCook`),
-    FOREIGN KEY (`idCdR`) REFERENCES `projet`.`cdr`(`idCdR`)
-);
-
-CREATE TABLE `projet`.`cooking`
-(
-	`idCooking` INT NOT NULL,
+	`idCooking` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idCooking`)
 );

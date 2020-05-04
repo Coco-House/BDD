@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Login Page" Height="180" Width="380">
+    <Grid Name="LoginPageGrid">
+        <Label Content="Entrez Votre Username MySQL : " FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="228"/>
+        <TextBox Name="IDBox" HorizontalAlignment="Left" Height="20" Margin="243,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113"/>
+        <Label Content="Entrez Votre Password MySQL : " FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="30" Width="228"/>
+        <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="243,65,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button Name="LoginButton" Content="Connexion" HorizontalAlignment="Left" Height="20" Margin="200,110,0,0" VerticalAlignment="Top" Width="127" Click="LoginButton_Click"/>
+        <Button Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="20" Margin="50,110,0,0" VerticalAlignment="Top" Width="120" Click="CancelButton_Click"/>
+        <Button x:Name="ValiderButton2" Content="Connexion" HorizontalAlignment="Left" Height="20" Margin="200,110,0,0" VerticalAlignment="Top" Width="127" Click="Valider2Button_Click"/>
         
     </Grid>
 </Window>
