@@ -6,3 +6,6 @@ pour expliquer les choix techniques
 
 
 -- Organisation de la base de données
+
+  *gestion de comptes et de mots de passe : lors de l'inscription d'une personne, nous stockons dans une base de données les informations données et particulièrement les identifiants et les mots de passe, car cela nous permet alors de gérer la partie connexion d'une personne déjà inscrite. 
+  Cependant, nous ne protégeons/hash pas les données sensibles telles que les mots de passe car il ne s'agit pas réellement d'une application entièrement fonctionnelle. Nous aurions pu faire cette méthode si nous avions plus de temps.
