@@ -9,6 +9,7 @@ namespace BDD
     public class Client
     {
         private string idC;
+        private char sexe;
         private string nomC;
         private string prenomC;
         private string dateNaissance; // YYYY-MM-DD
@@ -17,9 +18,10 @@ namespace BDD
         private string email;
         private string telC;
 
-        public Client(string idC, string nomC, string prenomC, string DateN, int age, string adresse, string email, string telC)
+        public Client(string idC, char sexe, string nomC, string prenomC, string DateN, int age, string adresse, string email, string telC)
         {
             this.idC = idC;
+            this.sexe = sexe;
             this.nomC = nomC;
             this.prenomC = prenomC;
             this.dateNaissance = DateN;
@@ -33,6 +35,12 @@ namespace BDD
         {
             get { return this.idC; }
             set { this.idC = value; }
+        }
+
+        public char Sexe
+        {
+            get { return this.sexe; }
+            set { this.sexe = value; }
         }
 
         public string NomC
@@ -82,6 +90,7 @@ namespace BDD
             string s = "\nId Client : " + this.idC
                 + "\nNom Client : " + this.nomC
                 + "\nPrenom Client : " + this.prenomC
+                + "\nSexe : " + this.sexe
                 + "\nDate de Naissance : " + this.dateNaissance
                 + "\nAge : " + this.age
                 + "\nAdresse : " + this.adresse
