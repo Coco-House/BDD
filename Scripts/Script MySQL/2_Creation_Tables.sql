@@ -25,6 +25,11 @@ CREATE TABLE projet.`client`
 (
 	`idC` VARCHAR(10) NOT NULL,
 	`nomC` VARCHAR(20) NOT NULL,
+    `prenomC` VARCHAR(20) NOT NULL,
+    `DateNaissance` DATE NOT NULL,
+    `age` INT NOT NULL,
+    `adresse` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(30) NOT NULL,
 	`telC` VARCHAR(10)  NOT NULL,
 	PRIMARY KEY (`idC`)
 );

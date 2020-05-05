@@ -1,9 +1,9 @@
 I- Remarques : 
   -----------
 
-- Points : en cook, convertis en euro : taux de change?
-- Creation de database --> "Les informations detaillees" p. 2/3
-- Cuisiniers = salaries = cooking --> pas de login page 
+- XPoints : en cook, convertis en euro : taux de change?
+- XCreation de database --> "Les informations detaillees" p. 2/3
+- XCuisiniers = salaries = cooking --> pas de login page 
 - Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
 
 
@@ -123,9 +123,9 @@ X VI- Creation Database :  On peut rajouter des infos supp.
         * unite de qte applicable au produit (a la fois pour les recettes et pour le restockage (commandes reapprovisionnement))
         * stock actuels
         * stock mini (initialise arbitrairement)
-            - A CHAQUE CREATION DE RECETTE utilisant ce produit -> stock mini = stock mini (precedent) / 2 +  3 * qte necessaire pour cette recette
+            - A CHAQUE CREATION DE RECETTE utilisant ce produit -> stock mini = stock mini (precedent) / 2 +  2 * qte necessaire pour cette recette
         * stock max (initialise arbitrairement)
-            - A CHAQUE CREATION DE RECETTE utilisant ce produit -> stock max = stock max (precedent)  +  2 * qte necessaire pour cette recette
+            - A CHAQUE CREATION DE RECETTE utilisant ce produit -> stock max = stock max (precedent)  +  3 * qte necessaire pour cette recette
         * un nom de fournisseur (on gere pas le prix d'achat)
         * reference fournissuer
     

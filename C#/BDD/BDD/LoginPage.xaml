@@ -1,0 +1,70 @@
+﻿<Window x:Class="BDD.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDD"
+        mc:Ignorable="d"
+        Title="LoginPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="611*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Nom" HorizontalAlignment="Left" Height="30" Margin="10,20,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Prenom" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Sexe" HorizontalAlignment="Left" Height="30" Margin="10,120,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Date Naissance " HorizontalAlignment="Left" Height="25" Margin="10,170,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Ville" HorizontalAlignment="Left" Height="30" Margin="10,220,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Height="30" Margin="10,270,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Majeur ?" HorizontalAlignment="Left" Height="30" Margin="10,320,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Name ="Valider" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click" Grid.Column="1"/>
+        <CheckBox Name = "MBox" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,125,0,0" Checked="MBox_Checked"/>
+        <CheckBox Name = "FBox" Content="F" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,125,0,0" Width="37" Checked="FBox_Checked"/>
+        <TextBox Name = "JourBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
+        <TextBox Name = "AnneeBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="230,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name = "MoisBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="175,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
+        <TextBox Name = "VilleBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name = "TelephoneBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <CheckBox Name = "OuiBox" Content="Oui" HorizontalAlignment="Left" Height="15" Margin="120,325,0,0" VerticalAlignment="Top" Width="81" Checked="OuiBox_Checked"/>
+        <CheckBox Name = "NonBox" Content="Non" HorizontalAlignment="Left" Height="15" Margin="200,325,0,0" VerticalAlignment="Top" Width="81" Checked="NonBox_Checked"/>
+        <TextBox Name ="NomBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name ="PrenomBox" HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="120,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Etes vous?" HorizontalAlignment="Left" Height="27" Margin="10,370,0,0" VerticalAlignment="Top" Width="70"/>
+        <CheckBox Name = "MembreBox" Content="Membre" HorizontalAlignment="Left" Height="15" Margin="120,375,0,0" VerticalAlignment="Top" Width="81" Checked="MembreBox_Checked" Unchecked="MembreBox_UnChecked"/>
+        <CheckBox Name = "PersonnelBox" Content="Peronnel" HorizontalAlignment="Left" Height="15" Margin="200,375,0,0" VerticalAlignment="Top" Width="81" Checked="PersonnelBox_Checked" Unchecked="PersonnelBox_UnChecked"/>
+        <Label Name ="MembreLabel" Content="Membre : "  HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="JJ/MM/AAAA" HorizontalAlignment="Left" Height="30" Margin="290,170,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Name="CotisationLabel" Content="Cotisation (€)" HorizontalAlignment="Left" Height="30" Margin="400,70,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Name ="ClassementLabel" Content="Classement" HorizontalAlignment="Left" Height="30" Margin="400,120,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Name="EntraineurLabel" Content="Entraineur ?" HorizontalAlignment="Left" Height="30" Margin="400,170,0,0" VerticalAlignment="Top" Width="80"/>
+        <CheckBox Name = "EntraineurOuiBox" Content="Oui" HorizontalAlignment="Left" Height="15" Margin="500,175,0,0" VerticalAlignment="Top" Width="81" Checked="EntraineurOuiBox_Checked" Unchecked ="EntraineurOuiBox_UnChecked"/>
+        <CheckBox Name = "EntraineurNonBox" Content="Non" HorizontalAlignment="Left" Height="15" Margin="600,176,0,0" VerticalAlignment="Top" Width="81" Checked="EntraineurNonBox_Checked" Grid.ColumnSpan="2"/>
+        <Label Name="EntraineurLabel2" Content="Entraineur : " HorizontalAlignment="Left" Height="30" Margin="400,270,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Name ="StatutLabel"  Content="Statut : " HorizontalAlignment="Left" Height="30" Margin="400,320,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox Name ="ClassementBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Label Name ="CotisationBox" Content="{Binding ElementName=VilleBox, Path=Text,UpdateSourceTrigger=Explicit}"  HorizontalAlignment="Left" Height="30" Margin="500,70,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"  />
+        <CheckBox Name = "IndependantBox" Content="Independant" HorizontalAlignment="Left" Height="15" Margin="500,325,0,0" VerticalAlignment="Top" Width="95" Checked="IndependantBox_Checked"/>
+        <CheckBox Name = "SalarieBox" Content="Salarie" HorizontalAlignment="Left" Height="15" Margin="600,325,0,0" VerticalAlignment="Top" Width="81" Checked="SalarieBox_Checked" Grid.ColumnSpan="2"/>
+        <Label Name ="PersonnelLabel" Content="Personnel : "  HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Name="SalaireLabel" Content="Salaire" HorizontalAlignment="Left" Height="30" Margin="400,70,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Name="DateEntreeLabel" Content="Date d'entrée" HorizontalAlignment="Left" Height="30" Margin="400,120,0,0" VerticalAlignment="Top" Width="83"/>
+        <TextBox Name = "JourEntreeBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="500,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
+        <TextBox Name = "MoisEntreeBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="550,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
+        <TextBox Name = "AnneeEntreeBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="600,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Grid.ColumnSpan="2"/>
+        <Label Name ="JJMMAAAALabel" Content="JJ/MM/AAAA" HorizontalAlignment="Left" Height="30" Margin="49,120,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1"/>
+        <Label Name="AdministrationLabel" Content="Administration ?" HorizontalAlignment="Left" Height="30" Margin="400,220,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Name = "AdministrationOuiBox" Content="Oui" HorizontalAlignment="Left" Height="15" Margin="500,225,0,0" VerticalAlignment="Top" Width="81" Checked="AdministrationOuiBox_Checked" Unchecked="AdministrationOuiBox_Unchecked"/>
+        <CheckBox Name = "AdministrationNonBox" Content="Non" HorizontalAlignment="Left" Height="15" Margin="600,225,0,0" VerticalAlignment="Top" Width="81" Checked="AdministrationNonBox_Checked" Grid.ColumnSpan="2"/>
+        <Label Name ="AdministrationLabel2" Content="Administration : " HorizontalAlignment="Left" Height="30" Margin="400,270,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Name="HorairesLabel" Content="Horaires : " HorizontalAlignment="Left" Height="30" Margin="400,320,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox Name="HorairesBox" HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,323,0,0" TextWrapping="Wrap" Text="8:00 - 17:00" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" />
+        <TextBox Name ="SalaireBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Button Name="CalculerCotisation" Content="Calculer Cotisation" HorizontalAlignment="Left" Height="20" Margin="49,70,0,0" VerticalAlignment="Top" Width="107" Click="CalculerCotisation_Click" Grid.Column="1"/>
+        <Button Name ="VerifierBox" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Button2_Click" Grid.Column="1"/>
+        <Label Name="InfoBancaireLabel" Content="RIB" HorizontalAlignment="Left" Height="30" Margin="400,170,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox Name ="InfoBancaireBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Button Name="PayerAdhesionButton" Content="Payer l'adhesion" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="49,25,0,0" VerticalAlignment="Top" Width="107" Click="PayerAdhesionButton_Click"/>
+        <Button Name ="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="30" Margin="447,365,0,0" VerticalAlignment="Top" Width="154" Click="CancelButton_Click" />
+    </Grid>
+</Window>

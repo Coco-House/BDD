@@ -12,7 +12,7 @@ INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stock
 
 -- insertion dans la table client
 
-INSERT INTO `projet`.`client` (`idC`,`nomC`,`telC`) VALUES ('C1','Bernard','0651249903');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`email`,`telC`) VALUES ('C1','DUPONT','Nicolas','2000-05-18',YEAR(CURDATE())-YEAR(`DateNaissance`),'25 Rue de la Republique, 75001, Paris','dupont.nicolas@gmail.com','0651249903');
 
 
 -- insertion dans la table CdR
