@@ -103,6 +103,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConnexionCompte.xaml.cs">
+      <DependentUpon>ConnexionCompte.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <DependentUpon>PageD%27accueil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Recette.cs" />
+    <Page Include="ConnexionCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,10 +128,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="CdR.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Cooking.cs" />
@@ -171,10 +174,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="background.jpg" />
+    <Resource Include="Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Logo.png" />
+    <Resource Include="Images\LoginBackground.png" />
+    <Resource Include="Images\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

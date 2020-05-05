@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace BDD
 {
-    public class CdR
+    public class CdR :Client
     {
         private string idCdR;
         private int cook;
-        private string idC;
 
-        public CdR(string idCdR, int cook, string idC)
+        public CdR(string idC, char sexe, string nomC, string prenomC, string DateN, int age, string adresse, string email, string password, string telC,string idCdR, int cook):base(idC, sexe, nomC, prenomC, DateN, age, adresse, email, password,telC)
         {
-            this.idC = idC;
             this.cook = cook;
             this.idCdR = idCdR;
         }
@@ -30,17 +28,11 @@ namespace BDD
             set { this.cook = value; }
         }
 
-        public string IdC
-        {
-            get { return this.idC; }
-            set { this.idC = value; }
-        }
-
         public override string ToString()
         {
-            string s = "\nId Createur de Recette : " + this.idCdR
+            string s = base.ToString();
+            s +="\nId Createur de Recette : " + this.idCdR
                 + "\nNombre de Cook : " + this.cook
-                + "\nId Client : " + this.idC
                 + "\n";
             return s;
         }

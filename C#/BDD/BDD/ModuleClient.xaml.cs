@@ -19,6 +19,7 @@ namespace BDD
     /// </summary>
     public partial class ModuleClient : Window
     {
+
         public ModuleClient()
         {
             InitializeComponent();
@@ -26,7 +27,9 @@ namespace BDD
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginPage window = new LoginPage();
+            window.Show();
+            this.Close();
         }
 
         private void PasserUneCommande_Click(object sender, RoutedEventArgs e)
@@ -39,6 +42,11 @@ namespace BDD
             PageD_accueil window = new PageD_accueil();
             window.Show();
             this.Close();
+        }
+
+        private void Deconnexion_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

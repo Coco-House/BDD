@@ -31,6 +31,7 @@ CREATE TABLE projet.`client`
     `adresse` VARCHAR(50) NOT NULL,
     `sexe` CHAR(1) NOT NULL,
     `email` VARCHAR(30) NOT NULL,
+    `password` VARCHAR(30) NOT NULL,
 	`telC` VARCHAR(10)  NOT NULL,
 	PRIMARY KEY (`idC`)
 );

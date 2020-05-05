@@ -11,50 +11,60 @@
             <ColumnDefinition Width="611*"/>
             <ColumnDefinition Width="181*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name ="NomBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/BDD;component/Images/LoginBackground.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <TextBox Name ="NomBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" />
         <TextBox Name ="PrenomBox" HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="120,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
         <CheckBox Name = "MBox" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,125,0,0" Checked="MBox_Checked"/>
         <CheckBox Name = "FBox" Content="F" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,125,0,0" Width="37" Checked="FBox_Checked"/>
-        <TextBox Name = "JourBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
-        <TextBox Name = "MoisBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="175,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35"/>
-        <TextBox Name = "AnneeBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="230,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name = "JourBox" MaxLength="2" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35" LostFocus="Jour_LostFocus"/>
+        <TextBox Name = "MoisBox" MaxLength="2" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="175,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35" LostFocus="Mois_LostFocus"/>
+        <TextBox Name = "AnneeBox" MaxLength="4" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="230,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" LostFocus="Annee_LostFocus"/>
         <TextBox Name = "AdresseBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Voie,Code Postal,Ville" FontSize="11" FontWeight="Medium" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="275,220,0,0" VerticalAlignment="Top" Width="120" />
         <TextBox Name = "TelephoneBox" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
-        <TextBox Name = "Age" HorizontalAlignment="Left" TextAlignment="Center" Height="20" Margin="120,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
-        <CheckBox Name = "MembreBox" Content="Client" HorizontalAlignment="Left" Height="15" Margin="120,375,0,0" VerticalAlignment="Top" Width="81" Checked="MembreBox_Checked" Unchecked="MembreBox_UnChecked"/>
-        <CheckBox Name = "PersonnelBox" Content="Createur de Recette" HorizontalAlignment="Left" Height="15" Margin="200,375,0,0" VerticalAlignment="Top" Width="131" Checked="PersonnelBox_Checked" Unchecked="PersonnelBox_UnChecked"/>
+        <Button Name = "Age" HorizontalAlignment="Left" Height="20" Margin="120,325,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Calculer l'age" VerticalAlignment="Top" Width="150" Click="CalculerAge"/>
+        <Label Name = "CalculAgeLabel" HorizontalAlignment="Left" Height="30" Margin="120,320,0,0" FontWeight="Medium" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="" VerticalAlignment="Top" Width="150"/>
+        <CheckBox Name = "ClientBox" Content="Client" HorizontalAlignment="Left" Height="15" Margin="120,375,0,0" VerticalAlignment="Top" Width="81" Checked="Client_Checked" Unchecked="Client_UnChecked" />
+        <CheckBox Name = "CdRBox" Content="Createur de Recette" HorizontalAlignment="Left" Height="15" Margin="200,375,0,0" VerticalAlignment="Top" Width="131" Checked="CdRBox_Checked" Unchecked="CdRBox_UnChecked" />
 
 
-        <Label Content="Nom" HorizontalAlignment="Left" Height="30" Margin="10,20,0,0" VerticalAlignment="Top" Width="70"/>
-        <Label Content="Prenom" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" VerticalAlignment="Top" Width="70"/>
-        <Label Content="Sexe" HorizontalAlignment="Left" Height="30" Margin="10,120,0,0" VerticalAlignment="Top" Width="70"/>
-        <Label Content="Date Naissance " HorizontalAlignment="Left" Height="25" Margin="10,170,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label Content="JJ/MM/AAAA" HorizontalAlignment="Left" Height="30" Margin="290,170,0,0" VerticalAlignment="Top" Width="83"/>
-        <Label Content="Adresse" HorizontalAlignment="Left" Height="30" Margin="10,220,0,0" VerticalAlignment="Top" Width="70"/>
-        <Label Content="Telephone" HorizontalAlignment="Left" Height="30" Margin="10,270,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label Name="AgeLabel" Content="Age" HorizontalAlignment="Left" Height="30" Margin="10,320,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label Content="Etes vous?" HorizontalAlignment="Left" Height="30" Margin="10,370,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Height="30" Margin="10,20,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" />
+        <Label Content="Prenom :" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <Label Content="Sexe :" HorizontalAlignment="Left" Height="30" Margin="10,120,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <Label Content="Date Naissance :" HorizontalAlignment="Left" Height="25" Margin="10,170,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold"/>
+        <Label Content="JJ/MM/AAAA" HorizontalAlignment="Left" Height="30" Margin="290,170,0,0" VerticalAlignment="Top" Width="83" />
+        <Label Content="Adresse :" HorizontalAlignment="Left" Height="30" Margin="10,220,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+        <Label Content="Telephone :" HorizontalAlignment="Left" Height="30" Margin="10,270,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold"/>
+        <Label Name="AgeLabel" Content="Age :" HorizontalAlignment="Left" Height="30" Margin="10,320,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold"/>
+        <Label Content="Etes vous?" HorizontalAlignment="Left" Height="30" Margin="10,370,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
 
-        <TextBox Name ="EmailBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <TextBox Name ="EmailBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" />
         <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="500,125,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
         <PasswordBox Name="PswdBoxVerif" HorizontalAlignment="Left" Height="20" Margin="500,175,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
-        <Button Name="VerifierMDPButton" Content="Verifier password" HorizontalAlignment="Left" Height="20" Margin="54,175,0,0" VerticalAlignment="Top" Width="107" Click="CalculerCotisation_Click" Grid.Column="1"/>
-        <TextBox Name ="IDClientBox"  HorizontalAlignment="Left" Height="25" TextAlignment="Center" Margin="500,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
-        <Button Name="VerifierIdCButton" Content="Verifier Id Client" HorizontalAlignment="Left" Height="25" Margin="54,220,0,0" VerticalAlignment="Top" Width="107" Click="CalculerCotisation_Click" Grid.Column="1"/>
-        <TextBox Name ="IDCdRBox"  HorizontalAlignment="Left" Height="25" TextAlignment="Center" Margin="500,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
-        <Button Name="VerifierIdCdRButton" Content="Verifier Id CdR" HorizontalAlignment="Left" Height="25" Margin="54,320,0,0" VerticalAlignment="Top" Width="107" Click="CalculerCotisation_Click" Grid.Column="1"/>
+        <Button Name="VerifierMDPButton" Content="Verifier password" HorizontalAlignment="Left" Height="20" Margin="54,175,0,0" VerticalAlignment="Top" Width="107" Click="VerifierPassword_Click" Grid.Column="1"/>
+        <TextBox Name ="IDClientBox" MaxLength="6" LostFocus="IdClient_LostFocus"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Button Name="VerifierIdCButton"  Content="Verifier Id Client" HorizontalAlignment="Left" Height="20" Margin="54,225,0,0" VerticalAlignment="Top" Width="107" Click="VerifierIdClient_Click" Grid.Column="1"/>
+        <TextBox Name ="IDCdRBox" MaxLength="6" LostFocus="IdCdR_LostFocus" HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Button Name="VerifierIdCdRButton" Content="Verifier Id CdR" HorizontalAlignment="Left" Height="20" Margin="54,325,0,0" VerticalAlignment="Top" Width="107" Click="VerifierIdCdR_Click" Grid.Column="1"/>
 
 
-        <Label Name ="LoginLabel" Content="Pour les ID, entrez 6 entiers : " FontWeight="ExtraBlack" Foreground="Red" HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="180"/>
-        <Label Name="EmailLabel" Content="Email" HorizontalAlignment="Left" Height="30" Margin="400,70,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label Name="MotDePasseLabel" Content="Mot de passe" HorizontalAlignment="Left" Height="30" Margin="400,120,0,0" VerticalAlignment="Top" Width="95"/>
-        <Label Name="VerificationMotDePasseLabel" Content="Verification" HorizontalAlignment="Left" Height="30" Margin="400,170,0,0" VerticalAlignment="Top" Width="95"/>
-        <Label Name="IDClientLabel" Content="Id Client :        C" HorizontalAlignment="Left" Height="30" Margin="400,220,0,0" VerticalAlignment="Top" Width="95"/>
-        <Label Name="IDCdRLabel" Content="Id CdR :       CdR" HorizontalAlignment="Left" Height="30" Margin="400,320,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Name ="LoginLabel" Content="Pour les ID, entrez 6 entiers : " FontWeight="ExtraBlack" Foreground="SaddleBrown" HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="180"/>
+        <Label Name="EmailLabel" Content="Email :" HorizontalAlignment="Left" Height="30" Margin="400,70,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
+        <Label Name="MotDePasseLabel" Content="Mot de passe :" HorizontalAlignment="Left" Height="30" Margin="400,120,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
+        <Label Name="VerificationMotDePasseLabel" Content="Verification :" HorizontalAlignment="Left" Height="30" Margin="400,170,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
+        <Label Name="IDClientLabel" Content="Id Client :" HorizontalAlignment="Left" Height="30" Margin="400,220,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" />
+        <Label Name="IDCdRLabel" Content="Id CdR :" HorizontalAlignment="Left" Height="30" Margin="400,320,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold" />
+        <Label Content="   C" HorizontalAlignment="Left" Height="25" Margin="467,222,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.321,-4.56"/>
 
-        <Button Name ="VerifierBox" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Button2_Click" Grid.Column="1"/>
+        <Button Name ="VerifierBox" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Verifier_Click" Grid.Column="1"/>
         <Button Name ="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="30" Margin="447,365,0,0" VerticalAlignment="Top" Width="154" Click="CancelButton_Click" />
-        <Button Name ="Valider" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click" Grid.Column="1"/>
+        <Button Name ="Valider" Content="Valider l'inscription" HorizontalAlignment="Left" Height="30" Margin="7,365,0,0" VerticalAlignment="Top" Width="154" Click="Valider_Click" Grid.Column="1"/>
+        <Label Content="   C" HorizontalAlignment="Left" Height="25" Margin="467,222,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.321,-4.56"/>
+        <Label Name="IDstart" Content="CdR" HorizontalAlignment="Left" Height="25" Margin="467,320,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.321,-4.56"/>
 
 
 

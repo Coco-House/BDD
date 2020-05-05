@@ -23,16 +23,49 @@ namespace BDD
     {
         private static string username;
         private static string password;
+        public static List<Client> listeClients = new List<Client>();
+        public static List<CdR> listeCdR = new List<CdR>();
+        public static List<Fournisseur> listeFournisseurs = new List<Fournisseur>();
+        public static List<Produit> listeProduits = new List<Produit>();
+        public static List<Recette> listeRecettes = new List<Recette>();
+        public static List<Cooking> listeCooking = new List<Cooking>();
+
+
+        public static string Username
+        {
+            get { return username; }
+        }
+
+        public static string Password
+        {
+            get { return password; }
+        }
+
+        private static void MettreAJourAges()
+        {
+            // calcul age
+            // sauvegarde (modifier)
+        }
+
+        private static void LoadDatabase()
+        {
+
+
+            MettreAJourAges();
+        }
 
         public MainWindow()
         {
             InitializeComponent();
             LoginButton.Visibility = Visibility.Hidden;
+            LoadDatabase();
         }
         
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Connexion Réussie ! Vous pouvez maintenant accéder à l'application !", "Login Successful ! ", MessageBoxButton.OK, MessageBoxImage.Information);
+            PageD_accueil windowAccueil = new PageD_accueil();
+            windowAccueil.Show();
             this.Close();
         }
 

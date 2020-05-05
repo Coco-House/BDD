@@ -16,19 +16,27 @@ namespace BDD
         private int age;
         private string adresse;
         private string email;
+        private string password;
         private string telC;
 
-        public Client(string idC, char sexe, string nomC, string prenomC, string DateN, int age, string adresse, string email, string telC)
+        public Client(string idC, char sexe, string nomC, string prenomC, string DateN, int age, string adresse, string email, string password,string telC)
         {
             this.idC = idC;
             this.sexe = sexe;
-            this.nomC = nomC;
+            this.nomC = nomC.ToUpper();
             this.prenomC = prenomC;
             this.dateNaissance = DateN;
             this.age = age;
             this.adresse = adresse;
             this.email = email;
+            this.password = password;
             this.telC = telC;
+        }
+
+        public string Password
+        {
+            get { return this.password; }
+            set { this.password = value; }
         }
 
         public string IdC

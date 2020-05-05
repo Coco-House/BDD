@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="ModuleClient" Height="90" Width="300">
+        Title="ModuleClient" Height="120" Width="300">
     <StackPanel>
         <Button x:Name ="LoginButton" Content="Login Client" Click="Login_Click" />
         <Button x:Name ="PasserCommandeButton" Content="Passer une commande" Click="PasserUneCommande_Click" />
+        <Button x:Name ="DeconnexionButton" Content="Deconnexion" Click="Deconnexion_Click" />
         <Button x:Name ="RetourButton" Content="Retour" Click="RetourButton_Click" />
     </StackPanel>
 </Window>

@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="PageD_accueil" Height="450" Width="800" Background="white">
+        Title="PageD_accueil" Height="470" Width="800" Background="white">
     <Grid>
-        <Button Content="Module Client" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Client"/>
-        <Button Content="Module CdR" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="475,10,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="CdR"/>
-        <Button Content="Gestion Cooking" FontSize="24" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="25,260,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Gestion"/>
-        <Button Content="Demo" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="475,260,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Demo"/>
+        <Button Name="ClientButton" Content="Module Client" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Client"/>
+        <Button Name="CdRButton" Content="Module CdR" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="475,10,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="CdR"/>
+        <Button Name="GestionButton" Content="Gestion Cooking" FontSize="24" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="25,260,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Gestion"/>
+        <Button Name="DemoButton" Content="Demo" FontSize="25" Background="Orange" FontFamily="Chiller" FontWeight="ExtraBold" FontStyle="Italic" Foreground="White" HorizontalAlignment="Left" Margin="475,260,0,0" VerticalAlignment="Top" Width="300" Height="150" Click="Demo"/>
         <Image HorizontalAlignment="Left" Height="175" Margin="325,120,0,0" VerticalAlignment="Top" Width="150" Source="Logo.png"/>
 
 

@@ -19,6 +19,7 @@ namespace BDD
     /// </summary>
     public partial class PageD_accueil : Window
     {
+        
         public PageD_accueil()
         {
             InitializeComponent();
@@ -34,7 +35,16 @@ namespace BDD
 
         private void CdR(object sender, RoutedEventArgs e)
         {
-
+            if (ConnexionCompte.UnBlockCdR == false)
+            {
+                MessageBox.Show("Attention ! Vous n'etes pas un créateur de recette ! Vous n'avez pas accès à ces fonctions", "Erreur !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                ConnexionCompte window = new ConnexionCompte();
+                window.Show();
+                this.Close();
+            }
         }
 
         private void Gestion(object sender, RoutedEventArgs e)
@@ -47,19 +57,7 @@ namespace BDD
 
         }
 
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            var result = MessageBox.Show("Attention ! êtes-vous sûr de vouloir quitter ? ", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-            if (result == MessageBoxResult.Yes)
-            {
-                this.Close();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
+        
 
     }
 }

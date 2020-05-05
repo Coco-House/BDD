@@ -2,4 +2,4 @@
 
 Non  
 
-- Login Page, Menu, Inscription CdR+Client, Modification table Client, --> reste : passer commande AVANT DE TELEVERSER
+ reste : passer commande + connexion
