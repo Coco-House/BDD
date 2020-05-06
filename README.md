@@ -6,6 +6,7 @@ mysqldump.exe -u root -p --databases projet > "J:/#Projets-ESILV/BDD/Scripts/Bac
 
 # En cours d'utilisation
 
-Non  
+oui
+
 
  reste : passer commande + connexion
