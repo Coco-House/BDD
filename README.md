@@ -1,5 +1,6 @@
 # En cours d'utilisation
 
-Non  
+oui
+
 
  reste : passer commande + connexion
