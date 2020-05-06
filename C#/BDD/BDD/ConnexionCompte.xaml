@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="ConnexionCompte" Height="450" Width="800">
-    <Grid>
-        
+       Title="Connexion" Height="220" Width="380">
+    <Grid Name="LoginPageGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/BDD;component/Images/connexionbackground.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Label Content="Entrez Votre Email : " FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="175"/>
+        <TextBox Name="EmailBox" HorizontalAlignment="Left" Height="20" Margin="190,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+        <Label Content="Entrez Votre Password : " FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="30" Width="175"/>
+        <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="190,65,0,0" VerticalAlignment="Top" Width="166"/>
+
+        <Button Name="LoginButton" Content="Login" HorizontalAlignment="Left" Height="20" Margin="200,150,0,0" VerticalAlignment="Top" Width="127" Click="LoginButton_Click"/>
+        <Button Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="20" Margin="50,150,0,0" VerticalAlignment="Top" Width="120" Click="CancelButton_Click"/>
+        <Button x:Name="ValiderButton2" Content="Login" HorizontalAlignment="Left" Height="20" Margin="200,150,0,0" VerticalAlignment="Top" Width="127" Click="Valider2Button_Click"/>
+
+        <Label Content="Vous n'avez pas de compte ? Cliquer       pour créer un compte." FontWeight="Medium" HorizontalAlignment="Left" Height="25" Margin="10,110,0,0" VerticalAlignment="Top" Width="352"/>
+        <Label Content="ici" HorizontalAlignment="Left" Foreground="blue" FontStyle="Italic" FontWeight="Medium" Height="25" Margin="212,110,0,0" VerticalAlignment="Top" Width="24"/>
+        <Rectangle Fill="Blue" HorizontalAlignment="Left" Height="1" Margin="216,130,0,0" Stroke="Blue" VerticalAlignment="Top" Width="14"/>
+        <Button BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Height="19" Margin="212,116,0,0" VerticalAlignment="Top" Width="24" Click="SignUp"/>
     </Grid>
 </Window>

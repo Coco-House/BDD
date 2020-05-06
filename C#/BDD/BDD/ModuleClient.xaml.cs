@@ -23,6 +23,19 @@ namespace BDD
         public ModuleClient()
         {
             InitializeComponent();
+
+            if(ConnexionCompte.ClientConnecte == true || ConnexionCompte.CdRConnecte == true)
+            {
+                LoginButton.IsEnabled = false;
+                ConnexionButton.IsEnabled = false;
+                DeconnexionButton.IsEnabled = true;
+            }
+            else
+            {
+                LoginButton.IsEnabled = true;
+                ConnexionButton.IsEnabled = true;
+                DeconnexionButton.IsEnabled = false;
+            }
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -34,7 +47,6 @@ namespace BDD
 
         private void PasserUneCommande_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void RetourButton_Click(object sender, RoutedEventArgs e)
@@ -46,7 +58,29 @@ namespace BDD
 
         private void Deconnexion_Click(object sender, RoutedEventArgs e)
         {
+            var result = MessageBox.Show("Attention ! êtes-vous sûr de vouloir vous deconnecter ? ", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
+            if (result == MessageBoxResult.Yes)
+            {
+                ConnexionCompte.UnBlockCdR = false;
+                ConnexionCompte.ClientConnecte = false;
+                ConnexionCompte.CdRConnecte = false;
+                LoginButton.IsEnabled = true;
+                ModuleClient window = new ModuleClient();
+                window.Show();
+                this.Close();
+            }
+            else
+            {
+            }
+
+        }
+
+        private void Connexion_Click(object sender, RoutedEventArgs e)
+        {
+            ConnexionCompte window = new ConnexionCompte();
+            window.Show();
+            this.Close();
         }
     }
 }

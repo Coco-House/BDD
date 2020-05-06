@@ -180,5 +180,8 @@
     <Resource Include="Images\LoginBackground.png" />
     <Resource Include="Images\Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ConnexionBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

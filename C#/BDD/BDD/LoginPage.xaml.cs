@@ -143,17 +143,130 @@ namespace BDD
         {
             ClientBox.IsChecked = true;
         }
+        private void Oui_Checked(object sender, RoutedEventArgs e)
+        {
+            NonBox.IsChecked = false;
+
+            NomBox.IsEnabled = false;
+            PrenomBox.IsEnabled = false;
+            MBox.IsEnabled = false;
+            FBox.IsEnabled = false;
+            JourBox.IsEnabled = false;
+            MoisBox.IsEnabled = false;
+            AnneeBox.IsEnabled = false;
+            AdresseBox.IsEnabled = false;
+            TelephoneBox.IsEnabled = false;
+            Age.IsEnabled = false;
+            ClientBox.IsEnabled = false;
+            CdRBox.IsEnabled = false;
+
+            IDClientBox.IsEnabled = false;
+            VerifierIdCButton.IsEnabled = false;
+
+
+            IDCdRBox.Visibility = Visibility.Visible;
+            IDCdRLabel.Visibility = Visibility.Visible;
+            IDstart.Visibility = Visibility.Visible;
+            VerifierIdCdRButton.Visibility = Visibility.Visible;
+        }
+
+        private void Oui_UnChecked(object sender, RoutedEventArgs e)
+        {
+            NonBox.IsChecked = true;
+        }
+
+        private void Non_Checked(object sender, RoutedEventArgs e)
+        {
+            OuiBox.IsChecked = false;
+
+            NonBox.IsChecked = true;
+            NomBox.IsEnabled = true;
+            PrenomBox.IsEnabled = true;
+            MBox.IsEnabled = true;
+            FBox.IsEnabled = true;
+            JourBox.IsEnabled = true;
+            MoisBox.IsEnabled = true;
+            AnneeBox.IsEnabled = true;
+            AdresseBox.IsEnabled = true;
+            TelephoneBox.IsEnabled = true;
+            Age.IsEnabled = true;
+            ClientBox.IsEnabled = true;
+            CdRBox.IsEnabled = true;
+
+            IDClientBox.IsEnabled = true;
+            VerifierIdCButton.IsEnabled = true;
+
+
+            IDCdRBox.Visibility = Visibility.Hidden;
+            IDCdRLabel.Visibility = Visibility.Hidden;
+            IDstart.Visibility = Visibility.Hidden;
+            VerifierIdCdRButton.Visibility = Visibility.Hidden;
+        }
+
+        private void Non_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OuiBox.IsChecked = true;
+        }
 
         private void VerifierPassword_Click(object sender, RoutedEventArgs e)
         {
-            if (PswdBox.Password != "" && PswdBoxVerif.Password != "")
+            if (EmailBox.IsEnabled == false && EmailBox.Text != "" && PswdBox.Password != "" && PswdBoxVerif.Password != "")
             {
                 if (PswdBox.Password == PswdBoxVerif.Password)
                 {
-                    MessageBox.Show("Les mots de passe correspondent !");
-                    PswdBox.IsEnabled = false;
-                    PswdBoxVerif.IsEnabled = false;
-                    VerifierMDPButton.IsEnabled = false;
+                    if (OuiBox.IsChecked == true)
+                    {
+                        string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+
+                        MySqlConnection connection = new MySqlConnection(connectionString);
+                        connection.Open();
+
+                        MySqlCommand command = connection.CreateCommand();
+                        command.CommandText = "SELECT password FROM projet.client WHERE email='" + EmailBox.Text + "';";     // la requete
+
+                        MySqlDataReader reader;
+                        reader = command.ExecuteReader();               // executer la requete (reader sera une ligne)
+
+                        // Manipulation du resultat
+
+                        string pswd;
+                        string pswdEntre = PswdBoxVerif.Password;
+                        bool correct = false;
+
+                        while (reader.Read()) // on parcourt reader ligne par ligne
+                        {
+                            pswd = reader.GetString(0);
+
+                            if (pswd == pswdEntre)
+                            {
+                                correct = true;
+                                break;
+                            }
+                        }
+
+                        if (correct == false)
+                        {
+                            MessageBox.Show("Le mot de passe ne correspond pas à cet email !");
+                            PswdBox.Password = string.Empty;
+                            PswdBoxVerif.Password = string.Empty;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vous avez entré le bon mot de passe et email!");
+                            PswdBox.IsEnabled = false;
+                            PswdBoxVerif.IsEnabled = false;
+                            VerifierMDPButton.IsEnabled = false;
+                        }
+
+                        connection.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Les mots de passe correspondent !");
+                        PswdBox.IsEnabled = false;
+                        PswdBoxVerif.IsEnabled = false;
+                        VerifierMDPButton.IsEnabled = false;
+                    }
                 }
                 else
                 {
@@ -163,7 +276,7 @@ namespace BDD
             }
             else
             {
-                MessageBox.Show("Attention ! Il faut remplir les deux cases password avant de verifier !", "Erreur !", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Attention ! Il faut remplir l'email et les deux cases password et verifier l'email avant de verifier !", "Erreur !", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -316,11 +429,9 @@ namespace BDD
 
         private void Verifier_Click(object sender, RoutedEventArgs e)
         {
-            if (NomBox.Text != "" && PrenomBox.Text != "" && (MBox.IsChecked == true || FBox.IsChecked == true) && JourBox.Text != "" && MoisBox.Text != "" && AnneeBox.Text != ""
-                && AdresseBox.Text != "" && TelephoneBox.Text != "" && Age.Visibility == Visibility.Hidden
-                && EmailBox.Text != "" && PswdBox.Password != "" && PswdBoxVerif.Password != "" && VerifierMDPButton.IsEnabled == false && IDClientBox.Text != "" && VerifierIdCButton.IsEnabled == false && IDClientBox.IsEnabled == false
-                && (ClientBox.IsChecked == true || (CdRBox.IsChecked == true && IDCdRBox.Text != "" && VerifierIdCdRButton.IsEnabled == false && IDCdRBox.IsEnabled == false)))
-
+            if (((NonBox.IsChecked == true && NomBox.Text != "" && PrenomBox.Text != "" && (MBox.IsChecked == true || FBox.IsChecked == true) && JourBox.Text != "" && MoisBox.Text != "" && AnneeBox.Text != ""
+                && AdresseBox.Text != "" && TelephoneBox.Text != "" && Age.Visibility == Visibility.Hidden && (ClientBox.IsChecked == true || (CdRBox.IsChecked == true && IDCdRBox.Text != "" && VerifierIdCdRButton.IsEnabled == false && IDCdRBox.IsEnabled == false))) || (OuiBox.IsChecked == true && IDCdRBox.Text != "" && VerifierIdCdRButton.IsEnabled == false && IDCdRBox.IsEnabled == false))
+                && EmailBox.Text != "" && VerifierEmail.IsEnabled == false && PswdBox.Password != "" && PswdBoxVerif.Password != "" && VerifierMDPButton.IsEnabled == false && IDClientBox.IsEnabled == false && VerifierIdCButton.IsEnabled == false)
             {
                 Valider.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             }
@@ -344,80 +455,254 @@ namespace BDD
 
         private void Valider_Click(object sender, RoutedEventArgs e)
         {
-             try
-             {
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
-
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-
-
-            string idC = IDClientBox.Text;
-            char sexe = 'F';
-
-            if (MBox.IsChecked == true)
+            try
             {
-                sexe = 'M';
+                if (NonBox.IsChecked == true)
+                {
+                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+
+                    MySqlConnection connection = new MySqlConnection(connectionString);
+                    connection.Open();
+
+
+                    string idC = "C"+IDClientBox.Text;
+                    char sexe = 'F';
+
+                    if (MBox.IsChecked == true)
+                    {
+                        sexe = 'M';
+                    }
+
+                    string nomC = NomBox.Text;
+                    string prenomC = PrenomBox.Text;
+                    string dateNaissance = AnneeBox.Text + "-" + MoisBox.Text + "-" + JourBox.Text;
+                    int age = Convert.ToInt32(CalculAgeLabel.Content);
+                    string adresse = AdresseBox.Text;
+                    string email = EmailBox.Text;
+                    string password = PswdBoxVerif.Password;
+                    string telC = TelephoneBox.Text;
+
+                    MySqlCommand command = connection.CreateCommand();
+                    command.CommandText = " INSERT INTO projet.client(`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES('" + idC + "','" + nomC + "','" + prenomC + "','" + dateNaissance + "'," + age + ",'" + adresse + "','" + sexe + "','" + email + "','" + password + "','" + telC + "');";
+                    MySqlDataReader reader;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read()) { }
+
+                    connection.Close();
+
+
+                    if (CdRBox.IsChecked == true)
+                    {
+                        int cook = 0;
+                        string idCdR = "CdR"+IDCdRBox.Text;
+
+                        CdR newCdR = new CdR(idC, sexe, nomC, prenomC, dateNaissance, age, adresse, email, password, telC, idCdR, cook);
+                        MainWindow.listeCdR.Add(newCdR);
+
+                        connection.Open();
+                        MySqlCommand commandCdR = connection.CreateCommand();
+                        commandCdR.CommandText = "INSERT INTO projet.cdr(`idCdR`,`cook`,`idC`) VALUES('" + idCdR + "','" + cook + "','" + idC + "');";
+
+                        MySqlDataReader readerCdR;
+                        readerCdR = commandCdR.ExecuteReader();
+
+                        while (readerCdR.Read()) { }
+
+                        connection.Close();
+                    }
+                    else if (ClientBox.IsChecked == true)
+                    {
+                        Client newClient = new Client(idC, sexe, nomC, prenomC, dateNaissance, age, adresse, email, password, telC);
+                        MainWindow.listeClients.Add(newClient);
+                    }
+
+                    MessageBox.Show("Inscription reussie !", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    ConnexionCompte window = new ConnexionCompte();
+                    window.Show();
+
+                    this.Close();
+                }
+                else if (OuiBox.IsChecked == true)
+                {
+                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+
+                    MySqlConnection connection = new MySqlConnection(connectionString);
+                    connection.Open();
+
+                    MySqlCommand command1 = connection.CreateCommand();
+                    command1.CommandText = "SELECT idC FROM projet.Client WHERE email='" + EmailBox.Text + "';";
+                    MySqlDataReader reader1;
+                    reader1 = command1.ExecuteReader();
+
+                    string idC = "";
+
+                    while (reader1.Read())
+                    {
+                        idC = reader1.GetString(0);
+                    }
+
+                    connection.Close();
+
+                    int cook = 0;
+                    string idCdR = "CdR"+IDCdRBox.Text;
+
+                    connection.Open();
+                    MySqlCommand commandCdR = connection.CreateCommand();
+                    commandCdR.CommandText = "INSERT INTO projet.cdr(`idCdR`,`cook`,`idC`) VALUES('" + idCdR + "','" + cook + "','" + idC + "');";
+
+                    MySqlDataReader readerCdR;
+                    readerCdR = commandCdR.ExecuteReader();
+
+                    while (readerCdR.Read()) { }
+
+                    connection.Close();
+
+                    connection.Open();
+                    MySqlCommand commandRecherche = connection.CreateCommand();
+                    commandRecherche.CommandText = "SELECT sexe,nomC,prenomC,DateNaissance,age,adresse,telC FROM projet.client WHERE idC='" + idC + "';";
+
+                    MySqlDataReader readerRecherche;
+                    readerRecherche = commandRecherche.ExecuteReader();
+
+                    char sexe = ' ';
+                    string nomC = "";
+                    string prenomC = "";
+                    string dateNaissance = "";
+                    DateTime dateNaissance2 = new DateTime();
+                    int age = 0;
+                    string adresse = "";
+                    string email = EmailBox.Text;
+                    string password = PswdBoxVerif.Password;
+                    string telC = "";
+
+                    while (readerRecherche.Read())
+                    {
+                        sexe = readerRecherche.GetChar(0);
+                        nomC = readerRecherche.GetString(1);
+                        prenomC = readerRecherche.GetString(2);
+                        dateNaissance2 = readerRecherche.GetDateTime(3);
+
+
+                        dateNaissance = dateNaissance2.Year + "-" + dateNaissance2.Month + "-" + dateNaissance2.Day;
+
+                        age = readerRecherche.GetInt32(4);
+                        adresse = readerRecherche.GetString(5);
+                        telC = readerRecherche.GetString(6);
+                    }
+
+                    connection.Close();
+
+
+                    CdR newCdR = new CdR(idC, sexe, nomC, prenomC, dateNaissance, age, adresse, email, password, telC, idCdR, cook);
+                    MainWindow.listeCdR.Add(newCdR);
+
+                    MessageBox.Show("Inscription reussie !", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
+                    ConnexionCompte window = new ConnexionCompte();
+                    window.Show();
+
+                    this.Close();
+                }
             }
-
-            string nomC = NomBox.Text;
-            string prenomC = PrenomBox.Text;
-            string dateNaissance = AnneeBox.Text + "-" + MoisBox.Text + "-" + JourBox.Text;
-            int age = Convert.ToInt32(CalculAgeLabel.Content);
-            string adresse = AdresseBox.Text;
-            string email = EmailBox.Text;
-            string password = PswdBoxVerif.Password;
-            string telC = TelephoneBox.Text;
-
-            MySqlCommand command = connection.CreateCommand();
-            command.CommandText = " INSERT INTO projet.client(`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES('" + idC + "','" + nomC + "','" + prenomC + "','" + dateNaissance + "'," + age + ",'" + adresse + "','" + sexe + "','" + email + "','" + password + "','" + telC + "');";
-            MySqlDataReader reader;
-            reader = command.ExecuteReader();
-
-            while (reader.Read()) { }
-
-            connection.Close();
-
-
-            if (CdRBox.IsChecked == true)
+            catch
             {
-                int cook = 0;
-                string idCdR = IDCdRBox.Text;
-
-                CdR newCdR = new CdR(idC, sexe, nomC, prenomC, dateNaissance, age, adresse, email, password, telC, idCdR, cook);
-                MainWindow.listeCdR.Add(newCdR);
-
-                connection.Open();
-                MySqlCommand commandCdR = connection.CreateCommand();
-                commandCdR.CommandText = "INSERT INTO projet.cdr(`idCdR`,`cook`,`idC`) VALUES('" + idCdR + "','" + cook + "','" + idC + "');";
-
-                MySqlDataReader readerCdR;
-                readerCdR = commandCdR.ExecuteReader();
-
-                while (readerCdR.Read()) { }
-
-                connection.Close();
-
+                MessageBox.Show("Inscription non reussie !", "Erreur!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else
-            {
-                Client newClient = new Client(idC, sexe, nomC, prenomC, dateNaissance, age, adresse, email, password, telC);
-                MainWindow.listeClients.Add(newClient);
-            }
-
-            MessageBox.Show("Inscription reussie !", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
-            ConnexionCompte window = new ConnexionCompte();
-            window.Show();
-
-            this.Close();
-              }
-              catch
-              {
-                  MessageBox.Show("Inscription non reussie !", "Erreur!", MessageBoxButton.OK, MessageBoxImage.Error);
-              }
 
         }
 
+        private void VerifierEmail_Click(object sender, RoutedEventArgs e)
+        {
+            if (NonBox.IsChecked == true)
+            {
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "SELECT email FROM projet.client";     // la requete
+
+                MySqlDataReader reader;
+                reader = command.ExecuteReader();               // executer la requete (reader sera une ligne)
+
+                // Manipulation du resultat
+
+                string email;
+                string emailEntre = EmailBox.Text;
+                bool existe = false;
+
+                while (reader.Read()) // on parcourt reader ligne par ligne
+                {
+                    email = reader.GetString(0); // 1ere colonne
+
+                    if (email == emailEntre)
+                    {
+                        MessageBox.Show("L'email existe deja, veuillez saisir un autre Id.");
+                        IDCdRBox.Text = string.Empty;
+                        existe = true;
+                        break;
+                    }
+
+                }
+
+                if (existe == false)
+                {
+                    MessageBox.Show("L'email a bien ete enregistre.");
+                    EmailBox.IsEnabled = false;
+                    VerifierEmail.IsEnabled = false;
+                    OuiBox.IsEnabled = false;
+                    NonBox.IsEnabled = false;
+                }
+                connection.Close();
+            }
+            else if (OuiBox.IsChecked == true)
+            {
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "SELECT email FROM projet.client";     // la requete
+
+                MySqlDataReader reader;
+                reader = command.ExecuteReader();               // executer la requete (reader sera une ligne)
+
+                // Manipulation du resultat
+
+                string email;
+                string emailEntre = EmailBox.Text;
+                bool existe = false;
+
+                while (reader.Read()) // on parcourt reader ligne par ligne
+                {
+                    email = reader.GetString(0); // 1ere colonne
+
+                    if (email == emailEntre)
+                    {
+                        existe = true;
+                        break;
+                    }
+
+                }
+
+                if (existe == false)
+                {
+                    MessageBox.Show("Il n'y a pas de compte client avec cet email.");
+                    EmailBox.Text = string.Empty;
+                }
+                else
+                {
+                    EmailBox.IsEnabled = false;
+                    VerifierEmail.IsEnabled = false;
+                    OuiBox.IsEnabled = false;
+                    NonBox.IsEnabled = false;
+                }
+                connection.Close();
+            }
+
+        }
     }
 }

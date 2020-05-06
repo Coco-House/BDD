@@ -42,7 +42,12 @@
         <Label Name="AgeLabel" Content="Age :" HorizontalAlignment="Left" Height="30" Margin="10,320,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold"/>
         <Label Content="Etes vous?" HorizontalAlignment="Left" Height="30" Margin="10,370,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
 
-        <TextBox Name ="EmailBox"  HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" />
+
+        <CheckBox Name="OuiBox" Content="Oui" HorizontalAlignment="Left" Height="20" Margin="0,26,0,0" VerticalAlignment="Top" Width="78" Grid.Column="1" Checked="Oui_Checked" Unchecked="Oui_UnChecked"/>
+        <CheckBox Name="NonBox" Content="Non" HorizontalAlignment="Left" Height="20" Margin="83,26,0,0" VerticalAlignment="Top" Width="78" Grid.Column="1" Checked="Non_Checked" Unchecked="Non_Unchecked"/>
+
+        <TextBox Name ="EmailBox" HorizontalAlignment="Left" Height="20" TextAlignment="Center" Margin="500,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" />
+        <Button Name="VerifierEmail" Content="Verifier email" HorizontalAlignment="Left" Height="20" Margin="54,75,0,0" VerticalAlignment="Top" Width="107" Grid.Column="1" Click="VerifierEmail_Click"/>
         <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="500,125,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
         <PasswordBox Name="PswdBoxVerif" HorizontalAlignment="Left" Height="20" Margin="500,175,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
         <Button Name="VerifierMDPButton" Content="Verifier password" HorizontalAlignment="Left" Height="20" Margin="54,175,0,0" VerticalAlignment="Top" Width="107" Click="VerifierPassword_Click" Grid.Column="1"/>
@@ -52,7 +57,7 @@
         <Button Name="VerifierIdCdRButton" Content="Verifier Id CdR" HorizontalAlignment="Left" Height="20" Margin="54,325,0,0" VerticalAlignment="Top" Width="107" Click="VerifierIdCdR_Click" Grid.Column="1"/>
 
 
-        <Label Name ="LoginLabel" Content="Pour les ID, entrez 6 entiers : " FontWeight="ExtraBlack" Foreground="SaddleBrown" HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="180"/>
+        <Label Name ="CompteExisteLabel" Content="Avez-vous un compte client ?" FontWeight="ExtraBlack" Foreground="SaddleBrown" HorizontalAlignment="Left" Height="30" Margin="400,20,0,0" VerticalAlignment="Top" Width="183"/>
         <Label Name="EmailLabel" Content="Email :" HorizontalAlignment="Left" Height="30" Margin="400,70,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
         <Label Name="MotDePasseLabel" Content="Mot de passe :" HorizontalAlignment="Left" Height="30" Margin="400,120,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
         <Label Name="VerificationMotDePasseLabel" Content="Verification :" HorizontalAlignment="Left" Height="30" Margin="400,170,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
