@@ -18,7 +18,18 @@ INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1500', 'Au Pa
 
 -- insertion dans la table produit
 
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('saumon', 'poisson', 'kg',10,3,20,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oeuf','aliment','unite',80,10,100,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('sucre','sucre','g',50000,10000,100000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('vanille','épice','unite',10,50,150,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('mascarpone','fromage','g',50000,5000,80000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('biscuit à la cuillère','biscuit','unite',50,20,100,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('café','boisson','cl',5000,2000,10000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('cacao','cocaine','g',2000,1000,5000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('courgette','légume','kg',30,10,100,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('gruyère râpé','fromage','g',5000,2000,10000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lait','boisson','kg',10,3,20,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('saumon','poisson','kg',10,3,20,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('saumon','poisson','kg',10,3,20,'F200');
 
 
 -- insertion dans la table client
@@ -60,3 +71,9 @@ INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descript
 -- insertion dans la table cooking
 
 INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K1');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K2');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K3');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K4');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K5');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K6');
+INSERT INTO `projet`.`cooking` (`idCooking`) VALUES ('C00K7');
