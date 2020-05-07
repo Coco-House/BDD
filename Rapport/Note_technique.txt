@@ -15,6 +15,8 @@ pour expliquer les choix techniques
  
  * pour offrir la possibilité d'accéder à chaque ingrédient de la liste d'ingrédients, il faut écrire la liste en séparant les ingrédients par des points-virgules, comme selon la forme suivante : "farine;oeufs;sel;levure..."
  
+ * nous avons crée un backup de la base de données pour ne pas avoir à rentrer les données à chaque fois
+ 
  
  -- Code C# / WPF
   * nous avons donné la possibilité de s'inscrire au site en tant que Client normal ou en tant que CdR. De plus, même en étant inscrit en tant que Client, nous avons ajouté la possibilité de s'inscrire en tant que CdR, qui est un Client particulier ;
