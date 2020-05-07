@@ -38,11 +38,24 @@ INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adr
 -- insertion dans la table CdR
 
 INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR123321',40,'C123456');
+INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR241234',24,'C789987');
+INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR029384',46,'C187483');
+INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR102938',20,'C789987');
+INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR918274',120,'C198743');
 
 
 -- insertion dans la table recette
 
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R1','tiramisu','Dessert','oeufs;sucre;vanille;mascarpone;biscuits à la cuillère;café;cacao','Dessert italien',12,2,'GratR1',2,'CdR123321');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R1','Tiramisu','Dessert','oeuf;sucre;vanille;mascarpone;biscuit à la cuillère;café;cacao','Dessert italien',12,2,'GratR1',2,'CdR123321');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R2','Flan de courgettes','Entrée','courgette;gruyère râpé;lait;oeuf;basilic','Entrée froide végétarienne sans gluten',16,2,'GratR2',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R3','Quiche lorraine','Plat','pâte brisée;lardon;beurre;oeuf;crème fraîche;lait;muscade;sel;poivre','Quiche lorraine en plat principal',20,2,'GratR3',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R4','Lasagnes à la bolognaise','Plat','pâte de lasagne;oignons;ail;carotte;boeuf haché;purée de tomate;eau;laurier;thym;basilic;muscade;fromage râpé;sel;poivre','Lasagnes italiennes',25,2,'GratR4',2,'CdR241234');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R5','Pancake','Dessert','farine;sucre;oeufs;levure;beurre;sel;lait','Dessert rapide et végétarien',8,2,'GratR5',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R6','Cookie au chocolat','Dessert','beurre;oeuf;sucre;vanille;farine;chocolat;sel;levure','Dessert végétarien',4,2,'GratR6',2,'CdR029384');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R7','Tarte aux pommes','Dessert','pâte brisée;pomme;sucre;beurre','Dessert normand rapide',12,2,'GratR7',2,'CdR029384');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R8','Gaspacho','Entrée','tomate;poivron;concombre;oignon;ail;vinaigre;oeuf;basilic;huile;poivre;sel','Entrée végétarienne rapide et froide',8,2,'GratR8',2,'CdR102938');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R9','Crêpe','Dessert','farine;sucre;oeuf;beurre;sel;lait;huile','Dessert rapide',6,2,'GratR9',2,'CdR102938');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R10','Fondant au chocolat','Dessert','chocolat;farine;sucre;oeuf;beurre','Gâteau au chocolat fondant',12,2,'GratR10',2,'CdR102938');
 
 -- insertion dans la table cooking
 
