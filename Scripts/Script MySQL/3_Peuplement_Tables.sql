@@ -23,8 +23,16 @@ INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stock
 
 -- insertion dans la table client
 
-INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C123456','DUPONT','Nicolas','2000-05-18',YEAR(CURDATE())-YEAR(`DateNaissance`),'25 Rue de la Republique, 75001, Paris','M','dupont.nicolas@gmail.com','Nicolas2000','0651249903');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C123456','DUPONT','Nicolas','2000-05-18',YEAR(CURDATE())-YEAR(`DateNaissance`),'25 rue de la Republique, 75001, Paris','M','dupont.nicolas@gmail.com','Nicolas2000','0651249903');
 INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C789987','MARTIN','Jeanne','1999-04-14',YEAR(CURDATE())-YEAR(`DateNaissance`),'42 rue de la Paix, 75001, Paris','F','martin.jeanne@gmail.com','Jeanne1999','0712456598');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C429385','BEAUCHESNE','Thiery','1970-10-02',YEAR(CURDATE())-YEAR(`DateNaissance`),'12 rue Marie de Médicis, 06150, Cannes-La-Bocca','M','b.thiery@outlook.com','thierybg','0183472993');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C640593','QUINCY','Marceau','1989-07-13',YEAR(CURDATE())-YEAR(`DateNaissance`),'83 boulevard Bryas, 60100, Creil','M','quicy.m@gmail.com','MarceauESILV','0612540365');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C198743','GUERTIN','Nadine','1992-02-21',YEAR(CURDATE())-YEAR(`DateNaissance`),'18 rue du Château, 42100, Saint-Etienne','F','nadine.guertin@yahoo.fr','Nadine','0709142374');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C019847','LABELLE','Viollette','1995-02-24',YEAR(CURDATE())-YEAR(`DateNaissance`),'80 rue Marguerite, 94300, Vincennes','F','viollette.labelle@gmail.com','viollettetropbelle','0753110854');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C928502','DUMONT','Ambre','1994-10-22',YEAR(CURDATE())-YEAR(`DateNaissance`),'27 rue Adolphe Wurtz','F','ambredumont@gmail.com','ambredumont123','0785931948');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C187483','BERNARD','Virginie','1985-04-05',YEAR(CURDATE())-YEAR(`DateNaissance`),'19 boulevar Amiral Courbet, 44700, Orvault','F','virginieb@gmail.com','virginieB321','0701943895');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C029834','FABRE','Frédéric','1983-08-31',YEAR(CURDATE())-YEAR(`DateNaissance`),'50 place du Jeu de Paume, 47000, Agen','M','frederic.fabre@outlook.com','FabreFrederic','0619830294');
+INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adresse`,`sexe`,`email`,`password`,`telC`) VALUES ('C437619','DEMANGE','Maxence','1992-11-20',YEAR(CURDATE())-YEAR(`DateNaissance`),'82 rue Sébastopol, 97230, Sainte-Marie','F','demange.maxence@outlook.com','demangemax','0619805832');
 
 
 -- insertion dans la table CdR
