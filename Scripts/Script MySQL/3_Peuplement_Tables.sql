@@ -4,6 +4,17 @@ INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F100', 'Distra
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F200', 'Davigel', '0106149938');
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F300', 'Agidra', '0136928534');
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F400', 'MiamLand', '0126339604');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F500', 'TransGourmet', '0811656588');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F600', 'Berard', '0490715574');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F700', 'brake', '0142335164');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F800', 'PassionFroid', '0112204935');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F900', 'OpaDistribution', '0410499351');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1000', 'Odestro SARL', '0139849491');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1100', 'Buisson', '0111934843');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1200', 'Les Menus du Monde', '0492548989');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1300', 'Maïs Délice', '0446980970');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1400', 'Le Delas', '0406387412');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1500', 'Au Paradis des Papilles', '0159028434');
 
 -- insertion dans la table produit
 
