@@ -2,10 +2,19 @@
 pour expliquer les choix techniques
 
 -- Choix pour le diagramme Entites/Associations
- * le createur de recettes est un client particulier, donc nous avons cree une table nouvelle liee a la table client mais egalement a la table recette car les recettes permettent au createur de recettes de gagner des points Cook.
+ * le createur de recettes est un client particulier, donc nous avons crée une table nouvelle liée a la table client mais egalement à la table recette car les recettes permettent au createur de recettes de gagner des points Cook et les créateurs créent des recettes ;
+ 
+ * nous avons décidé de créer une table Point, qui représente les Points Cook pour éviter d'avoir une relation ternaire (à trois temps) entre les tables Client, Recette et Créateur de recettes. Ainsi, cette table contient l'identification des points gratifiés au CdR et le nombre de points donnés.
 
 
 -- Organisation de la base de données
 
-  *gestion de comptes et de mots de passe : lors de l'inscription d'une personne, nous stockons dans une base de données les informations données et particulièrement les identifiants et les mots de passe, car cela nous permet alors de gérer la partie connexion d'une personne déjà inscrite. 
-  Cependant, nous ne protégeons/hash pas les données sensibles telles que les mots de passe car il ne s'agit pas réellement d'une application entièrement fonctionnelle. Nous aurions pu faire cette méthode si nous avions plus de temps.
+ * gestion de comptes et de mots de passe : lors de l'inscription d'une personne, nous stockons dans une base de données les informations données et particulièrement les identifiants et les mots de passe, car cela nous permet alors de gérer la partie connexion d'une personne déjà inscrite. Cependant, nous ne protégeons pas (hash) les données sensibles telles que les mots de passe car il ne s'agit pas réellement d'une application entièrement fonctionnelle. Nous aurions pu faire cette méthode si nous avions plus de temps ;
+ 
+ * pour faciliter l'accès à certaines données, telles que retrouver des clients/CdR/fournisseurs, nous avons décidé de procéder avec des identifiants ;
+ 
+ * pour offrir la possibilité d'accéder à chaque ingrédient de la liste d'ingrédients, il faut écrire la liste en séparant les ingrédients par des points-virgules, comme selon la forme suivante : "farine;oeufs;sel;levure..."
+ 
+ 
+ -- Code C# / WPF
+  * nous avons donné la possibilité de s'inscrire au site en tant que Client normal ou en tant que CdR. De plus, même en étant inscrit en tant que Client, nous avons ajouté la possibilité de s'inscrire en tant que CdR, qui est un Client particulier ;
