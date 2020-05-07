@@ -604,6 +604,7 @@ namespace BDD
 
                     this.Close();
                 }
+                MainWindow.LoadDatabase();
             }
             catch
             {

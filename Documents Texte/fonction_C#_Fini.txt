@@ -1,0 +1,91 @@
+I- Remarques : 
+  -----------
+
+- Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
+
+
+
+fonction requetes sql
+ - 1 : ajout d'éléments dans la dataset (recettes, clients, cooking, fournisseurs ...), points Cook
+ - 2 : affichage
+ - 3 : commandes / livraisons
+ - 4 : composition recette
+ - 5 : stocks actuels / stocks min,max / stocks apres recette
+
+
+
+III- 3 Parties :
+    -----------
+
+! = fonction/page WPF
+
+1. Partie clients
+
+    -! Passer une commande : parcourir liste recettes, choisir, payer, valider paiement en COOK. 
+        * Si le client qui commande est un CdR --> paiement = Son Credit Cook dispo - prix recette/commande en cook
+        * Sinon --> il paie en euro, puis on transforme euro en cook
+
+    - Pouvoir commander plusieurs plats ou plusieurs fois le meme (fonction compteur de commande)
+    
+    -! APRES paiement, 
+        * compteur de commande de la recette ++
+        * si le nombre de commande d'une recette (EN PRENANT EN COMPTE LA COMMANDE EN COURS) > 10 --> prix vente augemente de 2 cook (%10, Prix += 2)
+        * Meme chose, si ca depasse 50, remuneration passe de 2 à 4 cook
+        * Mettre a jour le stocs des produits utilises pour realiser ces plats commandes
+
+ex : (10*NbCommandes/3 (entiere)  - NbCommandes < 0 --> augmenter, > 0 non)
+
+2- Partie CdR
+
+    -! Saisir une recette : 
+        * rentrer nom, 
+        * liste ingredients (avec quantites, peut rajouter des produits), 
+        * description, 
+        * prix de vent client 
+    -! Consulter son solde de points cook
+    -! Affichage des recettes (avec nom, nombre de commande)
+
+3- Partie Gestion de Cooking
+    Top semaine "recalculable" --> ??
+
+    -! tableau de bord de semaine :
+        * top CdR de la semaine (derniere?) (le CdR ayant le plus ete commande de la semaine)
+        * Top 5 recettes les plus commandees (avec les infos utiles, type recette, cuisiner etc..)
+        * Le CdR d'or : CdR ayant le plus ete commande DEPUIS L'OUVERTURE DU SITE + ses 5 recettes les plus commandees
+    -! Reapprovisionnement hebdo des produits : 
+        * MaJ Qte max et min des produits --> les produits non utilise depuis 30 derniers jours : qte max et min / 2 
+        * Edition de la liste des commandes de la semaine au format XML (en fin de semaine) : 
+            * liste des produits avec une qte restante < qte minimale 
+            * la qte A COMMANDER = qte max - qte restante
+            * liste classee par fournisseur puis par produit (balise fournisseur puis balise produit dedans)
+            * NOUVEAUX PRODUITS???
+    -! Supprimer recette (Fonctionnalite CdR / nous)
+    -! Supprimer CdR ET TOUTES SES RECETTES mais on peutc choisir s'il reste client ou pas 
+
+
+IV- Mode demo : 
+    -----------
+
+Bouton sur le menu qui affichera les infos suivantes (les parcourir avec un bouton suivant et un precedent):
+    * Nb de clients ("xx clients dont yy CdR)
+    * Nb puis noms des CdR et pour chaque CdR 
+        - Nb total de ses recettes commandees 
+        - (Bonus, faire les 3 (nb recettes commandees, nombre de commandes total par CdR, nb de commandes total PAR recette PAR CdR))
+    * Nb recettes dans database
+    * Liste produits dont la qte restante en stock <= 2 * leur qte minimale
+    * Saisie clavier par l'evaluateur d'un des produits de la liste precedente ^ 
+        - puis afficher liste des recettes (nom) utilisant ce produit 
+        - et la qte utilisee dans cette recette
+
+
+==> Faire avec des Count sql
+
+V- Unit Testing :
+   ------------
+   
+   *  quelques Unit Testing
+
+VI- Bonus :
+  -------
+    - Fonctionnalite client et CdR --> possibilite de supprimer son compte (et donc toutes ses recettes pour un CdR) --> Verification avec mdp
+

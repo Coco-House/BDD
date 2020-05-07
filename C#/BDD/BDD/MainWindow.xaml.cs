@@ -41,7 +41,7 @@ namespace BDD
             get { return password; }
         }
 
-        private static void MettreAJourAges()
+        public static void MettreAJourAges()
         {
             string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
@@ -95,11 +95,10 @@ namespace BDD
 
                 connection.Close();
             }
-            MessageBox.Show("Mise a jour de la database reussie !");
 
         }
 
-        private static void LoadDatabase()
+        public static void LoadDatabase()
         {
             MettreAJourAges();
 
@@ -360,6 +359,7 @@ namespace BDD
         {
             MessageBox.Show("Connexion Réussie ! Vous pouvez maintenant accéder à l'application !", "Login Successful ! ", MessageBoxButton.OK, MessageBoxImage.Information);
             LoadDatabase();
+            MessageBox.Show("Mise a jour de la database reussie !","Update successful ! ",MessageBoxButton.OK,MessageBoxImage.Information);
             PageD_accueil windowAccueil = new PageD_accueil();
             windowAccueil.Show();
             this.Close();

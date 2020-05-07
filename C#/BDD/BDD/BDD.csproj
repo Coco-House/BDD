@@ -106,6 +106,9 @@
     <Compile Include="ConnexionCompte.xaml.cs">
       <DependentUpon>ConnexionCompte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DetailRecette.xaml.cs">
+      <DependentUpon>DetailRecette.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -115,8 +118,18 @@
     <Compile Include="PageD%27accueil.xaml.cs">
       <DependentUpon>PageD%27accueil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Panier.xaml.cs">
+      <DependentUpon>Panier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PasserCommande.xaml.cs">
+      <DependentUpon>PasserCommande.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Recette.cs" />
     <Page Include="ConnexionCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailRecette.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,6 +154,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageD%27accueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PasserCommande.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +203,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ConnexionBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Panier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Panier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CommandeBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Panier2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Panier2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,6 +47,9 @@ namespace BDD
 
         private void PasserUneCommande_Click(object sender, RoutedEventArgs e)
         {
+            PasserCommande window = new PasserCommande();
+            window.Show();
+            this.Close();
         }
 
         private void RetourButton_Click(object sender, RoutedEventArgs e)
