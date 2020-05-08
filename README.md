@@ -6,4 +6,8 @@ mysqldump.exe -u root -p --databases projet > "J:/#Projets-ESILV/BDD/Scripts/Bac
 
 # En cours d'utilisation
 
+<<<<<<< HEAD
 oui - module cdr
+=======
+oui
+>>>>>>> 8af9b299b09540874afa6160a606d2a903ff7bb0
