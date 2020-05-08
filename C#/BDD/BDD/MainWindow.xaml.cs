@@ -43,7 +43,7 @@ namespace BDD
 
         public static void MettreAJourAges()
         {
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -106,7 +106,7 @@ namespace BDD
 
             MainWindow.listeClients.Clear();
 
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -376,7 +376,7 @@ namespace BDD
                 username = IDBox.Text;
                 password = PswdBox.Password;
 
-                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + username + ";PASSWORD=" + password;
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + username + ";PASSWORD=" + password;
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
 
