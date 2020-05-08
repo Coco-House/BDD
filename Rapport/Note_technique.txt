@@ -15,6 +15,8 @@ pour expliquer les choix techniques
  
  * pour offrir la possibilité d'accéder à chaque ingrédient de la liste d'ingrédients, il faut écrire la liste en séparant les ingrédients par des points-virgules, comme selon la forme suivante : "farine;oeufs;sel;levure..."
  
+ * après relecture du sujet, la gestion des prix des recettes est comme suit : le prix d'une recette est augmenté de 2 cooks quand elle dépasse 10 commandes (10 non inclus), et non chaque 10 commandes. De même pour 50 recettes commandées.
+ 
  * nous avons crée un backup de la base de données pour ne pas avoir à rentrer les données à chaque fois
  
  
