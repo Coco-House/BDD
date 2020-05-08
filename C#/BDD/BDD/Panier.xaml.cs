@@ -38,7 +38,7 @@ namespace BDD
             dataPanier.Columns.Add("Nom Createur de Recette");
             dataPanier.Columns.Add("Prenom Createur de Recette");
 
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -83,7 +83,7 @@ namespace BDD
         {
             foreach (string id in PasserCommande.listeIdRecettesCommandees)
             {
-                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -194,7 +194,7 @@ namespace BDD
                 {
                     if (ConnexionCompte.CdRConnecte == true)
                     {
-                        string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                        string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                         MySqlConnection connection = new MySqlConnection(connectionString);
 

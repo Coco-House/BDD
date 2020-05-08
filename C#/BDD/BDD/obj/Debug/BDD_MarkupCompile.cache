@@ -4,29 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Projet\BDD_Github\BDD\C#\BDD\BDD\obj\Debug\
-=======
-j:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\
->>>>>>> 06e9b6526bddf9204cc4ecc53b8a18e7d7747464
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\
 BDD
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Projet\BDD_Github\BDD\C#\BDD\BDD\App.xaml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\App.xaml
 8-146016065
 
 17308642741
-1381900713082
-=======
-j:\#Projets-ESILV\BDD\C#\BDD\BDD\App.xaml
-81403218965
-
-1873057203
-138-1002847039
->>>>>>> 06e9b6526bddf9204cc4ecc53b8a18e7d7747464
+138-1542015413
 ConnexionCompte.xaml;DetailRecette.xaml;LoginPage.xaml;MainWindow.xaml;ModuleClient.xaml;PageD'accueil.xaml;Panier.xaml;PasserCommande.xaml;
 
-True
+False
 

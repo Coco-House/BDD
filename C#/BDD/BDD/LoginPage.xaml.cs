@@ -216,7 +216,7 @@ namespace BDD
                 {
                     if (OuiBox.IsChecked == true)
                     {
-                        string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                        string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                         MySqlConnection connection = new MySqlConnection(connectionString);
                         connection.Open();
@@ -330,7 +330,7 @@ namespace BDD
 
         private void VerifierIdClient_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -373,7 +373,7 @@ namespace BDD
 
         private void VerifierIdCdR_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+            string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -459,7 +459,7 @@ namespace BDD
             {
                 if (NonBox.IsChecked == true)
                 {
-                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                     MySqlConnection connection = new MySqlConnection(connectionString);
                     connection.Open();
@@ -525,7 +525,7 @@ namespace BDD
                 }
                 else if (OuiBox.IsChecked == true)
                 {
-                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                    string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                     MySqlConnection connection = new MySqlConnection(connectionString);
                     connection.Open();
@@ -617,7 +617,7 @@ namespace BDD
         {
             if (NonBox.IsChecked == true)
             {
-                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
@@ -660,7 +660,7 @@ namespace BDD
             }
             else if (OuiBox.IsChecked == true)
             {
-                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
