@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="DetailRecette" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Nom de la recette : " FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" />
+        <Label Content="Id Recette : " FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" />
+        <Label Content="Prix Recette : " FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="450,75,0,0" VerticalAlignment="Top" />
+        <Label Content="Liste Ingrédients  : " FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" />
+        <Label Content="Type de la recette : " FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="450,20,0,0" VerticalAlignment="Top" />
+        <Label Content="euros" HorizontalAlignment="Left" Margin="723,75,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="textIngredients" HorizontalAlignment="Left" Margin="20,161,0,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top" Height="237" Width="352"/>
+        <TextBlock Name="textDescription" HorizontalAlignment="Left" Margin="450,161,0,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top" Height="237" Width="312"/>
+        <Label Content="Description Recette  : " FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="450,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" />
     </Grid>
 </Window>

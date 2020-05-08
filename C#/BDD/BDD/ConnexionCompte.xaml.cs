@@ -27,8 +27,8 @@ namespace BDD
 
         public static string IdCdRConnecte
         {
-            get { return IdCdRConnecte; }
-            set { IdCdRConnecte = value; }
+            get { return idCdRConnecte; }
+            set { idCdRConnecte = value; }
         }
 
         public static bool UnBlockCdR
@@ -93,16 +93,16 @@ namespace BDD
             if (estCdR == true)
             {
                 MessageBox.Show("Vous avez accès aux fonctions Createur de Recette !");
-                UnBlockCdR = true;
+                unBlockCdR = true;
                 cdRConnecte = true;
                 clientConnecte = false;
-                IdCdRConnecte = idCdR;
+                idCdRConnecte = idCdR;
             }
             else 
             {
-                UnBlockCdR = false;
+                unBlockCdR = false;
                 cdRConnecte = false;
-                IdCdRConnecte = "";
+                idCdRConnecte = "";
                 clientConnecte = true;
             }
 

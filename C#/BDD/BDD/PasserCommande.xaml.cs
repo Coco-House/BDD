@@ -143,6 +143,7 @@ namespace BDD
         private void Finaliser_Click(object sender, RoutedEventArgs e)
         {
             Panier window = new Panier();
+            window.Show();
             MessageBox.Show("Veuillez vérifier votre panier avant de procéder au paiement !", "Information !", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
         }

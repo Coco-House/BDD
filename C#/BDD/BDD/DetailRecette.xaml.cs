@@ -22,6 +22,8 @@ namespace BDD
         public DetailRecette(string idRecette)
         {
             InitializeComponent();
+
+
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

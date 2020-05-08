@@ -10,14 +10,17 @@
         <DataGrid Name="PanierData"  Height="150" Margin="10,10,10,59" BorderThickness="5" BorderBrush="Black"/>
         <Label Content="Total :" FontStyle="Italic" FontSize="14" FontWeight="Medium"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="666,163,0,0" VerticalAlignment="Top" Width="52"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="672,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" RadiusY="0.5" RadiusX="0.5"/>
-        <Label Name="PrixCook" Content="0.00 cook" HorizontalContentAlignment="Center" FontStyle="Italic" FontSize="14" FontWeight="Medium" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="718,165,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Name="PrixCook" Content="0.00 " HorizontalContentAlignment="left" FontStyle="Italic" FontSize="14" FontWeight="Medium" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="718,165,0,0" VerticalAlignment="Top" Width="75"/>
 
         <Label Content="Total :" FontStyle="Italic" FontSize="14" FontWeight="Medium"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="666,188,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.256,0.407"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="672,210,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" RadiusY="0.5" RadiusX="0.5"/>
-        <Label Name="PrixEuros" Content="0.00 euros" HorizontalAlignment="Left" Height="27" FontStyle="Italic" FontSize="14" FontWeight="Medium" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="718,188,0,0" VerticalAlignment="Top" Width="75"/>
-        
+        <Label Name="PrixEuros" Content="0.00 " HorizontalAlignment="Left" Height="27" FontStyle="Italic" FontSize="14" FontWeight="Medium" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="718,188,0,0" VerticalAlignment="Top" Width="75"/>
+
         <Button Name="FinaliserButton" Content="Finaliser commande" FontStyle="Italic" FontWeight="Medium" HorizontalAlignment="Left" Margin="169,191,0,0" Height="25" VerticalAlignment="Top" Width="120" Click="FinaliserButton_Click"/>
         <Button Name="RetourButton" Content="Retour en arrière" FontStyle="Italic" FontWeight="Medium" HorizontalAlignment="Left" Margin="16,191,0,0" Height="25"  VerticalAlignment="Top" Width="120" Click="RetourButton_Click"/>
+
+        <Label Content="cook" FontWeight="Medium" FontStyle="Italic" FontSize="14"  HorizontalAlignment="Left" Margin="758,165,0,0" Height="27" VerticalAlignment="Top" Width="44"/>
+        <Label Content="euros" FontWeight="Medium" FontStyle="Italic" FontSize="14" HorizontalAlignment="Left" Margin="758,188,0,0" Height="27" VerticalAlignment="Top"/>
     </Grid>
 
 </Window>

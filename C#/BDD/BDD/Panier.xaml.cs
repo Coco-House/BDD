@@ -74,8 +74,95 @@ namespace BDD
             dataPanier.DefaultView.Sort = "Quantité_Commandée desc";
             PanierData.ItemsSource = dataPanier.DefaultView;
 
-            PrixCook.Content = prixCook + " cook";
-            PrixEuros.Content = Recette.ConvertirEnEuros(prixCook) + " euros";
+            PrixCook.Content = prixCook;
+            PrixEuros.Content = Recette.ConvertirEnEuros(prixCook);
+        }
+
+
+        private void MettreAJourStockEtPoints()
+        {
+            foreach (string id in PasserCommande.listeIdRecettesCommandees)
+            {
+                string connectionString = "SERVER=localhost;PORT=3306;DATABASE=loueur;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
+
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                connection.Open();
+
+                MySqlCommand commandRechercheR = connection.CreateCommand();
+                commandRechercheR.CommandText = "SELECT nbCommandes,prixR,remunerationCuisinier,listeIngredients,quantites FROM projet.recette WHERE idR='" + id + "';";
+                commandRechercheR.ExecuteNonQuery();
+
+                MySqlDataReader readerR;
+                readerR = commandRechercheR.ExecuteReader();
+
+                int nbCommandes = 0;
+                int prixR = 0;
+                int remuneration = 0;
+                string listeIngredientsSQL = "";
+                string listeQuantitesSQL = "";
+                string[] listeIngredients;
+                string[] listeQuantites;
+
+                while (readerR.Read())
+                {
+                    nbCommandes = readerR.GetInt32(0);
+                    prixR = readerR.GetInt32(1);
+                    remuneration = readerR.GetInt32(2);
+                    listeIngredientsSQL = readerR.GetString(3);
+                    listeQuantitesSQL = readerR.GetString(4);
+                }
+
+
+                listeIngredients = listeIngredientsSQL.Split(';');
+                listeQuantites = listeQuantitesSQL.Split(';');
+
+
+
+                connection.Close();
+
+
+                nbCommandes += 1;
+                
+                if(nbCommandes == 11)
+                {
+                    prixR += 2;
+                }
+
+                if(nbCommandes == 51)
+                {
+                    prixR += 5;
+                    remuneration = 4;
+                }
+
+                for(int i = 0; i< listeIngredients.Length; i++)
+                {
+                    connection.Open();
+
+                    MySqlCommand commandUpdate = connection.CreateCommand();
+                    commandUpdate.CommandText = "UPDATE projet.produit SET stockActuel=stockActuel-" + listeQuantites[i] + " WHERE nomP='" + listeIngredients[i] + "';";
+
+                    MySqlDataReader readerUpdate;
+                    readerUpdate = commandUpdate.ExecuteReader();
+
+                    while (readerUpdate.Read()) { }
+
+                    connection.Close();
+                }
+
+                connection.Open();
+
+                MySqlCommand commandUpdate2 = connection.CreateCommand();
+                commandUpdate2.CommandText = "UPDATE projet.recette SET nbCommandes=" + nbCommandes + ",prixR="+prixR+ ",remunerationCuisinier="+remuneration+" WHERE idR='" + id + "';";
+
+                MySqlDataReader readerUpdate2;
+                readerUpdate2 = commandUpdate2.ExecuteReader();
+
+                while (readerUpdate2.Read()) { }
+
+                connection.Close();
+
+            }
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
@@ -130,71 +217,43 @@ namespace BDD
 
                         connection.Close();
 
-
-                        var result = MessageBox.Show("La somme à payer est de  " + PrixCook.Content + " cook. Vous avez " + balanceCook + " cook ! Etes-vous sûr de vouloir procéder au paiement ?", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Information);
-
-                        if (result == MessageBoxResult.Yes)
+                        if (balanceCook < Convert.ToInt32(PrixCook.Content))
                         {
-                            int newBalance = balanceCook - (Convert.ToInt32(PrixCook.Content));
-
-                            connection.Open();
-
-                            MySqlCommand commandUpdate = connection.CreateCommand();
-                            commandUpdate.CommandText = "UPDATE projet.cdr SET cook=" + newBalance + " WHERE idCdR='" + ConnexionCompte.IdCdRConnecte + "';";
-
-                            MySqlDataReader readerUpdate;
-                            readerUpdate = commandUpdate.ExecuteReader();
-
-                            while (readerUpdate.Read()) { }
-
-                            connection.Close();
-
-                            foreach (string id in PasserCommande.listeIdRecettesCommandees)
-                            {
-                                /*
-* compteur de commande de la recette ++
-* si le nombre de commande d'une recette (EN PRENANT EN COMPTE LA COMMANDE EN COURS) > 10 --> prix vente augemente de 2 cook (%10, Prix += 2)
-* Meme chose, si ca depasse 50, remuneration passe de 2 à 4 cook
-* Mettre a jour le stocs des produits utilises pour realiser ces plats commandes
-*/
-                                connection.Open();
-
-                                MySqlCommand commandRechercheR = connection.CreateCommand();
-                                commandRechercheR.CommandText = "SELECT nbCommandes,prixR,remunerationCuisinier,listeIngredients,quantites FROM projet.recette WHERE idR='"+id+"';";
-                                commandRechercheR.ExecuteNonQuery();
-
-                                MySqlDataReader readerR;
-                                readerR = commandRechercheR.ExecuteReader();
-
-                                string idRecette = "";
-
-                                while (readerR.Read())
-                                {
-                                    idRecette = readerR.GetString(0);
-
-                                }
-
-                                connection.Close();
-
-                                connection.Open();
-                                //update
-                                connection.Close();
-
-             
-                            }
-
-                            MessageBox.Show("Paiement réussi !", "Success !", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                            MainWindow.LoadDatabase();
-                            PasserCommande.listeIdRecettesCommandees.Clear();
-
-                            ModuleClient window = new ModuleClient();
-                            window.Show();
-                            this.Close();
+                            MessageBox.Show("Vous n'avez pas assez de points cook ! ", "Erreur ! ", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         else
                         {
-                            MessageBox.Show("Paiement annulé !", "Information !", MessageBoxButton.OK, MessageBoxImage.Information);
+                            var result = MessageBox.Show("La somme à payer est de  " + PrixCook.Content + " cook. Vous avez " + balanceCook + " cook ! Etes-vous sûr de vouloir procéder au paiement ?", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Information);
+
+                            if (result == MessageBoxResult.Yes)
+                            {
+                                int newBalance = balanceCook - (Convert.ToInt32(PrixCook.Content));
+
+                                connection.Open();
+
+                                MySqlCommand commandUpdate = connection.CreateCommand();
+                                commandUpdate.CommandText = "UPDATE projet.cdr SET cook=" + newBalance + " WHERE idCdR='" + ConnexionCompte.IdCdRConnecte + "';";
+
+                                MySqlDataReader readerUpdate;
+                                readerUpdate = commandUpdate.ExecuteReader();
+
+                                while (readerUpdate.Read()) { }
+
+                                connection.Close();
+
+                                MettreAJourStockEtPoints();
+
+                                MessageBox.Show("Paiement réussi !", "Success !", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                                MainWindow.LoadDatabase();
+                                PasserCommande.listeIdRecettesCommandees.Clear();
+
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Paiement annulé !", "Information !", MessageBoxButton.OK, MessageBoxImage.Information);
+                            }
                         }
                     }
                     else
@@ -203,14 +262,12 @@ namespace BDD
 
                         if (result == MessageBoxResult.Yes)
                         {
-
+                            MettreAJourStockEtPoints();
                             MessageBox.Show("Paiement réussi !", "Success !", MessageBoxButton.OK, MessageBoxImage.Information);
 
                             MainWindow.LoadDatabase();
                             PasserCommande.listeIdRecettesCommandees.Clear();
 
-                            ModuleClient window = new ModuleClient();
-                            window.Show();
                             this.Close();
                         }
                         else

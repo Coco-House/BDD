@@ -70,6 +70,7 @@ namespace BDD
                 ConnexionCompte.CdRConnecte = false;
                 ConnexionCompte.IdCdRConnecte = "";
                 LoginButton.IsEnabled = true;
+                PasserCommande.listeIdRecettesCommandees.Clear();
                 ModuleClient window = new ModuleClient();
                 window.Show();
                 this.Close();
