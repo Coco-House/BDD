@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\
+j:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\
 BDD
 none
 false
 DEBUG;TRACE
-J:\#Projets-ESILV\BDD\C#\BDD\BDD\App.xaml
-8-146016065
+j:\#Projets-ESILV\BDD\C#\BDD\BDD\App.xaml
+81403218965
 
-17308642741
-138-1542015413
+1873057203
+138-1002847039
 ConnexionCompte.xaml;DetailRecette.xaml;LoginPage.xaml;MainWindow.xaml;ModuleClient.xaml;PageD'accueil.xaml;Panier.xaml;PasserCommande.xaml;
 
-False
+True
 

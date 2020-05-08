@@ -5,16 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="DetailRecette" Height="450" Width="800">
+        Title="DetailRecette" Height="460" Width="810">
     <Grid>
-        <Label Content="Nom de la recette : " FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" />
-        <Label Content="Id Recette : " FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" />
-        <Label Content="Prix Recette : " FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="450,75,0,0" VerticalAlignment="Top" />
-        <Label Content="Liste Ingrédients  : " FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" />
-        <Label Content="Type de la recette : " FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="450,20,0,0" VerticalAlignment="Top" />
-        <Label Content="euros" HorizontalAlignment="Left" Margin="723,75,0,0" VerticalAlignment="Top"/>
-        <TextBlock Name="textIngredients" HorizontalAlignment="Left" Margin="20,161,0,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top" Height="237" Width="352"/>
-        <TextBlock Name="textDescription" HorizontalAlignment="Left" Margin="450,161,0,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top" Height="237" Width="312"/>
-        <Label Content="Description Recette  : " FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="450,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="353*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/BDD;component/Images/detailBackground.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Label Content="Nom de la recette : " Foreground="White" FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" />
+        <Label Content="Id Recette : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="20,8.667,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="Prix Recette : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="492,7,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="Type de la recette : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="18" HorizontalAlignment="Left" Margin="492,20,0,0" VerticalAlignment="Top" />
+        <Rectangle Fill="Transparent"  HorizontalAlignment="Left" Height="290" Margin="10,53,0,0" Stroke="White" StrokeThickness="5"  VerticalAlignment="Top" Width="310" RadiusX="10" RadiusY="10" Grid.Row="1" />
+        <Label Content="Liste Ingrédients  : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="20,63.667,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" Grid.Row="1" />
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="3" Margin="20,51,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="157"/>
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="492,33,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="90" Grid.Row="1"/>
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="20,34,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="71" Grid.Row="1"/>
+
+        <Label Content="euros" Foreground="White"  HorizontalAlignment="Left" Margin="740,6,0,0" VerticalAlignment="Top" Grid.Row="1" FontSize="14"/>
+        <Label Content="cook" Foreground="White"  HorizontalAlignment="Left" Margin="644,6,0,0" VerticalAlignment="Top" Grid.Row="1" FontSize="14"/>
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="27,88,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="93" Grid.Row="1"/>
+
+        <Rectangle Fill="Transparent"  HorizontalAlignment="Left" Height="290" Margin="475,53,0,0" Stroke="White" StrokeThickness="5"  VerticalAlignment="Top" Width="310" RadiusX="10" RadiusY="10" Grid.Row="1" />
+
+        <Label Content="Description Recette  : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="492,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" Grid.Row="1" />
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="494,88,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="115" Grid.Row="1"/>
+        <Rectangle Fill="white" HorizontalAlignment="Left" Height="3" Margin="494,51,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="147"/>
+
+        <Label Name="NomLabel" Content="" FontStyle="Italic" FontWeight="Medium" FontSize="18" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="48" Margin="193,17,0,0" VerticalAlignment="Top" Width="283"/>
+        <Label Name="IdLabel" Content="" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="28" Margin="103,10,0,0" VerticalAlignment="Top" Width="110" Grid.Row="1"/>
+        <Label Name="TypeLabel" Content="" FontStyle="Italic" FontWeight="Medium" FontSize="18" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="48" Margin="653,13,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label Name="CookLabel" Content="" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="582,7,0,0" VerticalAlignment="Top" Width="59" Grid.Row="1"/>
+        <Label Name="EurosLabel" Content="" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="684,7,0,0" VerticalAlignment="Top" Width="56" Grid.Row="1"/>
+        <TextBlock Name="textIngredients"  Foreground="White" FontSize="11" FontWeight="Medium" FontFamily="Colibri" FontStyle="Italic" HorizontalAlignment="Left" Margin="27,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="218" Width="338" Grid.Row="1"/>
+        <TextBlock Name="textDescription" Foreground="White" FontSize="11" FontWeight="Medium" FontFamily="Colibri" FontStyle="Italic" HorizontalAlignment="Left" Margin="492,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="218" Width="276" Grid.Row="1"/>
+
     </Grid>
 </Window>

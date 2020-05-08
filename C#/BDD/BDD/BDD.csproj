@@ -214,10 +214,7 @@
     <Resource Include="Images\CommandeBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Panier2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Panier2.png" />
+    <Resource Include="Images\DetailBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

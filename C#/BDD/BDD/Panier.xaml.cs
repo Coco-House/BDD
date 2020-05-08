@@ -90,7 +90,7 @@ namespace BDD
                 connection.Open();
 
                 MySqlCommand commandRechercheR = connection.CreateCommand();
-                commandRechercheR.CommandText = "SELECT nbCommandes,prixR,remunerationCuisinier,listeIngredients,quantites FROM projet.recette WHERE idR='" + id + "';";
+                commandRechercheR.CommandText = "SELECT nbCommandes,prixR,remunerationCuisinier,listeIngredients,quantites,idCdR FROM projet.recette WHERE idR='" + id + "';";
                 commandRechercheR.ExecuteNonQuery();
 
                 MySqlDataReader readerR;
@@ -99,6 +99,7 @@ namespace BDD
                 int nbCommandes = 0;
                 int prixR = 0;
                 int remuneration = 0;
+                string idCdR = "";
                 string listeIngredientsSQL = "";
                 string listeQuantitesSQL = "";
                 string[] listeIngredients;
@@ -111,6 +112,7 @@ namespace BDD
                     remuneration = readerR.GetInt32(2);
                     listeIngredientsSQL = readerR.GetString(3);
                     listeQuantitesSQL = readerR.GetString(4);
+                    idCdR = readerR.GetString(5);
                 }
 
 
@@ -124,12 +126,12 @@ namespace BDD
 
                 nbCommandes += 1;
                 
-                if(nbCommandes == 11)
+                if(nbCommandes == 11) // on a fait l'hypothese que c'est "depasse strictement 10"
                 {
                     prixR += 2;
                 }
 
-                if(nbCommandes == 51)
+                if(nbCommandes == 51) // on a fait l'hypothese que c'est "depasse strictement 10"
                 {
                     prixR += 5;
                     remuneration = 4;
@@ -150,6 +152,8 @@ namespace BDD
                     connection.Close();
                 }
 
+                // Mettre a jour le nbCommandes et modifications du prix et de la remuneration si necessaire
+
                 connection.Open();
 
                 MySqlCommand commandUpdate2 = connection.CreateCommand();
@@ -159,6 +163,20 @@ namespace BDD
                 readerUpdate2 = commandUpdate2.ExecuteReader();
 
                 while (readerUpdate2.Read()) { }
+
+                connection.Close();
+
+                // Mettre a jour les points cook du CdR
+                
+                connection.Open();
+
+                MySqlCommand commandUpdate3 = connection.CreateCommand();
+                commandUpdate3.CommandText = "UPDATE projet.cdr SET cook=cook+" + remuneration + " WHERE projet.cdr.idCdR='"+idCdR+"';";
+
+                MySqlDataReader readerUpdate3;
+                readerUpdate3 = commandUpdate3.ExecuteReader();
+
+                while (readerUpdate3.Read()) { }
 
                 connection.Close();
 
@@ -187,6 +205,7 @@ namespace BDD
             {
                 if (ConnexionCompte.ClientConnecte == false && ConnexionCompte.CdRConnecte == false)
                 {
+                    this.Close();
                     ConnexionCompte window = new ConnexionCompte();
                     window.Show();
                 }
@@ -223,7 +242,7 @@ namespace BDD
                         }
                         else
                         {
-                            var result = MessageBox.Show("La somme à payer est de  " + PrixCook.Content + " cook. Vous avez " + balanceCook + " cook ! Etes-vous sûr de vouloir procéder au paiement ?", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                            var result = MessageBox.Show("La somme à payer est de  " + PrixCook.Content + " cook. Vous avez " + balanceCook + " cook ! Etes-vous sûr de vouloir procéder au paiement ? Reste : "+(balanceCook-Convert.ToInt32(PrixCook.Content))+" cook !", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Information);
 
                             if (result == MessageBoxResult.Yes)
                             {
