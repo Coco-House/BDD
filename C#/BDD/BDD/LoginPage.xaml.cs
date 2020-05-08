@@ -473,7 +473,7 @@ namespace BDD
                         sexe = 'M';
                     }
 
-                    string nomC = NomBox.Text;
+                    string nomC = NomBox.Text.ToUpper();
                     string prenomC = PrenomBox.Text;
                     string dateNaissance = AnneeBox.Text + "-" + MoisBox.Text + "-" + JourBox.Text;
                     int age = Convert.ToInt32(CalculAgeLabel.Content);
@@ -560,7 +560,7 @@ namespace BDD
 
                     connection.Open();
                     MySqlCommand commandRecherche = connection.CreateCommand();
-                    commandRecherche.CommandText = "SELECT sexe,nomC,prenomC,DateNaissance,age,adresse,telC FROM projet.client WHERE idC='" + idC + "';";
+                    commandRecherche.CommandText = "SELECT sexe,UPPER(nomC),prenomC,DateNaissance,age,adresse,telC FROM projet.client WHERE idC='" + idC + "';";
 
                     MySqlDataReader readerRecherche;
                     readerRecherche = commandRecherche.ExecuteReader();

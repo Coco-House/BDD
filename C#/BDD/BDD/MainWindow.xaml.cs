@@ -112,7 +112,7 @@ namespace BDD
             connection.Open();
 
             MySqlCommand commandRecherche = connection.CreateCommand();
-            commandRecherche.CommandText = "SELECT idC,sexe,nomC,prenomC,DateNaissance,age,adresse,email,password,telC FROM projet.client;";
+            commandRecherche.CommandText = "SELECT idC,sexe,UPPER(nomC),prenomC,DateNaissance,age,adresse,email,password,telC FROM projet.client;";
 
             MySqlDataReader readerRecherche;
             readerRecherche = commandRecherche.ExecuteReader();
@@ -159,7 +159,7 @@ namespace BDD
             connection.Open();
 
             MySqlCommand commandRechercheCdR = connection.CreateCommand();
-            commandRechercheCdR.CommandText = "SELECT projet.client.idC,sexe,nomC,prenomC,DateNaissance,age,adresse,email,password,telC,cook,idCdR FROM projet.client,projet.cdR WHERE projet.client.idC = projet.cdR.idC;";
+            commandRechercheCdR.CommandText = "SELECT projet.client.idC,sexe,UPPER(nomC),prenomC,DateNaissance,age,adresse,email,password,telC,cook,idCdR FROM projet.client,projet.cdR WHERE projet.client.idC = projet.cdR.idC;";
 
             MySqlDataReader readerRechercheCdR;
             readerRechercheCdR = commandRechercheCdR.ExecuteReader();
@@ -212,7 +212,7 @@ namespace BDD
             connection.Open();
 
             MySqlCommand commandRechercheR = connection.CreateCommand();
-            commandRechercheR.CommandText = "SELECT idR,nomR,type,listeIngredients,descriptionR,prixR,remunerationCuisinier,idGratification,nbCook,idCdR FROM projet.recette;";
+            commandRechercheR.CommandText = "SELECT idR,nomR,type,listeIngredients,quantites,descriptionR,prixR,remunerationCuisinier,idGratification,nbCook,idCdR,nbCommandes FROM projet.recette;";
 
             MySqlDataReader readerRechercheR;
             readerRechercheR = commandRechercheR.ExecuteReader();
@@ -221,11 +221,13 @@ namespace BDD
             string nomR = "";
             string type = "";
             string listeIngredients = "";
+            string quantites = "";
             string descriptionR = "";
             int prixR = 0;
             int remuneration = 0;
             string idGrat = "";
             int nbCook = 0;
+            int nbCommandes = 0;
             string idCdR2 = "";
 
             while (readerRechercheR.Read())
@@ -234,14 +236,16 @@ namespace BDD
                 nomR = readerRechercheR.GetString(1);
                 type = readerRechercheR.GetString(2);
                 listeIngredients = readerRechercheR.GetString(3);
-                descriptionR = readerRechercheR.GetString(4);
-                prixR = readerRechercheR.GetInt32(5);
-                remuneration = readerRechercheR.GetInt32(6);
-                idGrat = readerRechercheR.GetString(7);
-                nbCook = readerRechercheR.GetInt32(8);
-                idCdR2 = readerRechercheR.GetString(9);
+                quantites = readerRechercheR.GetString(4);
+                descriptionR = readerRechercheR.GetString(5);
+                prixR = readerRechercheR.GetInt32(6);
+                remuneration = readerRechercheR.GetInt32(7);
+                idGrat = readerRechercheR.GetString(8);
+                nbCook = readerRechercheR.GetInt32(9);
+                idCdR2 = readerRechercheR.GetString(10);
+                nbCommandes = readerRechercheR.GetInt32(11);
 
-                Recette newRecette = new Recette(idR, nomR, type, listeIngredients, descriptionR, prixR, remuneration, idGrat, nbCook, idCdR2);
+                Recette newRecette = new Recette(idR, nomR, type, listeIngredients,quantites, descriptionR, prixR, remuneration,nbCommandes, idGrat, nbCook, idCdR2);
                 MainWindow.listeRecettes.Add(newRecette);
             }
 

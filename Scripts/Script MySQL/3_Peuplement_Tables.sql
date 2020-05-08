@@ -15,22 +15,49 @@ INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1200', 'Les M
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1300', 'Maïs Délice', '0446980970');
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1400', 'Le Delas', '0406387412');
 INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1500', 'Au Paradis des Papilles', '0159028434');
+INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1600', 'Légumes et fruits frais', '0112548963');
 
 -- insertion dans la table produit
 
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oeuf','aliment','unite',80,10,100,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oeuf','aliment','unite',232,150,500,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('sucre','sucre','g',50000,10000,100000,'F200');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('vanille','épice','unite',10,50,150,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('vanille','épice','unite',50,10,150,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('mascarpone','fromage','g',50000,5000,80000,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('biscuit à la cuillère','biscuit','unite',50,20,100,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('café','boisson','cl',5000,2000,10000,'F200');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('cacao','cocaine','g',2000,1000,5000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('cacao','poudre','g',2000,1000,5000,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('courgette','légume','kg',30,10,100,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('gruyère râpé','fromage','g',5000,2000,10000,'F200');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lait','boisson','kg',10,3,20,'F200');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('saumon','poisson','kg',10,3,20,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lait','boisson','L',25,10,40,'F1100');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('saumon','poisson','kg',10,3,20,'F200');
 
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('basilic','légume','g',5000,1200,7000,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('pâte brisée','préparations pour pâtisseries','g',6000,1000,8000,'F1200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lardon','aliment','g',2000,400,3000,'F400');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('beurre','matières grasses','g',600,200,1000,'F300');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('crème fraîche','matières grasses','cup',30,20,70,'F1200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('muscade','épice','tbsp',30,20,90,'F500');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('sel','sel','g',30000,15000,60000,'F500');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('poivre','épice','g',2000,800,3000,'F500');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('pâte de lasagne','aliment','g',2500,2000,8000,'F1400');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oignon','légume','unite',55,30,110,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('ail','légume','unite',50,25,100,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('carotte','légume','unite',60,35,150,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('boeuf haché','aliment','g',15000,10000,50000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('purée de tomate','sauce','tbsp',250,150,500,'F600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('eau','boisson','L',15,10,30,'F1100');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('laurier','légume','tbsp',35,30,50,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('thym','épice','tbsp',42,20,60,'F500');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('fromage râpé','aliment','g',1640,1000,3000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('farine','produits céréaliers','g',15000,10000,60000,'F900');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('levure','aliment','g',1200,800,3000,'F900');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('chocolat','produits sucrés','bar',240,100,600,'F100');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('pomme','fruit','unite',270,200,650,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('tomate','fruit','unite',450,300,800,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('poivron','légume','unite',320,250,650,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('concombre','légume','unite',390,300,800,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('vinaigre','vinaigre','tbsp',210,120,320,'F400');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('huile','huiles','tbsp',240,150,350,'F400');
 
 -- insertion dans la table client
 
@@ -57,16 +84,16 @@ INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR918274',120,'C1987
 
 -- insertion dans la table recette
 
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R1','Tiramisu','Dessert','oeuf;sucre;vanille;mascarpone;biscuit à la cuillère;café;cacao','Dessert italien',12,2,'GratR1',2,'CdR123321');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R2','Flan de courgettes','Entrée','courgette;gruyère râpé;lait;oeuf;basilic','Entrée froide végétarienne sans gluten',16,2,'GratR2',2,'CdR918274');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R3','Quiche lorraine','Plat','pâte brisée;lardon;beurre;oeuf;crème fraîche;lait;muscade;sel;poivre','Quiche lorraine en plat principal',20,2,'GratR3',2,'CdR918274');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R4','Lasagnes à la bolognaise','Plat','pâte de lasagne;oignons;ail;carotte;boeuf haché;purée de tomate;eau;laurier;thym;basilic;muscade;fromage râpé;sel;poivre','Lasagnes italiennes',25,2,'GratR4',2,'CdR241234');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R5','Pancake','Dessert','farine;sucre;oeufs;levure;beurre;sel;lait','Dessert rapide et végétarien',8,2,'GratR5',2,'CdR918274');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R6','Cookie au chocolat','Dessert','beurre;oeuf;sucre;vanille;farine;chocolat;sel;levure','Dessert végétarien',4,2,'GratR6',2,'CdR029384');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R7','Tarte aux pommes','Dessert','pâte brisée;pomme;sucre;beurre','Dessert normand rapide',12,2,'GratR7',2,'CdR029384');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R8','Gaspacho','Entrée','tomate;poivron;concombre;oignon;ail;vinaigre;oeuf;basilic;huile;poivre;sel','Entrée végétarienne rapide et froide',8,2,'GratR8',2,'CdR102938');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R9','Crêpe','Dessert','farine;sucre;oeuf;beurre;sel;lait;huile','Dessert rapide',6,2,'GratR9',2,'CdR102938');
-INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`descriptionR`,`prixR`,`remunerationCuisinier`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R10','Fondant au chocolat','Dessert','chocolat;farine;sucre;oeuf;beurre','Gâteau au chocolat fondant',12,2,'GratR10',2,'CdR102938');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R1','Tiramisu','Dessert','oeuf;sucre;vanille;mascarpone;biscuit à la cuillère;café;cacao','4;80;1;100;10;500;150','Dessert italien',12,2,8,'GratR1',2,'CdR123321');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R2','Flan de courgettes','Entrée','courgette;gruyère râpé;lait;oeuf;basilic','1.5;120;0.5;3;50','Entrée froide végétarienne sans gluten',16,2,0,'GratR2',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R3','Quiche lorraine','Plat','pâte brisée;lardon;beurre;oeuf;crème fraîche;lait;muscade;sel;poivre','300;500;120;4;2;0.3;3;10;15','Quiche lorraine en plat principal',20,2,3,'GratR3',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R4','Lasagnes à la bolognaise','Plat','pâte de lasagne;oignons;ail;carotte;boeuf haché;purée de tomate;eau;laurier;thym;basilic;muscade;fromage râpé;sel;poivre','340;3;4;1;350;12;0.2;2;2;100;3;200;25;30','Lasagnes italiennes',25,2,48,'GratR4',2,'CdR241234');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R5','Pancake','Dessert','farine;sucre;oeufs;levure;beurre;sel;lait','400;250;8;50;150;20;1','Dessert rapide et végétarien',18,2,27,'GratR5',2,'CdR918274');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R6','Cookie au chocolat','Dessert','beurre;oeuf;sucre;vanille;farine;chocolat;sel;levure','150;6;250;2;450;4;10;60','Dessert végétarien',30,2,34,'GratR6',2,'CdR029384');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R7','Tarte aux pommes','Dessert','pâte brisée;pomme;sucre;beurre','300;5;200;100','Dessert normand rapide',12,2,5,'GratR7',10,'CdR029384');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R8','Gaspacho','Entrée','tomate;poivron;concombre;oignon;ail;vinaigre;oeuf;basilic;huile;poivre;sel','5;3;2;3;5;3;2;35;5;40;30','Entrée végétarienne rapide et froide',18,2,12,'GratR8',2,'CdR102938');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R9','Crêpe','Dessert','farine;sucre;oeuf;beurre;sel;lait;huile','300;240;6;100;10;0.7;3','Dessert rapide',16,2,24,'GratR9',2,'CdR102938');
+INSERT INTO `projet`.`recette` (`idR`,`nomR`,`type`,`listeIngredients`,`quantites`,`descriptionR`,`prixR`,`remunerationCuisinier`,`nbCommandes`,`idGratification`,`nbCook`,`idCdR`) VALUES ('R10','Fondant au chocolat','Dessert','chocolat;farine;sucre;oeuf;beurre','3;150;80;2;65','Gâteau au chocolat fondant',12,2,1,'GratR10',2,'CdR102938');
 
 -- insertion dans la table cooking
 

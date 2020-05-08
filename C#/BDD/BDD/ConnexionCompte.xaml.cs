@@ -23,6 +23,13 @@ namespace BDD
         private static bool unBlockCdR = false;
         private static bool cdRConnecte = false;
         private static bool clientConnecte = false;
+        private static string idCdRConnecte = "";
+
+        public static string IdCdRConnecte
+        {
+            get { return IdCdRConnecte; }
+            set { IdCdRConnecte = value; }
+        }
 
         public static bool UnBlockCdR
         {
@@ -63,17 +70,19 @@ namespace BDD
             connection.Open();
 
             MySqlCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT projet.client.idC FROM projet.client,projet.cdr WHERE email='" + EmailBox.Text + "' AND projet.client.idC = projet.cdr.idC;";     // la requete
+            command.CommandText = "SELECT projet.client.idC,projet.cdr.idCdR FROM projet.client,projet.cdr WHERE email='" + EmailBox.Text + "' AND projet.client.idC = projet.cdr.idC;";     // la requete
 
             MySqlDataReader reader;
             reader = command.ExecuteReader();               // executer la requete (reader sera une ligne)
 
             string idC = "";
+            string idCdR = "";
             bool estCdR = false;
             
             while (reader.Read()) // on parcourt reader ligne par ligne
             {
                 idC = reader.GetString(0);
+                idCdR = reader.GetString(1);
             }
 
             if(idC != "")
@@ -87,11 +96,13 @@ namespace BDD
                 UnBlockCdR = true;
                 cdRConnecte = true;
                 clientConnecte = false;
+                IdCdRConnecte = idCdR;
             }
             else 
             {
                 UnBlockCdR = false;
                 cdRConnecte = false;
+                IdCdRConnecte = "";
                 clientConnecte = true;
             }
 

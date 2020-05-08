@@ -3,15 +3,15 @@ USE projet;
 CREATE TABLE projet.`fournisseur`
 (
 	`idF` VARCHAR(10) NOT NULL,
-	`nomF` VARCHAR(20) NOT NULL,
+	`nomF` VARCHAR(30) NOT NULL,
 	`telF` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idF`)
 );
 
 CREATE TABLE projet.`produit`
 (
-	`nomP` VARCHAR(20) NOT NULL,
-    `categorieP` VARCHAR(20) NOT NULL,
+	`nomP` VARCHAR(30) NOT NULL,
+    `categorieP` VARCHAR(30) NOT NULL,
     `unite` VARCHAR(5) NOT NULL,
     `stockActuel` INT NOT NULL,
     `stockMin` INT NOT NULL,
@@ -48,12 +48,14 @@ CREATE TABLE projet.`cdr`
 CREATE TABLE projet.`recette`
 (
 	`idR` VARCHAR(10) NOT NULL,
-	`nomR` VARCHAR(20) NOT NULL,
+	`nomR` VARCHAR(30) NOT NULL,
     `type` VARCHAR(10) CHECK(LOCATE(' ',`type`)=0) ,
-    `listeIngredients` VARCHAR(100) NOT NULL, -- c'est un string de nom de produits separes par un ;
+    `listeIngredients` VARCHAR(200) NOT NULL, -- c'est un string de nom de produits separes par un ;
+    `quantites` VARCHAR(200) NOT NULL, -- c'est un string de quantites des produits utilises suivant l'ordre de la liste d'ingredients
     `descriptionR` TEXT(256) NOT NULL,
 	`prixR` INT NOT NULL CHECK(`prixR` BETWEEN 10 and 40 ),
     `remunerationCuisinier` INT NOT NULL,
+    `nbCommandes` INT NOT NULL,
     `idGratification` VARCHAR(10) NOT NULL,
     `nbCook` INT NOT NULL,
     `idCdR` VARCHAR(10) NOT NULL,

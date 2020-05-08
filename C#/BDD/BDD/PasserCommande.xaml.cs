@@ -39,7 +39,7 @@ namespace BDD
                 connection.Open();
 
                 MySqlCommand commandRechercheR = connection.CreateCommand();
-                commandRechercheR.CommandText = "SELECT R.idR AS id_Recette,R.nomR AS Nom_Recette,R.type,R.prixR AS Prix_Recette,R.idCdR AS id_Createur_de_Recette,C.nomC AS Nom_Createur_de_Recette,C.prenomC AS Prenom_Createur_de_Recette FROM projet.recette AS R, projet.client AS C, projet.cdr AS CdR WHERE R.idCdR = CdR.idCdR AND CdR.idC = C.idC;";
+                commandRechercheR.CommandText = "SELECT R.type,R.nomR AS Nom_Recette,R.idR AS id_Recette,R.prixR AS prix_Cook,R.idCdR AS id_Createur_de_Recette,C.nomC AS Nom_Createur_de_Recette,C.prenomC AS Prenom_Createur_de_Recette FROM projet.recette AS R, projet.client AS C, projet.cdr AS CdR WHERE R.idCdR = CdR.idCdR AND CdR.idC = C.idC ORDER BY R.type,R.nomR;";
                 commandRechercheR.ExecuteNonQuery();
 
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(commandRechercheR);
@@ -54,7 +54,7 @@ namespace BDD
                 connection.Open();
 
                 MySqlCommand commandRemplir = connection.CreateCommand();
-                commandRemplir.CommandText = "SELECT idR FROM projet.recette;";
+                commandRemplir.CommandText = "SELECT idR FROM projet.recette ORDER BY idR;";
 
                 MySqlDataReader readerRemplir;
                 readerRemplir = commandRemplir.ExecuteReader();
@@ -70,6 +70,11 @@ namespace BDD
                 }
 
                 connection.Close();
+
+                foreach(string id in listeIdRecettesCommandees)
+                {
+                    ListeRecettesSupprimer.Items.Add(id);
+                }
 
                 Compteur.Content = listeIdRecettesCommandees.Count;
             }
@@ -137,23 +142,9 @@ namespace BDD
 
         private void Finaliser_Click(object sender, RoutedEventArgs e)
         {
-            if(listeIdRecettesCommandees.Count == 0)
-            {
-                MessageBox.Show("Vous n'avez rien commandé ! ");
-            }
-            else
-            {
-                if (ConnexionCompte.ClientConnecte == false && ConnexionCompte.CdRConnecte == false)
-                {
-                    ConnexionCompte window = new ConnexionCompte();
-                    window.Show();
-                }
-                else
-                {
-                    // UPDATE CALCUL    
-                    listeIdRecettesCommandees.Clear();
-                }
-            }
+            Panier window = new Panier();
+            MessageBox.Show("Veuillez vérifier votre panier avant de procéder au paiement !", "Information !", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

@@ -68,6 +68,7 @@ namespace BDD
                 ConnexionCompte.UnBlockCdR = false;
                 ConnexionCompte.ClientConnecte = false;
                 ConnexionCompte.CdRConnecte = false;
+                ConnexionCompte.IdCdRConnecte = "";
                 LoginButton.IsEnabled = true;
                 ModuleClient window = new ModuleClient();
                 window.Show();

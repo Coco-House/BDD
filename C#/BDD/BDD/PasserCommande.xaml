@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
-        Title="PasserCommande" Height="550" Width="800">
+        Title="PasserCommande" Height="560" Width="800">
     <Grid Background="LightGreen">
         <DataGrid Name="DataSQL" AutoGenerateColumns="True"  BorderThickness="5" BorderBrush="Black" HorizontalAlignment="Left" Margin="20,60,0,0" Height="250" VerticalAlignment="Top" Width="750">
-
+            
         </DataGrid>
         <Button BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Height="50" Margin="730,10,0,0" VerticalAlignment="Top" Width="50" Click="Panier_Click">
             <StackPanel>
                 <Image  Source="Panier.png"/>
             </StackPanel>
         </Button>
+        
         <Ellipse Fill="LightBlue" HorizontalAlignment="Left" Height="15" Margin="763,10,0,0" Stroke="LightBlue" VerticalAlignment="Top" Width="15"/>
         <Label Name="Compteur" Content="0" FontWeight="ExtraBold" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="759,4,0,0" VerticalAlignment="Top" Height="24" Width="23"/>
         <Label Content="Liste des recettes disponibles en stock : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="325"/>
@@ -36,7 +37,7 @@
         <ComboBox Name="ListeRecettesSupprimer"  HorizontalAlignment="Left" Margin="469,427,0,0" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.067,0.318" Height="22"/>
         <Button Name="SupprimerButton" Content="Supprimer du panier" HorizontalAlignment="Left" Margin="650,427,0,0" FontWeight="Medium"  FontStyle="Italic" VerticalAlignment="Top" Width="116" Height="22" Click="SupprimerPanier_Click" />
 
-        <Button Name="FinaliserButton" Content="Finaliser la commande" HorizontalAlignment="Left" Margin="640,484,0,0" FontWeight="Medium"  FontStyle="Italic" VerticalAlignment="Top" Width="142" Height="25" Click="Finaliser_Click" />
+        <Button Name="FinaliserButton" Content="Finaliser la commande" HorizontalAlignment="Left" Margin="636,484,0,0" FontWeight="Medium"  FontStyle="Italic" VerticalAlignment="Top" Width="142" Height="25" Click="Finaliser_Click" />
         <Button Name="CancelButton" Content="Annuler la commande" HorizontalAlignment="Left" Margin="469,484,0,0" FontWeight="Medium"  FontStyle="Italic" VerticalAlignment="Top" Width="147" Height="25" Click="Cancel_Click" />
 
     </Grid>
