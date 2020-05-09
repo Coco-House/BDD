@@ -51,6 +51,7 @@ namespace BDD
             this.idCdR = idCdR;
         }
 
+        
         public string Quantites
         {
             get { return this.quantites; }
@@ -142,12 +143,22 @@ namespace BDD
             return s;
         }
 
+        /// <summary>
+        /// Convertit le montant cook en euros.
+        /// </summary>
+        /// <param name="cook">Le montant à convertir en euros.</param>
+        /// <returns>Le montant (double) en euros.</returns>
         public static double ConvertirEnEuros(int cook)
         {
             double taux = 0.5; // 1 cook = 0.5 euros
             return cook * taux;
         }
 
+        /// <summary>
+        /// Convertit le montant euros en cook.
+        /// </summary>
+        /// <param name="euros">Le montant à convertir en cook.</param>
+        /// <returns>Le montant (int) en cook.</returns>
         public static int ConvertirEnCook(double euros)
         {
             int taux = 2; // 1 euros = 2 cook

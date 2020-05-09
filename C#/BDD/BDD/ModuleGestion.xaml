@@ -1,0 +1,21 @@
+﻿<Window x:Class="BDD.ModuleGestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDD"
+        mc:Ignorable="d"
+        Title="ModuleGestion" Height="200" Width="300">
+    <StackPanel>
+        <Button Name ="ConnexionAdminButton" Content="Connexion Admin" Click="ConnexionAdmin_Click" FontWeight="Medium" FontStyle="Italic"/>
+
+        <Button Name ="TableauBordButton" Content="Tableau de Bord de la semaine" Click="TableauBord_Click" FontWeight="Medium" FontStyle="Italic"/>
+
+        <Button Name ="SupprimerRecetteButton" Content="Supprimer une recette (Admin/CdR)" Click="SupprimerRecette_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="RajouterProduitButton" Content="Rajouter un produit (Admin)" Click="RajouterProduit_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="SupprimerCompteButton" Content="Supprimer compte (Admin)" Click="Supprimer_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="DeconnexionAdminButton" Content="Deconnexion Admin" Click="DeconnexionAdmin_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="ReapprovisionnementButton" Content="Réapprovisionnement hébdomadaire" Click="Reapprovisionnement_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="RetourButton" Content="Retour" Click="RetourButton_Click" FontWeight="Medium" FontStyle="Italic"/>
+    </StackPanel>
+</Window>

@@ -112,6 +112,9 @@
     <Compile Include="ConnexionCompte.xaml.cs">
       <DependentUpon>ConnexionCompte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreerProduitCdR.xaml.cs">
+      <DependentUpon>CreerProduitCdR.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreerRecette.xaml.cs">
       <DependentUpon>CreerRecette.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,9 @@
     </Compile>
     <Compile Include="ModuleClient.xaml.cs">
       <DependentUpon>ModuleClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGestion.xaml.cs">
+      <DependentUpon>ModuleGestion.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageD%27accueil.xaml.cs">
       <DependentUpon>PageD%27accueil.xaml</DependentUpon>
@@ -152,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConnexionCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreerProduitCdR.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ModuleClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModuleGestion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -127,3 +127,9 @@ J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\PageD'accueil.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Panier.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\PasserCommande.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerCompte.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerRecette.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerRecette.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitCdR.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitCdR.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ModuleGestion.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ModuleGestion.baml

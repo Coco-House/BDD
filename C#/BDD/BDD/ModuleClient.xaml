@@ -9,11 +9,11 @@
         WindowStartupLocation="CenterScreen"
         Title="ModuleClient" Height="160" Width="300">
     <StackPanel>
-        <Button x:Name ="ConnexionButton" Content="Connexion" Click="Connexion_Click" FontWeight="Medium" FontStyle="Italic"/>
-        <Button x:Name ="LoginButton" Content="Sign Up Client" Click="Login_Click" FontWeight="Medium" FontStyle="Italic"/>
-        <Button x:Name ="PasserCommandeButton" Content="Passer une commande" Click="PasserUneCommande_Click" FontWeight="Medium" FontStyle="Italic"/>
-        <Button x:Name ="DeconnexionButton" Content="Deconnexion" Click="Deconnexion_Click" FontWeight="Medium" FontStyle="Italic"/>
-        <Button x:Name ="SupprimerCompteButton" Content="Supprimer compte" Click="Supprimer_Click" FontWeight="Medium" FontStyle="Italic"/>
-        <Button x:Name ="RetourButton" Content="Retour" Click="RetourButton_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="ConnexionButton" Content="Connexion" Click="Connexion_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="LoginButton" Content="Sign Up Client" Click="Login_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="PasserCommandeButton" Content="Passer une commande" Click="PasserUneCommande_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="DeconnexionButton" Content="Deconnexion" Click="Deconnexion_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="SupprimerCompteButton" Content="Supprimer compte" Click="Supprimer_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="RetourButton" Content="Retour" Click="RetourButton_Click" FontWeight="Medium" FontStyle="Italic"/>
     </StackPanel>
 </Window>

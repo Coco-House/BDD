@@ -15,6 +15,7 @@ namespace BDD
         private int stockMin;
         private int stockMax;
         private string idF;
+        private int compteurCommmandes = 0;
 
         public Produit(string nomP, string categorieP, string unite, int stockActuel, int stockMin, int stockMax, string idF)
         {
@@ -25,6 +26,12 @@ namespace BDD
             this.stockMax = stockMax;
             this.stockMin = stockMin;
             this.idF = idF;
+        }
+
+        public int CompteurCommandes
+        {
+            get { return this.compteurCommmandes; }
+            set { this.compteurCommmandes = value; }
         }
 
         public string NomP

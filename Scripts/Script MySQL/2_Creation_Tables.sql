@@ -12,7 +12,7 @@ CREATE TABLE projet.`produit`
 (
 	`nomP` VARCHAR(30) NOT NULL,
     `categorieP` VARCHAR(30) NOT NULL,
-    `unite` VARCHAR(5) NOT NULL,
+    `unite` VARCHAR(10) NOT NULL,
     `stockActuel` INT NOT NULL,
     `stockMin` INT NOT NULL,
     `stockMax` INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE projet.`recette`
 	`prixR` INT NOT NULL CHECK(`prixR` BETWEEN 10 and 40 ),
     `remunerationCuisinier` INT NOT NULL,
     `nbCommandes` INT NOT NULL,
-    `idGratification` VARCHAR(10) NOT NULL,
+    `idGratification` VARCHAR(14) NOT NULL,
     `nbCook` INT NOT NULL,
     `idCdR` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`idR`),

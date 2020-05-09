@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="CreerRecette" Height="520" Width="810">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="77*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="321*"/>
             <RowDefinition Height="91*"/>
         </Grid.RowDefinitions>
@@ -27,7 +28,7 @@
         <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="20,34,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="71" Grid.Row="1"/>
 
         <Label Content="euros" Foreground="White"  HorizontalAlignment="Left" Margin="740,6,0,0" VerticalAlignment="Top" Grid.Row="1" FontSize="14"/>
-        <Label Content="cook" Foreground="White"  HorizontalAlignment="Left" Margin="644,6,0,0" VerticalAlignment="Top" Grid.Row="1" FontSize="14"/>
+        <Label Content="cook" Foreground="White"  HorizontalAlignment="Left" Margin="641,6,0,0" VerticalAlignment="Top" Grid.Row="1" FontSize="14"/>
         <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="27,88,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="93" Grid.Row="1"/>
 
         <Rectangle Fill="Transparent"  HorizontalAlignment="Left" Height="290" Margin="475,53,0,0" Stroke="White" StrokeThickness="5"  VerticalAlignment="Top" Width="310" RadiusX="10" RadiusY="10" Grid.Row="1" Grid.RowSpan="2" />
@@ -35,24 +36,22 @@
         <Label Content="Description Recette  : " Foreground="White"  FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Margin="492,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,2.207" Grid.Row="1" />
         <Rectangle Fill="white" HorizontalAlignment="Left" Height="2" Margin="494,88,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="115" Grid.Row="1"/>
         <Rectangle Fill="white" HorizontalAlignment="Left" Height="3" Margin="494,51,0,0" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="147"/>
-        <TextBox Name="NomLabel" Background="Transparent" FontStyle="Italic" FontWeight="Medium" FontSize="18" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="48" Margin="193,17,0,0" VerticalAlignment="Top" Width="283"/>
+        <TextBox Name="NomLabel" LostFocus="NomLostFocus" Background="Transparent" FontStyle="Italic" FontWeight="Medium" FontSize="18" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="48" Margin="193,17,0,0" VerticalAlignment="Top" Width="283"/>
         <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="28" Margin="103,10,0,0"  Grid.Row="1" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="74"/>
-        <TextBox Name="IdLabel" Text="0000" BorderThickness="0" Background="Transparent" LostFocus="IdLostFocus" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="28" Margin="115,10,0,0" VerticalAlignment="Top" Width="62" Grid.Row="1"/>
+        <TextBox Name="IdLabel" Text="" MaxLength="9" BorderThickness="0" Background="Transparent" LostFocus="IdLostFocus" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="28" Margin="115,10,0,0" VerticalAlignment="Top" Width="62" Grid.Row="1"/>
         <Label BorderThickness="0" Content="R" Background="Transparent" LostFocus="IdLostFocus" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="28" Margin="103,10,0,0" VerticalAlignment="Top" Width="19" Grid.Row="1"/>
+        <TextBox Name="textDescription" LostFocus="DescriptionLostFocus" MaxLength="256" Foreground="White" Background="Transparent" FontSize="11" FontWeight="Medium" FontFamily="Colibri" FontStyle="Italic" HorizontalAlignment="Left" Margin="492,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="218" Width="276" Grid.Row="1" Grid.RowSpan="2"/>
 
-        <TextBox Name="TypeLabel" LostFocus="TypeLostFocus"  Background="Transparent" FontStyle="Italic" FontWeight="Medium" FontSize="18" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="48" Margin="653,13,0,0" VerticalAlignment="Top" Width="126"/>
-        <TextBox Name="CookLabel" Text="0" LostFocus="PrixLostFocus" BorderThickness="1" Background="Transparent" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="587,7,0,0" VerticalAlignment="Top" Width="54" Grid.Row="1" TextChanged="CookLabel_TextChanged"/>
-        <Label Name="EurosLabel" Content="" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="684,7,0,0" VerticalAlignment="Top" Width="56" Grid.Row="1"/>
-        <TextBox Name="textDescription" MaxLength="256" Foreground="White" Background="Transparent" FontSize="11" FontWeight="Medium" FontFamily="Colibri" FontStyle="Italic" HorizontalAlignment="Left" Margin="492,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="218" Width="276" Grid.Row="1" Grid.RowSpan="2"/>
-        <Button Name="FinaliserButton" Content="Finaliser" HorizontalAlignment="Left" Height="25" Margin="644,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" FontStyle="Italic" FontWeight="Medium"/>
+        <Button Name="FinaliserButton" Content="Finaliser" HorizontalAlignment="Left" Height="25" Margin="644,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" FontStyle="Italic" FontWeight="Medium" Click="FinaliserButton_Click"/>
         <Button Name="ValiderButton" Content="Finaliser" HorizontalAlignment="Left" Height="25" Margin="643,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" FontStyle="Italic" FontWeight="Medium" Click="ValiderButton_Click"/>
         <Button Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="25" Margin="494,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" FontStyle="Italic" FontWeight="Medium" Click="CancelButton_Click"/>
-        <DataGrid HorizontalAlignment="Left" Height="218" Margin="27,109,0,0" Grid.Row="1" VerticalAlignment="Top" Width="275" Grid.RowSpan="2"/>
+        
+        <DataGrid Name="TableIngred" HorizontalAlignment="Left" Height="218" Margin="27,109,0,0" Grid.Row="1" VerticalAlignment="Top" Width="275" Grid.RowSpan="2"/>
 
-        <ComboBox Name="listeProduitsCombo" HorizontalAlignment="Left" Height="25" Margin="336,65,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117"/>
-        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="25" Margin="336,110,0,0"  Grid.Row="1" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="112"/>
-        <TextBox Name="QuantiteText" Text="0" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent" Foreground="White" FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Height="25" Margin="336,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
-        <Label Name="UniteLabel" Content="unite" Foreground="White" FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Height="25" Margin="406,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="42"/>
+        <ComboBox Name="listeProduitsCombo" LostFocus="ComboBoxLostFocus" HorizontalAlignment="Left" Height="25" Margin="336,65,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117"/>
+        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="30" Margin="336,110,0,0"  Grid.Row="1" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="112"/>
+        <TextBox Name="QuantiteText" LostFocus="QuantiteLostFocus" Text="" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent" Foreground="White" FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Height="30" Margin="336,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <Label Name="UniteLabel" Content="" Foreground="White" FontStyle="Italic" FontWeight="Medium" FontSize="12" HorizontalAlignment="Left" Height="30" Margin="406,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="42"/>
 
         <Label Content="L'id doit être composé que de chiffres !" Foreground="Red"  FontStyle="Italic" FontWeight="Medium" FontSize="14" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Grid.Row="1" />
 
@@ -64,6 +63,13 @@
         <Label Content="ici" FontSize="14" FontWeight="Medium" Foreground="Red" FontStyle="Italic" HorizontalAlignment="Left" Margin="310,41,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.789,0.462"/>
         <Rectangle Fill="Red" HorizontalAlignment="Left" Height="2" Margin="315,65,0,0" Grid.Row="2" Stroke="Red" StrokeThickness="1" VerticalAlignment="Top" Width="14"/>
         <Button Name="NouveauProduitButton" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="312,50,0,0" Grid.Row="2" VerticalAlignment="Top" Width="22" Click="NouveauProduit_Click" Height="17"/>
+        <ComboBox Name="TypesCombo" HorizontalAlignment="Left" Margin="665,27,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="TypeChanged"/>
+
+        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="28" Margin="587,7,0,0"  Grid.Row="1" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="97"/>
+        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="28" Margin="686,7,0,0"  Grid.Row="1" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="97"/>
+
+        <TextBox Name="CookLabel"  Text="" LostFocus="PrixLostFocus" BorderThickness="0" Background="Transparent" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="587,7,0,0" VerticalAlignment="Top" Width="54" Grid.Row="1" />
+        <Label Name="EurosLabel" Content="" FontWeight="Medium" FontSize="14" FontStyle="Italic" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="684,7,0,0" VerticalAlignment="Top" Width="56" Grid.Row="1"/>
 
     </Grid>
 </Window>

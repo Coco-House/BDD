@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\App.xaml
-14-466861570
+16982097149
 
-24-1246090909
+26-696499368
 138-1542015413
-AfficherProfilCdR.xaml;AfficherRecettesCdR.xaml;ConnexionCompte.xaml;CreerRecette.xaml;DetailRecette.xaml;DetailRecette2.xaml;LoginPage.xaml;MainWindow.xaml;ModuleCdR.xaml;ModuleClient.xaml;PageD'accueil.xaml;Panier.xaml;PasserCommande.xaml;SupprimerCompte.xaml;
+AfficherProfilCdR.xaml;AfficherRecettesCdR.xaml;ConnexionCompte.xaml;CreerProduitCdR.xaml;CreerRecette.xaml;DetailRecette.xaml;DetailRecette2.xaml;LoginPage.xaml;MainWindow.xaml;ModuleCdR.xaml;ModuleClient.xaml;ModuleGestion.xaml;PageD'accueil.xaml;Panier.xaml;PasserCommande.xaml;SupprimerCompte.xaml;
 
 True
 

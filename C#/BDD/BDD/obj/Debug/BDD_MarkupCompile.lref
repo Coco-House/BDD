@@ -1,17 +1,19 @@
 ﻿
 
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherProfilCdR.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherRecettesCdR.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\ConnexionCompte.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerRecette.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\DetailRecette.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\DetailRecette2.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\LoginPage.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\MainWindow.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\ModuleCdR.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\ModuleClient.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\PageD'accueil.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\Panier.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\PasserCommande.xaml;;
-Fj:\#Projets-ESILV\BDD\C#\BDD\BDD\SupprimerCompte.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherProfilCdR.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherRecettesCdR.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ConnexionCompte.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerProduitCdR.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerRecette.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\DetailRecette.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\DetailRecette2.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\LoginPage.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\MainWindow.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ModuleCdR.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ModuleClient.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ModuleGestion.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\PageD'accueil.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\Panier.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\PasserCommande.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\SupprimerCompte.xaml;;
 
