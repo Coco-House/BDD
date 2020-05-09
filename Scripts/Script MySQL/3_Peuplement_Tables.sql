@@ -19,7 +19,7 @@ INSERT INTO `projet`.`fournisseur` (`idF`,`nomF`,`telF`) VALUES ('F1600', 'Légu
 
 -- insertion dans la table produit
 
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oeuf','aliment','unite',232,150,500,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('oeuf','aliment','unite',100,150,500,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('sucre','sucre','g',50000,10000,100000,'F100');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('vanille','épice','unite',50,10,150,'F300');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('mascarpone','fromage','g',50000,5000,80000,'F100');
@@ -27,9 +27,9 @@ INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stock
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('café','boisson','cl',5000,2000,10000,'F1100');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('cacao','poudre','g',2000,1000,5000,'F400');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('courgette','légume','kg',30,10,100,'F300');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('gruyère râpé','fromage','g',5000,2000,10000,'F200');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('gruyère râpé','fromage','g',1800,2000,10000,'F200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lait','boisson','L',25,10,40,'F1100');
-INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('basilic','légume','g',5000,1200,7000,'F1600');
+INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('basilic','légume','g',500,1200,7000,'F1600');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('pâte brisée','préparations pour pâtisseries','g',6000,1000,8000,'F1200');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('lardon','aliment','g',2000,400,3000,'F400');
 INSERT INTO `projet`.`produit` (`nomP`,`categorieP`,`unite`,`stockActuel`,`stockMin`,`stockMax`,`idF`) VALUES ('beurre','matières grasses','g',600,200,1000,'F300');
