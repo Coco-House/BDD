@@ -23,6 +23,7 @@ namespace BDD
         private static bool unBlockCdR = false;
         private static bool cdRConnecte = false;
         private static bool clientConnecte = false;
+        private static string emailConnecte = "";
         private static string idCdRConnecte = "";
 
         public static string IdCdRConnecte
@@ -31,6 +32,11 @@ namespace BDD
             set { idCdRConnecte = value; }
         }
 
+        public static string EmailConnecte
+        {
+            get { return emailConnecte; }
+            set { emailConnecte = value; }
+        }
         public static bool UnBlockCdR
         {
             get { return unBlockCdR; }
@@ -97,12 +103,14 @@ namespace BDD
                 cdRConnecte = true;
                 clientConnecte = false;
                 idCdRConnecte = idCdR;
+                emailConnecte = EmailBox.Text;
             }
             else 
             {
                 unBlockCdR = false;
                 cdRConnecte = false;
                 idCdRConnecte = "";
+                emailConnecte = EmailBox.Text;
                 clientConnecte = true;
             }
 
@@ -117,6 +125,7 @@ namespace BDD
         {
             ModuleClient window = new ModuleClient();
             window.Show();
+            emailConnecte = "";
             this.Close();
         }
 
@@ -163,15 +172,16 @@ namespace BDD
                     
                 }
 
-                if (correct == false)
-                {
-                    MessageBox.Show("Le mot de passe ne correspond pas à cet email !");
-                    PswdBox.Password = string.Empty;
-                }
-                else if (existe == false)
+               
+                 if (existe == false)
                 {
                     MessageBox.Show("Il n'y a pas de compte associé à cet email !");
                     EmailBox.Text = string.Empty;
+                }
+                else if (correct == false)
+                {
+                    MessageBox.Show("Le mot de passe ne correspond pas à cet email !");
+                    PswdBox.Password = string.Empty;
                 }
                 else
                 {

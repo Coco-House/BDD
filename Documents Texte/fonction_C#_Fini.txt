@@ -6,17 +6,6 @@ I- Remarques :
 III- 3 Parties :
     -----------
 
-
-2- Partie CdR
-
-    -! Saisir une recette : 
-        * rentrer nom, 
-        * liste ingredients (avec quantites, peut rajouter des produits), 
-        * description, 
-        * prix de vent client 
-    -! Consulter son solde de points cook
-    -! Affichage des recettes (avec nom, nombre de commande)
-
 3- Partie Gestion de Cooking
     Top semaine "recalculable" --> ??
 

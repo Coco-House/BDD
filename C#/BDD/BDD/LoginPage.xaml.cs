@@ -640,7 +640,7 @@ namespace BDD
 
                     if (email == emailEntre)
                     {
-                        MessageBox.Show("L'email existe deja, veuillez saisir un autre Id.");
+                        MessageBox.Show("Il existe un compte avec cet email ! Veuillez en choisir un autre ou de vous connecter si c'est votre email !");
                         IDCdRBox.Text = string.Empty;
                         existe = true;
                         break;

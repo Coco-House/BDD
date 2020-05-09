@@ -103,14 +103,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AfficherProfilCdR.xaml.cs">
+      <DependentUpon>AfficherProfilCdR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AfficherRecettesCdR.xaml.cs">
+      <DependentUpon>AfficherRecettesCdR.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ConnexionCompte.xaml.cs">
       <DependentUpon>ConnexionCompte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreerRecette.xaml.cs">
+      <DependentUpon>CreerRecette.xaml</DependentUpon>
     </Compile>
     <Compile Include="DetailRecette.xaml.cs">
       <DependentUpon>DetailRecette.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DetailRecette2.xaml.cs">
+      <DependentUpon>DetailRecette2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCdR.xaml.cs">
+      <DependentUpon>ModuleCdR.xaml</DependentUpon>
     </Compile>
     <Compile Include="ModuleClient.xaml.cs">
       <DependentUpon>ModuleClient.xaml</DependentUpon>
@@ -125,11 +140,30 @@
       <DependentUpon>PasserCommande.xaml</DependentUpon>
     </Compile>
     <Compile Include="Recette.cs" />
+    <Compile Include="SupprimerCompte.xaml.cs">
+      <DependentUpon>SupprimerCompte.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AfficherProfilCdR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AfficherRecettesCdR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ConnexionCompte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CreerRecette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DetailRecette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailRecette2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,6 +183,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModuleCdR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ModuleClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PasserCommande.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupprimerCompte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,6 +257,53 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\DetailBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DefaultProfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DefaultProfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LogosProfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ProfileM.png" />
+    <Resource Include="ProfileM.png" />
+    <Resource Include="ProfileF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ProfileF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogosProfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ProfileF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Solde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SoldeLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SoldeLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CalendrierLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ExitLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExitLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CalendrierLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="BDD.ModuleCdR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDD"
+        mc:Ignorable="d"
+        
+        WindowStartupLocation="CenterScreen"
+        Title="ModuleCdR" Height="160" Width="300">
+    <StackPanel>
+        <Button Name ="ModuleClientButton" Content="Accéder aux fonctions partagées avec un client" Click="ModuleClientButton_click" FontWeight="Medium" FontStyle="Italic" />
+
+        <Button Name ="CreerRecetteButton" Content="Créer une nouvelle recette" Click="CreerRecette_click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="ConsulterSoldeButton" Content="Consulter solde points cook" Click="ConsulterSolde_click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="AfficherRecettesButton" Content="Consulter vos recettes" Click="AfficherRecettes_click" FontWeight="Medium" FontStyle="Italic"/>
+
+        <Button Name ="DeconnexionButton" Content="Deconnexion" Click="Deconnexion_Click" FontWeight="Medium" FontStyle="Italic"/>
+        <Button Name ="RetourButton" Content="Retour" Click="RetourButton_Click" FontWeight="Medium" FontStyle="Italic"/>
+    </StackPanel>
+</Window>

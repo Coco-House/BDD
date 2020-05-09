@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="DetailRecette" Height="460" Width="810">
     <Grid>
         <Grid.RowDefinitions>

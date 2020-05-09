@@ -41,7 +41,7 @@ namespace BDD
             }
             else
             {
-                ConnexionCompte window = new ConnexionCompte();
+                ModuleCdR window = new ModuleCdR();
                 window.Show();
                 this.Close();
             }

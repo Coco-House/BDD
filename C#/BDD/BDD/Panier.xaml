@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Panier" Height="260" Width="820">
     <Grid Background="LightYellow">
         <DataGrid Name="PanierData"  Height="150" Margin="10,10,10,59" BorderThickness="5" BorderBrush="Black"/>

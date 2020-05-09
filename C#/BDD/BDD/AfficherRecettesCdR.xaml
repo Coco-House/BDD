@@ -1,0 +1,27 @@
+﻿<Window x:Class="BDD.AfficherRecettesCdR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDD"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="AfficherRecettesCdR" Height="440" Width="525">
+    <Grid Background="LightCoral">
+        <DataGrid Name="RecetteTable" AutoGenerateColumns="True" BorderThickness="5" BorderBrush="Black" HorizontalAlignment="Left" Margin="20,60,0,0" Height="200" VerticalAlignment="Top" Width="475">
+
+        </DataGrid>
+        <Label Content="Liste de vos recettes : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="325"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="2" Margin="25,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="163"/>
+
+
+        <Label Content="Si vous voulez plus de détail, appuyez sur le bouton 'Détail' : " FontWeight="Medium" FontStyle="Italic" FontSize="14" HorizontalAlignment="Left" Margin="20,265,0,0" VerticalAlignment="Top" Width="398"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="2" Margin="25,292,0,0" Stroke="Black" VerticalAlignment="Top" Width="381"/>
+        <ComboBox Name="ListeRecettesDetail"  HorizontalAlignment="Left" Margin="25,315,0,0" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.067,0.318" Height="22"/>
+        <Button Name="DetailButton" Content="Détail" HorizontalAlignment="Left" Margin="230,315,0,0" FontWeight="Medium"  FontStyle="Italic" VerticalAlignment="Top" Width="116" Height="22"  Click="Detail_Click" />
+
+        <Button Name="Retour" Content="Retour" HorizontalAlignment="Left" Margin="381,369,0,0" VerticalAlignment="Top" Width="116" Click="Retour_Click" FontStyle="Italic" FontWeight="Medium" Height="20"/>
+
+
+    </Grid>
+</Window>

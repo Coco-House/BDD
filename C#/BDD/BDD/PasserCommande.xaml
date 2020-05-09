@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
+        
+        WindowStartupLocation="CenterScreen"
         Title="PasserCommande" Height="560" Width="800">
     <Grid Background="LightGreen">
         <DataGrid Name="DataSQL" AutoGenerateColumns="True"  BorderThickness="5" BorderBrush="Black" HorizontalAlignment="Left" Margin="20,60,0,0" Height="250" VerticalAlignment="Top" Width="750">

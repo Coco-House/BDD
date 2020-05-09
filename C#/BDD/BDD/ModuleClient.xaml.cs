@@ -29,12 +29,14 @@ namespace BDD
                 LoginButton.IsEnabled = false;
                 ConnexionButton.IsEnabled = false;
                 DeconnexionButton.IsEnabled = true;
+                SupprimerCompteButton.IsEnabled = true;
             }
             else
             {
                 LoginButton.IsEnabled = true;
                 ConnexionButton.IsEnabled = true;
                 DeconnexionButton.IsEnabled = false;
+                SupprimerCompteButton.IsEnabled = false;
             }
         }
 
@@ -69,6 +71,7 @@ namespace BDD
                 ConnexionCompte.ClientConnecte = false;
                 ConnexionCompte.CdRConnecte = false;
                 ConnexionCompte.IdCdRConnecte = "";
+                ConnexionCompte.EmailConnecte = "";
                 LoginButton.IsEnabled = true;
                 PasserCommande.listeIdRecettesCommandees.Clear();
                 ModuleClient window = new ModuleClient();
@@ -84,6 +87,13 @@ namespace BDD
         private void Connexion_Click(object sender, RoutedEventArgs e)
         {
             ConnexionCompte window = new ConnexionCompte();
+            window.Show();
+            this.Close();
+        }
+
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+            SupprimerCompte window = new SupprimerCompte();
             window.Show();
             this.Close();
         }
