@@ -29,11 +29,33 @@ namespace BDD
 
         private void Valider2Button_Click(object sender, RoutedEventArgs e)
         {
-            if(ConnexionCompte.IdCdRConnecte != "")
+            if (ConnexionCompte.IdCdRConnecte != "")
             {
                 string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
+
+
+                // Supprimer ses recettes
+
+                connection.Open();
+
+                MySqlCommand commandR = connection.CreateCommand();
+                commandR.CommandText = "DELETE FROM projet.recette WHERE idCdR='" + ConnexionCompte.IdCdRConnecte + "';";     // la requete
+
+                MySqlDataReader readerR;
+                readerR = commandR.ExecuteReader();               // executer la requete (reader sera une ligne)
+
+                // Manipulation du resultat
+
+                while (readerR.Read()) // on parcourt reader ligne par ligne
+                {
+                }
+
+                connection.Close();
+
+                // Supprimer le cdr
+
                 connection.Open();
 
                 MySqlCommand command = connection.CreateCommand();
@@ -49,6 +71,8 @@ namespace BDD
                 }
 
                 connection.Close();
+
+                // Le supprimer de la table client
 
                 connection.Open();
 
@@ -184,6 +208,8 @@ namespace BDD
                         }
                     }
 
+                    connection.Close();
+
                     if (correct == false)
                     {
                         MessageBox.Show("Le mot de passe ne correspond pas à cet email !");
@@ -192,10 +218,18 @@ namespace BDD
                     }
                     else
                     {
-                        ValiderButton2.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                        var result = MessageBox.Show("Attention ! Etes-vous sûr de vouloir supprimer votre compte ? Cela supprimera vos recettes ainsi que votre compte client !", "Warning !", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            ValiderButton2.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                        }
+                        else
+                        {
+                            MessageBox.Show("L'operation a ete abondonnée.","Suppression abandonnée !", MessageBoxButton.OK,MessageBoxImage.Information);
+                        }
                     }
 
-                    connection.Close();
                 }
             }
             else

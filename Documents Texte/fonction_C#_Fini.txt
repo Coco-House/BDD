@@ -1,10 +1,5 @@
-I- Remarques : 
-  -----------
 
 - Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
-
-III- 3 Parties :
-    -----------
 
 3- Partie Gestion de Cooking
     Top semaine "recalculable" --> ??
@@ -20,6 +15,7 @@ III- 3 Parties :
             * la qte A COMMANDER = qte max - qte restante
             * liste classee par fournisseur puis par produit (balise fournisseur puis balise produit dedans)
             * NOUVEAUX PRODUITS???
+
     -! Supprimer recette (Fonctionnalite CdR / nous)
     -! Supprimer CdR ET TOUTES SES RECETTES mais on peutc choisir s'il reste client ou pas 
 
@@ -28,26 +24,22 @@ IV- Mode demo :
     -----------
 
 Bouton sur le menu qui affichera les infos suivantes (les parcourir avec un bouton suivant et un precedent):
-    * Nb de clients ("xx clients dont yy CdR)
-    * Nb puis noms des CdR et pour chaque CdR 
-        - Nb total de ses recettes commandees 
-        - (Bonus, faire les 3 (nb recettes commandees, nombre de commandes total par CdR, nb de commandes total PAR recette PAR CdR))
-    * Nb recettes dans database
-    * Liste produits dont la qte restante en stock <= 2 * leur qte minimale
-    * Saisie clavier par l'evaluateur d'un des produits de la liste precedente ^ 
-        - puis afficher liste des recettes (nom) utilisant ce produit 
-        - et la qte utilisee dans cette recette
+    * Nb de clients ("xx clients dont yy CdR) // Count(*) client puis cdr
+   
+    * Nb puis noms des CdR et pour chaque CdR // datatable --> id, nom, nb de recettes, nb de commandes total par cdR (nb de commande par recette par cdr???)
+   
+    * Nb recettes dans database // Count(*) recette
 
+    * Liste produits dont la qte restante en stock <= 2 * leur qte minimale  -->  select * where stockActuel <= 2*stockMin
+    
+    * Saisie clavier par l'evaluateur d'un des produits de la liste precedente ^ --> verifier ou combobox
 
-==> Faire avec des Count sql
+        - puis afficher liste des recettes (nom) utilisant ce produit --> natural join 
+        - et la qte utilisee dans cette recette                      --> parcourir liste nomP de chaque recette, trouver indice --> indice dans qtes --> on a la qte
+
 
 V- Unit Testing :
    ------------
    
    *  quelques Unit Testing
-
-VI- Bonus :
-  -------
-    - Fonctionnalite client et CdR --> possibilite de supprimer son compte (et donc toutes ses recettes pour un CdR) --> Verification avec mdp
-
 
