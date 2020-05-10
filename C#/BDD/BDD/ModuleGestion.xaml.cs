@@ -229,6 +229,9 @@ namespace BDD
                 }
 
                 MainWindow.LoadDatabase();
+                MainWindow.SaveDatabaseSemainePrec();
+                MainWindow.LoadDatabaseSemainePrec();
+               
 
                 MessageBox.Show("Réapprovisionnement de la semaine dernière a bien été réussi !", "Success !", MessageBoxButton.OK, MessageBoxImage.Information);
 

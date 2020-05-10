@@ -1,5 +1,5 @@
 ail,légume,unite,50,25,100,F700
-basilic,légume,g,13500,1200,7000,F1600
+basilic,légume,g,7000,1200,7000,F1600
 beurre,matières grasses,g,600,200,1000,F300
 biscuit à la cuillère,biscuit,unite,50,20,100,F1200
 boeuf haché,aliment,g,15000,10000,50000,F200
@@ -13,7 +13,7 @@ crème fraîche,matières grasses,cup,30,20,70,F1200
 eau,boisson,L,15,10,30,F1100
 farine,produits céréaliers,g,15000,10000,60000,F900
 fromage râpé,aliment,g,1640,1000,3000,F200
-gruyère râpé,fromage,g,18200,2000,10000,F200
+gruyère râpé,fromage,g,10000,2000,10000,F200
 huile,huiles,tbsp,240,150,350,F900
 lait,boisson,L,8,10,40,F1100
 lardon,aliment,g,241,400,3000,F200
@@ -21,7 +21,7 @@ laurier,légume,tbsp,35,30,50,F500
 levure,aliment,g,1200,800,3000,F900
 mascarpone,fromage,g,50000,5000,80000,F100
 muscade,épice,tbsp,30,20,90,F800
-oeuf,aliment,unite,900,150,500,F200
+oeuf,aliment,unite,500,150,500,F200
 oignon,légume,unite,55,30,110,F1500
 pâte brisée,préparations pour pâtisseries,g,6000,1000,8000,F1200
 pâte de lasagne,aliment,g,2500,2000,8000,F1400

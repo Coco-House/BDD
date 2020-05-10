@@ -34,8 +34,8 @@ namespace BDD
             TableRecettes.Visibility = Visibility.Hidden;
             listeRecettesLabel.Visibility = Visibility.Hidden;
             ListeRecettesRectangle.Visibility = Visibility.Hidden;
-            
-            
+
+
             RetourCheckBox.IsEnabled = false;
             RetourCheckBox.IsChecked = false;
 
@@ -78,11 +78,11 @@ namespace BDD
 
         private void AfficherButton_Click(object sender, RoutedEventArgs e)
         {
-            if(SaisieManuelle.Text == "" && ProduitComboBox.SelectedIndex == -1)
+            if (SaisieManuelle.Text == "" && ProduitComboBox.SelectedIndex == -1)
             {
                 MessageBox.Show("Veuillez choisir un produit dans le comboBox ou de le saisir manuellement dans le textBox ! ", "Erreur !", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if(SaisieManuelle.Text != "" && ProduitComboBox.SelectedIndex != -1)
+            else if (SaisieManuelle.Text != "" && ProduitComboBox.SelectedIndex != -1)
             {
                 MessageBox.Show("Veuillez choisir entre comboBox et saisie manuelle , et non pas les deux ! ", "Erreur !", MessageBoxButton.OK, MessageBoxImage.Error);
                 ProduitComboBox.SelectedIndex = -1;
@@ -90,7 +90,7 @@ namespace BDD
             }
             else
             {
-                if(SaisieManuelle.Text != "")
+                if (SaisieManuelle.Text != "")
                 {
                     string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
 
@@ -98,7 +98,7 @@ namespace BDD
                     connection.Open();
 
                     MySqlCommand commande = connection.CreateCommand();
-                    commande.CommandText = "SELECT * FROM projet.produit WHERE stockActuel <= 2 * stockMin AND nomP='"+SaisieManuelle.Text+"';";
+                    commande.CommandText = "SELECT * FROM projet.produit WHERE stockActuel <= 2 * stockMin AND nomP='" + SaisieManuelle.Text + "';";
 
                     MySqlDataReader reader;
                     reader = commande.ExecuteReader();
@@ -107,7 +107,7 @@ namespace BDD
 
                     while (reader.Read())
                     {
-                        existe = reader.GetString(0);    
+                        existe = reader.GetString(0);
                     }
 
                     connection.Close();
@@ -120,10 +120,10 @@ namespace BDD
                     else
                     {
                         DataTable dataRec = new DataTable("Recettes");
-                        
+
                         dataRec.Columns.Add("Id Recette");
                         dataRec.Columns.Add("Nom Recette");
-                        dataRec.Columns.Add("Quantite Dans Recette",typeof(int));
+                        dataRec.Columns.Add("Quantite Dans Recette", typeof(int));
                         dataRec.Columns.Add("Unite");
 
                         connection.Open();
@@ -146,7 +146,7 @@ namespace BDD
                         connection.Open();
 
                         MySqlCommand commande2 = connection.CreateCommand();
-                        commande2.CommandText = "SELECT idR,nomR,quantites,listeIngredients FROM projet.recette WHERE listeIngredients LIKE '%;" + SaisieManuelle.Text + "%' OR listeIngredients LIKE '%" + SaisieManuelle.Text+ ";%' OR listeIngredients LIKE '%;" + SaisieManuelle.Text + ";%';";
+                        commande2.CommandText = "SELECT idR,nomR,quantites,listeIngredients FROM projet.recette WHERE listeIngredients LIKE '%;" + SaisieManuelle.Text + "%' OR listeIngredients LIKE '%" + SaisieManuelle.Text + ";%' OR listeIngredients LIKE '%;" + SaisieManuelle.Text + ";%';";
 
                         MySqlDataReader reader2;
                         reader2 = commande2.ExecuteReader();
@@ -161,19 +161,23 @@ namespace BDD
                             string[] ingredients = listeIngredients.Split(';');
                             string[] listeQuantites = quantites.Split(';');
 
-                            int indiceProd = 0;
-                            foreach(string prod in ingredients)
+                            int indiceProd = -1;
+
+                            for (int q = 0; q < ingredients.Length; q++)
                             {
-                                if (prod == SaisieManuelle.Text)
+                                if (ingredients[q] == SaisieManuelle.Text)
                                 {
+                                    indiceProd = q;
                                     break;
                                 }
-                                indiceProd++;
                             }
 
-                            int quantite = Convert.ToInt32(listeQuantites[indiceProd]);
+                            if (indiceProd != -1)
+                            {
+                                int quantite = Convert.ToInt32(listeQuantites[indiceProd]);
+                                dataRec.Rows.Add(idR, nomR, quantite, unite);
+                            }
 
-                            dataRec.Rows.Add(idR, nomR, quantite, unite);
                         }
 
                         connection.Close();
@@ -197,7 +201,7 @@ namespace BDD
                     }
 
                 }
-                else if(ProduitComboBox.SelectedIndex != -1)
+                else if (ProduitComboBox.SelectedIndex != -1)
                 {
                     DataTable dataRec = new DataTable("Recettes");
 
@@ -246,19 +250,24 @@ namespace BDD
                         string[] ingredients = listeIngredients.Split(';');
                         string[] listeQuantites = quantites.Split(';');
 
-                        int indiceProd = 0;
-                        foreach (string prod in ingredients)
+                        int indiceProd = -1;
+
+                        for(int q = 0; q < ingredients.Length; q++)
                         {
-                            if (prod == ProduitComboBox.SelectedItem.ToString())
+                            if(ingredients[q] == ProduitComboBox.SelectedItem.ToString())
                             {
+                                indiceProd = q;
                                 break;
                             }
-                            indiceProd++;
+                        }
+                        
+                        if(indiceProd != -1)
+                        {
+                            int quantite = Convert.ToInt32(listeQuantites[indiceProd]);
+                            dataRec.Rows.Add(idR, nomR, quantite, unite);
                         }
 
-                        int quantite = Convert.ToInt32(listeQuantites[indiceProd]);
 
-                        dataRec.Rows.Add(idR, nomR, quantite, unite);
                     }
 
                     connection.Close();
@@ -293,7 +302,7 @@ namespace BDD
 
             ListeProdRectangle.Visibility = Visibility.Visible;
             ListeProdLabel.Visibility = Visibility.Visible;
-            
+
             RetourCheckBox.IsEnabled = false;
             RetourCheckBox.IsChecked = false;
 
