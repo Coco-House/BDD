@@ -31,6 +31,13 @@ namespace BDD
                 DeconnexionButton.IsEnabled = true;
                 SupprimerCompteButton.IsEnabled = true;
             }
+            else if(ConnexionCompteAdmin.AdminConnecte == true)
+            {
+                LoginButton.IsEnabled = false;
+                ConnexionButton.IsEnabled = false;
+                DeconnexionButton.IsEnabled = false;
+                SupprimerCompteButton.IsEnabled = false;
+            }
             else
             {
                 LoginButton.IsEnabled = true;

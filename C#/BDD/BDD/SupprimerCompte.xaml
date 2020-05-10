@@ -13,10 +13,10 @@
         </Grid.Background>
 
         <Label Content="Entrez Votre Email : " FontStyle="Italic"  FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="175"/>
-        <TextBox Name="EmailBox" HorizontalAlignment="Left" Height="20" Margin="206,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name="EmailBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="209,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
 
         <Label Content="Entrez Votre Password : " FontStyle="Italic" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="30" Width="175"/>
-        <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="206,65,0,0" VerticalAlignment="Top" Width="150"/>
+        <PasswordBox Name="PswdBox" HorizontalAlignment="Left" Height="20" Margin="209,65,0,0" VerticalAlignment="Top" Width="150"/>
 
         <Label Content="Confirmez Votre Password : " FontStyle="Italic" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Height="30" Width="199"/>
         <PasswordBox Name="PswdBoxVerif" HorizontalAlignment="Left" Height="20" Margin="209,114,0,0" VerticalAlignment="Top" Width="150"/>
@@ -31,7 +31,7 @@
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="2" Margin="16,135,0,0" Stroke="Black" VerticalAlignment="Top" Width="184"/>
         <Label Content="Tapez 'Je confirme la suppression' :" FontWeight="Medium" FontStyle="Italic" HorizontalAlignment="Left" Height="25" Margin="10,157,0,0" VerticalAlignment="Top" Width="352"/>
         <CheckBox Background="White" Name="Confirmer" Content="" HorizontalAlignment="Left" Margin="342,163,0,0" VerticalAlignment="Top" Height="19" RenderTransformOrigin="0.667,0.491" Checked="ConfirmerChecked" Unchecked="ConfirmerUnchecked"/>
-        <TextBox Name="JeconfirmeContent" HorizontalAlignment="Left" Height="20" Margin="216,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121"/>
+        <TextBox Name="JeconfirmeContent" HorizontalAlignment="Left" Height="20" Margin="209,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128"/>
 
     </Grid>
 </Window>

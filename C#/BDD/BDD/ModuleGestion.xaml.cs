@@ -23,50 +23,84 @@ namespace BDD
         {
             InitializeComponent();
             
-            // if client ou cdr co
+            if(ConnexionCompte.CdRConnecte == false && ConnexionCompte.ClientConnecte==false && ConnexionCompteAdmin.AdminConnecte == false)
+            {
+                ConnexionAdminButton.IsEnabled = true;
+                SupprimerRecetteButton.IsEnabled = false;
+                RajouterProduitButton.IsEnabled = false;
+                SupprimerCompteButton.IsEnabled = false;
+                DeconnexionAdminButton.IsEnabled = false;
+            }
+            else if(ConnexionCompte.CdRConnecte == true)
+            {
+                ConnexionAdminButton.IsEnabled = false;
+                SupprimerRecetteButton.IsEnabled = true;
+                RajouterProduitButton.IsEnabled = false;
+                SupprimerCompteButton.IsEnabled = false;
+                DeconnexionAdminButton.IsEnabled = false;
+            }
+            else if(ConnexionCompte.ClientConnecte == true)
+            {
+                ConnexionAdminButton.IsEnabled = false;
+                SupprimerRecetteButton.IsEnabled = false;
+                RajouterProduitButton.IsEnabled = false;
+                SupprimerCompteButton.IsEnabled = false;
+                DeconnexionAdminButton.IsEnabled = false;
+            }
+            else if(ConnexionCompteAdmin.AdminConnecte == true)
+            {
+                ConnexionAdminButton.IsEnabled = false;
+                SupprimerRecetteButton.IsEnabled = true;
+                RajouterProduitButton.IsEnabled = true;
+                SupprimerCompteButton.IsEnabled = true;
+                DeconnexionAdminButton.IsEnabled = true;
+            }
 
-            /*
-             disable
-             tout sauf retour et tableau bord
-             */
-
-            // if admin
-
-            // activer boutons,  connexion disabled 
-
-
-            // if CdR co --> activer supprimer recette
         }
 
         private void ConnexionAdmin_Click(object sender, RoutedEventArgs e)
         {
-            // avec mdp et username database
+            ConnexionCompteAdmin window = new ConnexionCompteAdmin();
+            window.Show();
+            this.Close();
         }
 
         private void TableauBord_Click(object sender, RoutedEventArgs e)
         {
-            // 3 checkboxs et 1 table
+            TableauBord window = new TableauBord();
+            window.Show();
+            this.Close();
         }
 
         private void SupprimerRecette_Click(object sender, RoutedEventArgs e)
         {
-            // combobox --> remplie de TOUTES les recettes si admin, sinon SES recettes
+            SupprimerUneRecette window = new SupprimerUneRecette();
+            window.Show();
+            this.Close();
         }
 
         private void RajouterProduit_Click(object sender, RoutedEventArgs e)
         {
-            // reprendre creer produit cdr
+            CreerProduitAdmin window = new CreerProduitAdmin();
+            window.Show();
+            this.Close();
         }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-            // Reprendre supprimer compte cdr --> avec checkbox : laisser en client ou pas
+            SupprimerCompteAdmin window = new SupprimerCompteAdmin();
+            window.Show();
+            this.Close();
         }
 
         private void DeconnexionAdmin_Click(object sender, RoutedEventArgs e)
         {
-            // deco admin
-            // mise a jour boutons
+            ConnexionCompteAdmin.AdminConnecte = false;
+            ConnexionAdminButton.IsEnabled = true;
+            SupprimerRecetteButton.IsEnabled = false;
+            RajouterProduitButton.IsEnabled = false;
+            SupprimerCompteButton.IsEnabled = false;
+            DeconnexionAdminButton.IsEnabled = false;
         }
 
         private void Reapprovisionnement_Click(object sender, RoutedEventArgs e)

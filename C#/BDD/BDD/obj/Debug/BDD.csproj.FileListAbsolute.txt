@@ -133,3 +133,13 @@ J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitCdR.g.cs
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitCdR.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ModuleGestion.g.cs
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ModuleGestion.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ConnexionCompteAdmin.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitAdmin.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerCompteAdmin.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerUneRecette.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\TableauBord.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ConnexionCompteAdmin.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitAdmin.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerCompteAdmin.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerUneRecette.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\TableauBord.baml

@@ -125,7 +125,11 @@ namespace BDD
         {
             ModuleClient window = new ModuleClient();
             window.Show();
+            unBlockCdR = false;
+            cdRConnecte = false;
+            idCdRConnecte = "";
             emailConnecte = "";
+            clientConnecte = false;
             this.Close();
         }
 

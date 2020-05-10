@@ -1,25 +1,12 @@
 
 - Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
 
-3- Partie Gestion de Cooking
-    Connexion Admin --> pouvoir rajouter des produits
-
-    Top semaine "recalculable" --> ??
-
-    -! tableau de bord de semaine :
-        * top CdR de la semaine (derniere?) (le CdR ayant le plus ete commande de la semaine)
-        * Top 5 recettes les plus commandees (avec les infos utiles, type recette, cuisiner etc..)
-        * Le CdR d'or : CdR ayant le plus ete commande DEPUIS L'OUVERTURE DU SITE + ses 5 recettes les plus commandees
-
     -! Reapprovisionnement hebdo des produits : 
         * MaJ Qte max et min des produits --> les produits non utilise depuis 30 derniers jours : qte max et min / 2 
         * Edition de la liste des commandes de la semaine au format XML (en fin de semaine) : 
             * liste des produits avec une qte restante < qte minimale 
             * la qte A COMMANDER = qte max - qte restante
             * liste classee par fournisseur puis par produit (balise fournisseur puis balise produit dedans)
-
-    -! Supprimer recette (Fonctionnalite CdR / nous)                                      --> verifier admin ou cdr connecte
-    -! Supprimer CdR ET TOUTES SES RECETTES mais on peutc choisir s'il reste client ou pas --> verifier admin ou cdr connecte
 
 
 IV- Mode demo : 

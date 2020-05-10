@@ -1,0 +1,10 @@
+R1,Tiramisu,Dessert,oeuf;sucre;vanille;mascarpone;biscuit à la cuillère;café;cacao,4;80;1;100;10;500;150,Dessert italien,12,2,GratR1,2,CdR123321,8
+R10,Fondant au chocolat,Dessert,chocolat;farine;sucre;oeuf;beurre,3;150;80;2;65,Gâteau au chocolat fondant,12,2,GratR10,2,CdR102938,16
+R2,Flan de courgettes,Entrée,courgette;gruyère râpé;lait;oeuf;basilic,1.5;120;0.5;3;50,Entrée froide végétarienne sans gluten,16,2,GratR2,2,CdR918274,0
+R3,Quiche lorraine,Plat,pâte brisée;lardon;beurre;oeuf;crème fraîche;lait;muscade;sel;poivre,300;500;120;4;2;0.3;3;10;15,Quiche lorraine en plat principal,20,2,GratR3,2,CdR918274,3
+R4,Lasagnes à la bolognaise,Plat,pâte de lasagne;oignon;ail;carotte;boeuf haché;purée de tomate;eau;laurier;thym;basilic;muscade;fromage râpé;sel;poivre,340;3;4;1;350;12;0.2;2;2;100;3;200;25;30,Lasagnes italiennes,25,2,GratR4,2,CdR241234,48
+R5,Pancake,Dessert,farine;sucre;oeuf;levure;beurre;sel;lait,400;250;8;50;150;20;1,Dessert rapide et végétarien,18,2,GratR5,2,CdR918274,27
+R6,Cookie au chocolat,Dessert,beurre;oeuf;sucre;vanille;farine;chocolat;sel;levure,150;6;250;2;450;4;10;60,Dessert végétarien,30,2,GratR6,2,CdR029384,34
+R7,Tarte aux pommes,Dessert,pâte brisée;pomme;sucre;beurre,300;5;200;100,Dessert normand rapide,12,2,GratR7,2,CdR918274,26
+R8,Gaspacho,Entrée,tomate;poivron;concombre;oignon;ail;vinaigre;oeuf;basilic;huile;poivre;sel,5;3;2;3;5;3;2;35;5;40;30,Entrée végétarienne rapide et froide,18,2,GratR8,2,CdR102938,12
+R9,Crêpe,Dessert,farine;sucre;oeuf;beurre;sel;lait;huile,300;240;6;100;10;0.7;3,Dessert rapide,16,2,GratR9,2,CdR918274,24

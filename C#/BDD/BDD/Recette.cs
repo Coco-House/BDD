@@ -74,6 +74,11 @@ namespace BDD
             set { this.nomR = value; }
         }
 
+        public string Type
+        {
+            get { return this.type; }
+            set { this.type = value; }
+        }
         public string ListeIngredients
         {
             get { return this.listeIngredients; }

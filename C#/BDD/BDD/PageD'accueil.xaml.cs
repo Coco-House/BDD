@@ -49,7 +49,9 @@ namespace BDD
 
         private void Gestion(object sender, RoutedEventArgs e)
         {
-
+            ModuleGestion window = new ModuleGestion();
+            window.Show();
+            this.Close();
         }
 
         private void Demo(object sender, RoutedEventArgs e)

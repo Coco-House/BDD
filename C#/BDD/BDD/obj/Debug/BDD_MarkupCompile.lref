@@ -3,6 +3,8 @@
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherProfilCdR.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\AfficherRecettesCdR.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ConnexionCompte.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\ConnexionCompteAdmin.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerProduitAdmin.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerProduitCdR.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\CreerRecette.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\DetailRecette.xaml;;
@@ -16,4 +18,7 @@ FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\PageD'accueil.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\Panier.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\PasserCommande.xaml;;
 FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\SupprimerCompte.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\SupprimerCompteAdmin.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\SupprimerUneRecette.xaml;;
+FJ:\#Projets-ESILV\BDD\C#\BDD\BDD\TableauBord.xaml;;
 

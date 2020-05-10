@@ -112,6 +112,12 @@
     <Compile Include="ConnexionCompte.xaml.cs">
       <DependentUpon>ConnexionCompte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConnexionCompteAdmin.xaml.cs">
+      <DependentUpon>ConnexionCompteAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreerProduitAdmin.xaml.cs">
+      <DependentUpon>CreerProduitAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreerProduitCdR.xaml.cs">
       <DependentUpon>CreerProduitCdR.xaml</DependentUpon>
     </Compile>
@@ -149,6 +155,15 @@
     <Compile Include="SupprimerCompte.xaml.cs">
       <DependentUpon>SupprimerCompte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SupprimerCompteAdmin.xaml.cs">
+      <DependentUpon>SupprimerCompteAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerUneRecette.xaml.cs">
+      <DependentUpon>SupprimerUneRecette.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableauBord.xaml.cs">
+      <DependentUpon>TableauBord.xaml</DependentUpon>
+    </Compile>
     <Page Include="AfficherProfilCdR.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +173,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConnexionCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConnexionCompteAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreerProduitAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,6 +241,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SupprimerCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupprimerCompteAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupprimerUneRecette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableauBord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

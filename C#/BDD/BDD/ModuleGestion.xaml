@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDD"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
         Title="ModuleGestion" Height="200" Width="300">
     <StackPanel>
         <Button Name ="ConnexionAdminButton" Content="Connexion Admin" Click="ConnexionAdmin_Click" FontWeight="Medium" FontStyle="Italic"/>
