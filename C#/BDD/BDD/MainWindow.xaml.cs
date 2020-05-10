@@ -38,6 +38,8 @@ namespace BDD
         public static List<Recette> listeRecettesSemainePrec = new List<Recette>();
         public static List<Cooking> listeCookingSemainePrec = new List<Cooking>();
 
+        public static List<int> listeNbSemainesSansCommande = new List<int>();
+
 
         public static string Username
         {
@@ -49,6 +51,9 @@ namespace BDD
             get { return password; }
         }
 
+        /// <summary>
+        /// Permet de garder les ages des clients à jour, avec un maximum de précision
+        /// </summary>
         public static void MettreAJourAges()
         {
             string connectionString = "SERVER=localhost;PORT=3306;DATABASE=projet;UID=" + MainWindow.Username + ";PASSWORD=" + MainWindow.Password;
@@ -106,6 +111,9 @@ namespace BDD
 
         }
 
+        /// <summary>
+        /// Lit la database et instance chaque tuple en utilisant les classes C#
+        /// </summary>
         public static void LoadDatabase()
         {
             MettreAJourAges();
@@ -269,7 +277,7 @@ namespace BDD
             connection.Open();
 
             MySqlCommand commandRechercheP = connection.CreateCommand();
-            commandRechercheP.CommandText = "SELECT nomP,categorieP,unite,stockActuel,stockMin,stockMax,idF FROM projet.produit;";
+            commandRechercheP.CommandText = "SELECT nomP,categorieP,unite,stockActuel,stockMin,stockMax,idF FROM projet.produit ORDER BY nomP;";
 
             MySqlDataReader readerRechercheP;
             readerRechercheP = commandRechercheP.ExecuteReader();
@@ -361,6 +369,34 @@ namespace BDD
 
         }
 
+        /// <summary>
+        /// Vérifie si un produit a été utilisé, ou pas, depuis la semaine précédente
+        /// </summary>
+        public static void VerifierSiProduitCommandé()
+        {
+            LoadDatabaseSemainePrec();
+            LoadDatabase();
+            LoadDatabaseSemainePrec();
+
+            int compteur = 0;
+            foreach(Produit p in listeProduits)
+            {
+                if (p.StockActuel == listeProduitsSemainePrec[compteur].StockActuel)
+                {
+                    // il n'a pas ete achete 
+                    listeNbSemainesSansCommande[compteur] += 1; // compte le nombre de semaines passées avant qu'il soit commandé
+                }
+                else
+                {
+                    listeNbSemainesSansCommande[compteur] = 0;
+                }
+                compteur++;
+            }
+        }
+
+        /// <summary>
+        /// Enregistre la database en début de semaine sous format fichier .csv 
+        /// </summary>
         public static void SaveDatabaseSemainePrec()
         {
             #region Client
@@ -534,7 +570,7 @@ namespace BDD
             connection.Open();
 
             MySqlCommand commandRechercheP = connection.CreateCommand();
-            commandRechercheP.CommandText = "SELECT nomP,categorieP,unite,stockActuel,stockMin,stockMax,idF FROM projet.produit;";
+            commandRechercheP.CommandText = "SELECT nomP,categorieP,unite,stockActuel,stockMin,stockMax,idF FROM projet.produit ORDER BY nomP;";
 
             MySqlDataReader readerRechercheP;
             readerRechercheP = commandRechercheP.ExecuteReader();
@@ -627,8 +663,25 @@ namespace BDD
             fichEct6.Close();
 
             #endregion
+
+            #region Liste Nombre Semaines Passées Sans Commandes (Par Produit)
+
+            StreamWriter fichEct7 = new StreamWriter("NbSemainesSansCommade.csv", false);
+            
+            foreach(int nb in listeNbSemainesSansCommande)
+            {
+                fichEct7.WriteLine(nb);
+            }
+
+            fichEct7.Close();
+
+            #endregion
         }
 
+
+        /// <summary>
+        /// Lit la database de la semaine dernièr à partir du fichier .csv
+        /// </summary>
         public static void LoadDatabaseSemainePrec()
         {
             MettreAJourAges();
@@ -829,23 +882,52 @@ namespace BDD
 
             #endregion
 
+            #region Liste Nombre Semaines Passées Sans Commandes (Par Produit)
+
+            StreamReader fichLect7 = new StreamReader("NbSemainesSansCommade.csv");
+
+            listeNbSemainesSansCommande.Clear();
+
+            string ligne7 = "";
+
+            string[] data7;
+            char[] sep7 = new char[1] { ',' };
+
+            while (fichLect7.Peek() > 0)
+            {
+                ligne7 = fichLect7.ReadLine();
+                data7 = ligne7.Split(sep7);
+
+
+                int nbSemaines = Convert.ToInt32(data7[0]);
+
+                listeNbSemainesSansCommande.Add(nbSemaines);
+            }
+
+            fichLect7.Close();
+
+            #endregion
+
         }
 
         public MainWindow()
         {
             InitializeComponent();
             LoginButton.Visibility = Visibility.Hidden;
+            ModuleGestion.aReapprovisionne = false;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Connexion Réussie ! Vous pouvez maintenant accéder à l'application !", "Login Successful ! ", MessageBoxButton.OK, MessageBoxImage.Information);
             LoadDatabase();
+            LoadDatabaseSemainePrec();
             MessageBox.Show("Mise a jour de la database reussie !","Update successful ! ",MessageBoxButton.OK,MessageBoxImage.Information);
             
             if(DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
             {
                 SaveDatabaseSemainePrec();
+                VerifierSiProduitCommandé();
                 MessageBox.Show("Mise a jour de la database de la semaine dernière reussie !", "Update successful ! ", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 

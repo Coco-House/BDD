@@ -65,7 +65,6 @@ C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Pro
 C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Projet\BDD_Github\BDD\C#\BDD\BDD\obj\Debug\BDD.csproj.CopyComplete
 C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Projet\BDD_Github\BDD\C#\BDD\BDD\obj\Debug\BDD.exe
 C:\Users\andri\OneDrive\Documents\Cours\ESILV_A3\S6\BDD & interopérabilité\Projet\BDD_Github\BDD\C#\BDD\BDD\obj\Debug\BDD.pdb
-J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\BDD.csprojAssemblyReference.cache
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\ConnexionCompte.g.cs
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\DetailRecette.g.cs
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\LoginPage.g.cs
@@ -153,3 +152,6 @@ J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo2.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo3.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo4.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo5.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\AfficherProfilClient.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\AfficherProfilClient.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\BDD.csprojAssemblyReference.cache

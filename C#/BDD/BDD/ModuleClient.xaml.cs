@@ -30,6 +30,15 @@ namespace BDD
                 ConnexionButton.IsEnabled = false;
                 DeconnexionButton.IsEnabled = true;
                 SupprimerCompteButton.IsEnabled = true;
+
+                if(ConnexionCompte.ClientConnecte == true)
+                {
+                    AfficherProfil.IsEnabled = true;
+                }
+                else
+                {
+                    AfficherProfil.IsEnabled = false;
+                }
             }
             else if(ConnexionCompteAdmin.AdminConnecte == true)
             {
@@ -37,6 +46,7 @@ namespace BDD
                 ConnexionButton.IsEnabled = false;
                 DeconnexionButton.IsEnabled = false;
                 SupprimerCompteButton.IsEnabled = false;
+                AfficherProfil.IsEnabled = false;
             }
             else
             {
@@ -44,6 +54,7 @@ namespace BDD
                 ConnexionButton.IsEnabled = true;
                 DeconnexionButton.IsEnabled = false;
                 SupprimerCompteButton.IsEnabled = false;
+                AfficherProfil.IsEnabled = false;
             }
         }
 
@@ -101,6 +112,13 @@ namespace BDD
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             SupprimerCompte window = new SupprimerCompte();
+            window.Show();
+            this.Close();
+        }
+
+        private void ConsulterProfil_Click(object sender, RoutedEventArgs e)
+        {
+            AfficherProfilClient window = new AfficherProfilClient();
             window.Show();
             this.Close();
         }

@@ -24,6 +24,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,6 +108,9 @@
     <Compile Include="AfficherProfilCdR.xaml.cs">
       <DependentUpon>AfficherProfilCdR.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AfficherProfilClient.xaml.cs">
+      <DependentUpon>AfficherProfilClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AfficherRecettesCdR.xaml.cs">
       <DependentUpon>AfficherRecettesCdR.xaml</DependentUpon>
     </Compile>
@@ -180,6 +185,10 @@
       <DependentUpon>TableauBord.xaml</DependentUpon>
     </Compile>
     <Page Include="AfficherProfilCdR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AfficherProfilClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
