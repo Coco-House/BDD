@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<commande>
+  <fournisseur>
+    <idF>F1100</idF>
+    <produit>
+      <nomP>lait</nomP>
+      <quantiteCommander>32</quantiteCommander>
+      <unite>L</unite>
+    </produit>
+  </fournisseur>
+  <fournisseur>
+    <idF>F200</idF>
+    <produit>
+      <nomP>lardon</nomP>
+      <quantiteCommander>2759</quantiteCommander>
+      <unite>g</unite>
+    </produit>
+    <produit>
+      <nomP>sucre</nomP>
+      <quantiteCommander>95000</quantiteCommander>
+      <unite>g</unite>
+    </produit>
+  </fournisseur>
+</commande>
