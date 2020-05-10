@@ -19,5 +19,11 @@
 
         <ComboBox Name="ComboBoxRecettes" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Détail Recette" FontWeight="Medium" Height="22" FontStyle="Italic" HorizontalAlignment="Left" Margin="202,240,0,0" VerticalAlignment="Top" Width="112" Click="Button_Click"/>
+        <Label Name="CdRSemaineLabel" Content="Le Top Créateur de recettes de la semaine : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="500"/>
+        <Label Name="CdROrLabel" Content="Le Créateur de recette d'or : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="500"/>
+        <Label Name="Top5Label" Content="Liste des 5 recettes les plus commandées de la semaine : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="500"/>
+        <Rectangle Name="Top5Rectangle" Fill="Black" HorizontalAlignment="Left" Height="2" Margin="10,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="455"/>
+        <Rectangle Name="OrRectangle" Fill="Black" HorizontalAlignment="Left" Height="2" Margin="10,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="225"/>
+        <Rectangle Name="TopCdRRectangle" Fill="Black" HorizontalAlignment="Left" Height="2" Margin="10,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="346"/>
     </Grid>
 </Window>

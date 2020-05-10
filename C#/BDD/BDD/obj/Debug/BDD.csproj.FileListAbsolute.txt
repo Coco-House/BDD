@@ -143,3 +143,13 @@ J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\CreerProduitAdmin.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerCompteAdmin.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\SupprimerUneRecette.baml
 J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\TableauBord.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo1.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo2.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo3.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo4.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo5.g.cs
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo1.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo2.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo3.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo4.baml
+J:\#Projets-ESILV\BDD\C#\BDD\BDD\obj\Debug\Demo5.baml

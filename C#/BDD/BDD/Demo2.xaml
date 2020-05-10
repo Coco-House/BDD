@@ -1,0 +1,19 @@
+﻿<Window x:Class="BDD.Demo2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDD"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Demo2" Height="320" Width="830">
+    <Grid Background="LightYellow">
+        <DataGrid Name="TableDonnees"  Height="150" Margin="10,49,10,90" BorderThickness="5" BorderBrush="Black"/>
+        <Button Name="RetourButton" Content="Précédent" FontStyle="Italic" FontWeight="Medium" HorizontalAlignment="Left" Margin="122.5,239,0,0" Height="25"  VerticalAlignment="Top" Width="170" Click="RetourButton_Click"/>
+        <Button Name="SuivantButton" Content="Suivant" FontStyle="Italic" FontWeight="Medium" HorizontalAlignment="Left" Margin="537.5,239,0,0" Height="25"  VerticalAlignment="Top" Width="170" Click="SuivantButton_Click"/>
+        <Label Content="Liste des Créateur de recettes : " FontWeight="Medium" FontStyle="Italic" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="500"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="2" Margin="10,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="247"/>
+
+
+    </Grid>
+</Window>

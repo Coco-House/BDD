@@ -124,6 +124,21 @@
     <Compile Include="CreerRecette.xaml.cs">
       <DependentUpon>CreerRecette.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Demo1.xaml.cs">
+      <DependentUpon>Demo1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo2.xaml.cs">
+      <DependentUpon>Demo2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo3.xaml.cs">
+      <DependentUpon>Demo3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo4.xaml.cs">
+      <DependentUpon>Demo4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo5.xaml.cs">
+      <DependentUpon>Demo5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DetailRecette.xaml.cs">
       <DependentUpon>DetailRecette.xaml</DependentUpon>
     </Compile>
@@ -189,6 +204,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreerRecette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

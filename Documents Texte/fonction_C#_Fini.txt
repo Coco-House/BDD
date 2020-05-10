@@ -1,6 +1,4 @@
 
-- Pas oublier de mettre le rapport, le script de la databse, et le fichier XML dans le depot
-
     -! Reapprovisionnement hebdo des produits : 
         * MaJ Qte max et min des produits --> les produits non utilise depuis 30 derniers jours : qte max et min / 2 
         * Edition de la liste des commandes de la semaine au format XML (en fin de semaine) : 
@@ -8,23 +6,6 @@
             * la qte A COMMANDER = qte max - qte restante
             * liste classee par fournisseur puis par produit (balise fournisseur puis balise produit dedans)
 
-
-IV- Mode demo : 
-    -----------
-
-Bouton sur le menu qui affichera les infos suivantes (les parcourir avec un bouton suivant et un precedent):
-    * Nb de clients ("xx clients dont yy CdR) // Count(*) client puis cdr
-   
-    * Nb puis noms des CdR et pour chaque CdR // datatable --> id, nom, nb de recettes, nb de commandes total par cdR (nb de commande par recette par cdr???)
-   
-    * Nb recettes dans database // Count(*) recette
-
-    * Liste produits dont la qte restante en stock <= 2 * leur qte minimale  -->  select * where stockActuel <= 2*stockMin
-    
-    * Saisie clavier par l'evaluateur d'un des produits de la liste precedente ^ --> verifier ou combobox
-
-        - puis afficher liste des recettes (nom) utilisant ce produit --> natural join 
-        - et la qte utilisee dans cette recette                      --> parcourir liste nomP de chaque recette, trouver indice --> indice dans qtes --> on a la qte
 
 
 Bonus :

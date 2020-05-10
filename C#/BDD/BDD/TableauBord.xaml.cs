@@ -31,6 +31,14 @@ namespace BDD
             listeIdRComboBoxOr.Clear();
             listeIdRComboBoxTop.Clear();
 
+            CdROrLabel.Visibility = Visibility.Hidden;
+            CdRSemaineLabel.Visibility = Visibility.Hidden;
+            Top5Label.Visibility = Visibility.Hidden;
+
+            OrRectangle.Visibility = Visibility.Hidden;
+            TopCdRRectangle.Visibility = Visibility.Hidden;
+            Top5Rectangle.Visibility = Visibility.Hidden;
+
             TableVide.Visibility = Visibility.Visible;
             CdROrTable.Visibility = Visibility.Hidden;
             top5RecettesTable.Visibility = Visibility.Hidden;
@@ -229,6 +237,15 @@ namespace BDD
             {
                 ComboBoxRecettes.Items.Add(idR);
             }
+
+            CdROrLabel.Visibility = Visibility.Hidden;
+            CdRSemaineLabel.Visibility = Visibility.Hidden;
+            Top5Label.Visibility = Visibility.Visible;
+
+
+            OrRectangle.Visibility = Visibility.Hidden;
+            TopCdRRectangle.Visibility = Visibility.Hidden;
+            Top5Rectangle.Visibility = Visibility.Visible;
         }
 
         private void CdROrCheckbox_Checked(object sender, RoutedEventArgs e)
@@ -253,6 +270,15 @@ namespace BDD
             {
                 ComboBoxRecettes.Items.Add(idR);
             }
+
+            CdROrLabel.Visibility = Visibility.Visible;
+            CdRSemaineLabel.Visibility = Visibility.Hidden;
+            Top5Label.Visibility = Visibility.Hidden;
+
+
+            OrRectangle.Visibility = Visibility.Visible;
+            TopCdRRectangle.Visibility = Visibility.Hidden;
+            Top5Rectangle.Visibility = Visibility.Hidden;
         }
 
         private void CdRSemaineCheckbox_Checked(object sender, RoutedEventArgs e)
@@ -272,6 +298,16 @@ namespace BDD
 
 
             ComboBoxRecettes.Items.Clear();
+
+            CdROrLabel.Visibility = Visibility.Hidden;
+            CdRSemaineLabel.Visibility = Visibility.Visible;
+            Top5Label.Visibility = Visibility.Hidden;
+
+
+            OrRectangle.Visibility = Visibility.Hidden;
+            TopCdRRectangle.Visibility = Visibility.Visible;
+            Top5Rectangle.Visibility = Visibility.Hidden;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

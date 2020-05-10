@@ -74,7 +74,7 @@ INSERT INTO `projet`.`client` (`idC`,`nomC`,`prenomC`,`DateNaissance`,`age`,`adr
 -- insertion dans la table CdR
 
 INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR123321',40,'C123456');
-INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR241234',24,'C789987');
+INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR241234',24,'C437619');
 INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR029384',46,'C187483');
 INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR102938',20,'C789987');
 INSERT INTO `projet`.`cdr` (`idCdR`,`cook`,`idC`) VALUES ('CdR918274',120,'C198743');

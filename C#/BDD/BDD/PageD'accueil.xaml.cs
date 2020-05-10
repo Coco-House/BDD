@@ -56,6 +56,9 @@ namespace BDD
 
         private void Demo(object sender, RoutedEventArgs e)
         {
+            Demo1 window = new Demo1();
+            window.Show();
+            this.Close();
         }
 
         
