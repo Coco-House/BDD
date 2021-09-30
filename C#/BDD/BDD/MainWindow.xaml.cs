@@ -924,7 +924,7 @@ namespace BDD
             LoadDatabaseSemainePrec();
             MessageBox.Show("Mise a jour de la database reussie !","Update successful ! ",MessageBoxButton.OK,MessageBoxImage.Information);
             
-            if(DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            if(DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
                 SaveDatabaseSemainePrec();
                 VerifierSiProduitCommandé();

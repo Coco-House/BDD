@@ -30,7 +30,7 @@ namespace BDD
 
             ReapprovisionnementButton.IsEnabled = false; /// seulement disponible en fin de semaine ! Dimanche !
 
-            if(DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            if(DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
                 if (aReapprovisionne == true)
                 {
@@ -126,7 +126,7 @@ namespace BDD
 
         private void Reapprovisionnement_Click(object sender, RoutedEventArgs e)
         {
-            if (DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
+            if (DateTime.Now.DayOfWeek != DayOfWeek.Friday)
             {
                 MessageBox.Show("Attention ! cette fonction est disponible qu'en fin de semaine ! (Dimanche) ", "Erreur!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
